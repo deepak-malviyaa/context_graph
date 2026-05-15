@@ -66,6 +66,13 @@ const CONTINUATION_PATTERNS = [
   /^(after that |once |before )/i,
 ];
 
+function createMessageId(): string {
+  if (typeof globalThis !== "undefined" && globalThis.crypto?.randomUUID) {
+    return globalThis.crypto.randomUUID();
+  }
+  return `msg-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 // Lines with markdown formatting indicate actual response content
 const MARKDOWN_LINE = /^(#{1,6} |[-*] |\d+\. |\|)/;
 
@@ -119,7 +126,7 @@ function loadStoredMessages(): Message[] {
   try {
     const stored = sessionStorage.getItem(STORAGE_KEY);
     if (!stored) return [];
-    return JSON.parse(stored).map((m: Message) => ({ ...m, id: m.id || crypto.randomUUID() }));
+    return JSON.parse(stored).map((m: Message) => ({ ...m, id: m.id || createMessageId() }));
   } catch {
     return [];
   }
@@ -220,7 +227,7 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
     const messageText = text || input.trim();
     if (!messageText || loading) return;
 
-    const userMessage: Message = { id: crypto.randomUUID(), role: "user", content: messageText };
+    const userMessage: Message = { id: createMessageId(), role: "user", content: messageText };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setLoading(true);
@@ -348,7 +355,7 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
                   setMessages((prev) => [
                     ...prev,
                     {
-                      id: crypto.randomUUID(),
+                      id: createMessageId(),
                       role: "assistant",
                       content: data.response || fullText,
                       toolCalls: toolCalls.length > 0 ? toolCalls : undefined,
@@ -403,7 +410,7 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
       }
       setMessages((prev) => [
         ...prev,
-        { id: crypto.randomUUID(), role: "assistant", content: `**Error:** ${errorMsg}`, retryInput: messageText },
+        { id: createMessageId(), role: "assistant", content: `**Error:** ${errorMsg}`, retryInput: messageText },
       ]);
       setStreamingContent("");
       setStreamingToolCalls([]);
@@ -473,11 +480,11 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
               <Text fontSize="3xl" fontWeight="bold" className="gradient-text" mb={2}>
                 How can I help you?
               </Text>
-              <Text fontSize="sm" color="gray.400">
+              <Text fontSize="sm" color="gray.300">
                 Explore the knowledge graph through natural conversation
               </Text>
             </Box>
-            <HStack gap={1.5} color="gray.500" fontSize="xs" fontWeight="medium" letterSpacing="wider" textTransform="uppercase">
+            <HStack gap={1.5} color="gray.400" fontSize="xs" fontWeight="medium" letterSpacing="wider" textTransform="uppercase">
               <Sparkles size={12} />
               <Text>Try one of these</Text>
             </HStack>
@@ -496,7 +503,7 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
                   height="auto"
                   py={2}
                   maxW="340px"
-                  color="gray.200"
+                  color="gray.100"
                   onClick={() => sendMessage(prompt)}
                   title={prompt}
                   style={{ animationDelay: `${i * 60}ms` }}
@@ -505,6 +512,42 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
                 </Button>
               ))}
             </Flex>
+            <Box h="1px" bg="whiteAlpha.200" my={2} />
+            <VStack gap={2} w="full" maxW="500px">
+              <Text fontSize="xs" color="gray.400" fontWeight="medium" textTransform="uppercase" letterSpacing="wider">
+                Or ask your own question
+              </Text>
+              <Box w="full" className="glass-input" rounded="xl">
+                <Textarea
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Type your question here..."
+                  border="none"
+                  _focus={{ boxShadow: "none", outline: "none" }}
+                  _placeholder={{ color: "gray.600" }}
+                  color="white"
+                  resize="none"
+                  rows={2}
+                  fontSize="sm"
+                  px={4}
+                  py={3}
+                  bg="transparent"
+                />
+                <HStack px={3} py={2} justify="flex-end" borderTop="1px solid" borderColor="whiteAlpha.100">
+                  <IconButton
+                    className="glow-button"
+                    aria-label="Send"
+                    onClick={() => sendMessage()}
+                    disabled={!input.trim() || loading}
+                    size="sm"
+                    rounded="lg"
+                  >
+                    <Send size={14} />
+                  </IconButton>
+                </HStack>
+              </Box>
+            </VStack>
           </VStack>
         </Flex>
       )}
@@ -546,7 +589,7 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
                 maxW="85%"
               >
                 {msg.role === "assistant" ? (
-                  <Box fontSize="sm" className="markdown-content" color="gray.100">
+                  <Box fontSize="sm" className="markdown-content" color="gray.50">
                     {(() => {
                       const { thinking, response } = splitThinkingAndResponse(msg.content);
                       return (
@@ -606,7 +649,7 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
                     )}
                   </Box>
                 ) : (
-                  <Text fontSize="sm" whiteSpace="pre-wrap" color="white">
+                  <Text fontSize="sm" whiteSpace="pre-wrap" color="white" fontWeight="500">
                     {msg.content}
                   </Text>
                 )}
@@ -687,43 +730,45 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
       </VStack>
 
       {/* Input area — Chakra UI Pro inspired bordered container */}
-      <Box px={4} py={3} borderTop="1px solid" borderColor="whiteAlpha.200" bg="whiteAlpha.50" backdropFilter="blur(8px)" zIndex={10}>
-        <Box className="glass-input" rounded="xl">
-          <Textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Ask about your agent memory data..."
-            border="none"
-            _focus={{ boxShadow: "none", outline: "none" }}
-            _placeholder={{ color: "gray.500" }}
-            color="white"
-            resize="none"
-            rows={2}
-            fontSize="sm"
-            px={4}
-            py={3}
-            bg="transparent"
-          />
-          <HStack px={3} py={2} justify="space-between" borderTop="1px solid" borderColor="whiteAlpha.100">
-            <Text fontSize="xs" color="gray.500" display={{ base: "none", sm: "block" }}>
-              <Text as="span" color="gray.400" fontWeight="medium">Enter</Text> to send
-              {" · "}
-              <Text as="span" color="gray.400" fontWeight="medium">Shift + Enter</Text> new line
-            </Text>
-            <IconButton
-              className="glow-button"
-              aria-label="Send"
-              onClick={() => sendMessage()}
-              disabled={!input.trim() || loading}
-              size="sm"
-              rounded="lg"
-            >
-              <Send size={14} />
-            </IconButton>
-          </HStack>
+      {messages.length > 0 && (
+        <Box px={4} py={3} borderTop="1px solid" borderColor="whiteAlpha.200" bg="whiteAlpha.50" backdropFilter="blur(8px)" zIndex={10}>
+          <Box className="glass-input" rounded="xl">
+            <Textarea
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Ask about your agent memory data..."
+              border="none"
+              _focus={{ boxShadow: "none", outline: "none" }}
+              _placeholder={{ color: "gray.600" }}
+              color="white"
+              resize="none"
+              rows={2}
+              fontSize="sm"
+              px={4}
+              py={3}
+              bg="transparent"
+            />
+            <HStack px={3} py={2} justify="space-between" borderTop="1px solid" borderColor="whiteAlpha.100">
+              <Text fontSize="xs" color="gray.500" display={{ base: "none", sm: "block" }}>
+                <Text as="span" color="gray.400" fontWeight="medium">Enter</Text> to send
+                {" · "}
+                <Text as="span" color="gray.400" fontWeight="medium">Shift + Enter</Text> new line
+              </Text>
+              <IconButton
+                className="glow-button"
+                aria-label="Send"
+                onClick={() => sendMessage()}
+                disabled={!input.trim() || loading}
+                size="sm"
+                rounded="lg"
+              >
+                <Send size={14} />
+              </IconButton>
+            </HStack>
+          </Box>
         </Box>
-      </Box>
+      )}
     </Flex>
   );
 }

@@ -160,12 +160,12 @@ export default function Home() {
         </HStack>
         <HStack
           gap={2}
-          bg="whiteAlpha.100"
+          bg="rgba(255,255,255,0.64)"
           px={3}
           py={1.5}
           borderRadius="full"
           border="1px solid"
-          borderColor="whiteAlpha.200"
+          borderColor="blackAlpha.200"
         >
           <Box
             className="status-dot"
@@ -187,7 +187,7 @@ export default function Home() {
                   : "Backend offline"
             }
           />
-          <Text fontSize="xs" color="gray.300" fontWeight="medium" letterSpacing="wide">
+          <Text fontSize="xs" color="gray.700" fontWeight="medium" letterSpacing="wide">
             {backendStatus === "ok"
               ? "CONNECTED"
               : backendStatus === "degraded"
@@ -251,8 +251,8 @@ export default function Home() {
             <Tabs.Root defaultValue="traces" size="sm" h="100%" display="flex" flexDirection="column">
               <Tabs.List
                 borderBottom="1px solid"
-                borderColor="whiteAlpha.200"
-                bg="whiteAlpha.50"
+                borderColor="blackAlpha.200"
+                bg="rgba(255,255,255,0.6)"
                 backdropFilter="blur(8px)"
                 px={2}
                 gap={1}
@@ -268,12 +268,12 @@ export default function Home() {
                   textTransform="uppercase"
                   position="relative"
                   _selected={{
-                    color: "white",
-                    bg: "whiteAlpha.100",
+                    color: "gray.900",
+                    bg: "white",
                     borderRadius: "md",
                     boxShadow: "inset 0 -2px 0 0 #a78bfa, 0 0 16px rgba(167,139,250,0.2)",
                   }}
-                  _hover={{ color: "white", bg: "whiteAlpha.50" }}
+                  _hover={{ color: "gray.900", bg: "whiteAlpha.700" }}
                   transition="all 0.2s"
                 >
                   Traces
@@ -289,12 +289,12 @@ export default function Home() {
                   textTransform="uppercase"
                   position="relative"
                   _selected={{
-                    color: "white",
-                    bg: "whiteAlpha.100",
+                    color: "gray.900",
+                    bg: "white",
                     borderRadius: "md",
                     boxShadow: "inset 0 -2px 0 0 #22d3ee, 0 0 16px rgba(34,211,238,0.2)",
                   }}
-                  _hover={{ color: "white", bg: "whiteAlpha.50" }}
+                  _hover={{ color: "gray.900", bg: "whiteAlpha.700" }}
                   transition="all 0.2s"
                 >
                   Documents

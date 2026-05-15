@@ -1,434 +1,469 @@
 inherits: _base
 
 domain:
-  id: agent-memory
-  name: Agent Memory
-  description: AI agent conversation tracking, entity extraction, memory management, and tool usage analysis
-  tagline: "AI-powered Agent Intelligence"
-  emoji: "\U0001F9E0"
+  id: scientific-research
+  name: Scientific Research
+  description: Research collaboration, publication tracking, grant management, and experiment analysis
+  tagline: "AI-powered Research Intelligence"
+  emoji: "\U0001F52C"
 
 entity_types:
-  - label: Agent
+  - label: Researcher
     pole_type: OBJECT
-    subtype: AI_AGENT
-    color: "#8b5cf6"
-    icon: bot
+    subtype: ACADEMIC
+    color: "#1d4ed8"
+    icon: user-circle
     properties:
-      - name: agent_id
+      - name: researcher_id
         type: string
         required: true
         unique: true
       - name: name
         type: string
         required: true
-      - name: model
+      - name: orcid
         type: string
-      - name: version
+        unique: true
+      - name: title
         type: string
-      - name: capabilities
+        enum: [professor, associate_professor, assistant_professor, postdoc, phd_student, research_scientist]
+      - name: h_index
+        type: integer
+      - name: specialization
         type: string
-      - name: status
+      - name: email
         type: string
-        enum: [active, idle, suspended, retired]
 
-  - label: Conversation
-    pole_type: EVENT
-    subtype: DIALOGUE
-    color: "#0ea5e9"
-    icon: messages-square
+  - label: Paper
+    pole_type: OBJECT
+    subtype: PUBLICATION
+    color: "#be185d"
+    icon: file-text
     properties:
-      - name: conversation_id
+      - name: doi
         type: string
         required: true
         unique: true
-      - name: topic
+      - name: title
         type: string
-      - name: started_at
-        type: datetime
         required: true
-      - name: ended_at
-        type: datetime
-      - name: message_count
-        type: integer
-      - name: status
+      - name: abstract
         type: string
-        enum: [active, completed, abandoned, escalated]
+      - name: journal
+        type: string
+      - name: publication_date
+        type: date
+      - name: citation_count
+        type: integer
+      - name: paper_type
+        type: string
+        enum: [journal_article, conference_paper, preprint, review, meta_analysis]
 
-  - label: Entity
+  - label: Dataset
     pole_type: OBJECT
-    subtype: EXTRACTED_ENTITY
-    color: "#f59e0b"
-    icon: tag
+    subtype: DATA_RESOURCE
+    color: "#0d9488"
+    icon: database
     properties:
-      - name: entity_id
+      - name: dataset_id
         type: string
         required: true
         unique: true
       - name: name
         type: string
         required: true
-      - name: entity_type
+      - name: description
         type: string
-        enum: [person, place, concept, event, product, organization]
-      - name: confidence
+      - name: format
+        type: string
+        enum: [csv, json, hdf5, netcdf, parquet, sql, custom]
+      - name: size_gb
         type: float
-      - name: source_text
+      - name: license
+        type: string
+        enum: [cc_by, cc_by_sa, cc0, mit, gpl, proprietary, restricted]
+      - name: access_url
         type: string
 
-  - label: Memory
-    pole_type: OBJECT
-    subtype: AGENT_MEMORY
-    color: "#10b981"
-    icon: brain
-    properties:
-      - name: memory_id
-        type: string
-        required: true
-        unique: true
-      - name: content
-        type: string
-        required: true
-      - name: memory_type
-        type: string
-        enum: [episodic, semantic, procedural, working]
-      - name: importance
-        type: float
-      - name: created_at
-        type: datetime
-        required: true
-      - name: last_accessed
-        type: datetime
-
-  - label: ToolCall
+  - label: Experiment
     pole_type: EVENT
-    subtype: TOOL_INVOCATION
-    color: "#ef4444"
-    icon: wrench
+    subtype: RESEARCH_ACTIVITY
+    color: "#d97706"
+    icon: flask
     properties:
-      - name: call_id
+      - name: experiment_id
         type: string
         required: true
         unique: true
-      - name: tool_name
+      - name: name
         type: string
         required: true
-      - name: input_params
+      - name: methodology
         type: string
-      - name: output_summary
-        type: string
-      - name: duration_ms
-        type: integer
+      - name: start_date
+        type: date
+      - name: end_date
+        type: date
       - name: status
         type: string
-        enum: [success, failure, timeout, cancelled]
-      - name: called_at
-        type: datetime
-        required: true
+        enum: [planned, in_progress, completed, failed, abandoned]
+      - name: result_summary
+        type: string
 
-  - label: Session
-    pole_type: EVENT
-    subtype: AGENT_SESSION
+  - label: Grant
+    pole_type: OBJECT
+    subtype: FUNDING
+    color: "#16a34a"
+    icon: banknote
+    properties:
+      - name: grant_id
+        type: string
+        required: true
+        unique: true
+      - name: title
+        type: string
+        required: true
+      - name: funding_agency
+        type: string
+        required: true
+      - name: amount
+        type: float
+      - name: currency
+        type: string
+        default: USD
+      - name: start_date
+        type: date
+      - name: end_date
+        type: date
+      - name: status
+        type: string
+        enum: [submitted, under_review, awarded, active, completed, rejected]
+
+  - label: Institution
+    pole_type: OBJECT
+    subtype: ACADEMIC_ORG
     color: "#6366f1"
-    icon: layout-dashboard
+    icon: building
     properties:
-      - name: session_id
+      - name: institution_id
         type: string
         required: true
         unique: true
-      - name: started_at
-        type: datetime
+      - name: name
+        type: string
         required: true
-      - name: ended_at
-        type: datetime
-      - name: goal
+      - name: institution_type
         type: string
-      - name: outcome
+        enum: [university, research_institute, national_lab, hospital, industry_lab]
+      - name: country
         type: string
-        enum: [achieved, partial, failed, ongoing]
+      - name: ranking
+        type: integer
+      - name: department
+        type: string
 
 relationships:
-  - type: REMEMBERED
-    source: Agent
-    target: Memory
-  - type: EXTRACTED
-    source: Conversation
-    target: Entity
-  - type: REASONED_ABOUT
-    source: Agent
-    target: Entity
-  - type: INVOKED
-    source: Agent
-    target: ToolCall
-  - type: PARTICIPATED_IN
-    source: Agent
-    target: Conversation
-  - type: REFERENCED
-    source: Memory
-    target: Entity
-  - type: PART_OF_SESSION
-    source: Conversation
-    target: Session
-  - type: TRIGGERED_BY
-    source: ToolCall
-    target: Conversation
+  - type: AUTHORED
+    source: Researcher
+    target: Paper
+  - type: CITED
+    source: Paper
+    target: Paper
+  - type: FUNDED_BY
+    source: Experiment
+    target: Grant
+  - type: REPLICATED
+    source: Experiment
+    target: Experiment
+  - type: USED_DATASET
+    source: Paper
+    target: Dataset
+  - type: AFFILIATED_WITH
+    source: Researcher
+    target: Institution
+  - type: CONDUCTED
+    source: Researcher
+    target: Experiment
+  - type: PRODUCED_DATASET
+    source: Experiment
+    target: Dataset
 
 document_templates:
-  - id: agent_session_log
-    name: Agent Session Log
-    description: Detailed log of an agent's reasoning and actions during a session
-    count: 10
-    prompt_template: |
-      Write a session log for agent "{{agent.name}}" during session {{session.session_id}}.
-      Goal: {{session.goal}}. Started: {{session.started_at}}.
-      Include reasoning steps, tool calls made, entities discovered, and outcome.
-    required_entities: [Agent, Session, ToolCall]
-
-  - id: memory_snapshot
-    name: Memory Snapshot
-    description: Point-in-time snapshot of an agent's memory state
-    count: 8
-    prompt_template: |
-      Write a memory snapshot report for agent "{{agent.name}}" capturing
-      its current knowledge state. Include episodic memories from recent
-      conversations, semantic knowledge about {{entity.name}}, and
-      procedural memories for common tasks.
-    required_entities: [Agent, Memory, Entity]
-
-  - id: tool_trace
-    name: Tool Execution Trace
-    description: Detailed trace of tool calls and their results
-    count: 8
-    prompt_template: |
-      Write a tool execution trace for agent "{{agent.name}}" during
-      conversation {{conversation.conversation_id}}. Tool: {{toolcall.tool_name}}.
-      Document the input, reasoning for invocation, output, and how the
-      result was used in the conversation.
-    required_entities: [Agent, ToolCall, Conversation]
-
-  - id: conversation_summary
-    name: Conversation Summary
-    description: Summary of a conversation with key points and entities
-    count: 10
-    prompt_template: |
-      Write a conversation summary for {{conversation.conversation_id}}
-      between agent "{{agent.name}}" and a user. Topic: {{conversation.topic}}.
-      Highlight key entities extracted, decisions made, and unresolved questions.
-    required_entities: [Agent, Conversation, Entity]
-
-  - id: entity_extraction_log
-    name: Entity Extraction Log
-    description: Log of entities extracted from conversations and their relationships
+  - id: grant_proposal
+    name: Grant Proposal
+    description: Research grant proposals and funding applications
     count: 6
     prompt_template: |
-      Write an entity extraction log from conversation {{conversation.conversation_id}}.
-      Document each entity found ({{entity.name}}, type: {{entity.entity_type}}),
-      confidence scores, source context, and relationships between entities.
-    required_entities: [Conversation, Entity]
+      Write a grant proposal from {{researcher.name}} at {{institution.name}}
+      for the {{grant.title}} grant from {{grant.funding_agency}}.
+      Requested amount: ${{grant.amount}}. Research area: {{researcher.specialization}}.
+      Include background, objectives, methodology, timeline, and expected impact.
+    required_entities: [Researcher, Institution, Grant]
+
+  - id: peer_review
+    name: Peer Review
+    description: Peer review reports for submitted manuscripts
+    count: 8
+    prompt_template: |
+      Write a peer review for the paper "{{paper.title}}" submitted to
+      {{paper.journal}}. Reviewer: {{researcher.name}} from {{institution.name}}.
+      Include assessment of methodology, results, significance,
+      and recommendation (accept, revise, reject).
+    required_entities: [Paper, Researcher, Institution]
+
+  - id: lab_notebook
+    name: Lab Notebook Entry
+    description: Daily lab notebook entries documenting experimental work
+    count: 12
+    prompt_template: |
+      Write a lab notebook entry by {{researcher.name}} for experiment
+      "{{experiment.name}}" ({{experiment.experiment_id}}) on {{date}}.
+      Methodology: {{experiment.methodology}}. Include observations,
+      measurements, deviations from protocol, and preliminary analysis.
+    required_entities: [Researcher, Experiment, Dataset]
+
+  - id: experiment_log
+    name: Experiment Log
+    description: Formal experiment design and results documentation
+    count: 8
+    prompt_template: |
+      Write an experiment log for "{{experiment.name}}" conducted by
+      {{researcher.name}} at {{institution.name}}. Status: {{experiment.status}}.
+      Dataset used: {{dataset.name}}. Include hypothesis, methodology,
+      variables, results summary, and conclusions.
+    required_entities: [Experiment, Researcher, Institution, Dataset]
+
+  - id: publication_draft
+    name: Publication Draft
+    description: Draft sections of academic publications
+    count: 6
+    prompt_template: |
+      Write a draft introduction and methods section for a paper titled
+      "{{paper.title}}" by {{researcher.name}} et al. at {{institution.name}}.
+      Based on experiment "{{experiment.name}}" using dataset {{dataset.name}}.
+      Journal target: {{paper.journal}}.
+    required_entities: [Paper, Researcher, Institution, Experiment, Dataset]
 
 decision_traces:
-  - id: memory_consolidation
-    task: "Decide which memories to consolidate or prune for agent {{agent.name}}"
+  - id: research_direction
+    task: "Evaluate whether to pursue research direction based on {{paper.title}} findings"
     steps:
-      - thought: "Assess memory usage and identify low-importance or redundant memories"
-        action: "Query all memories sorted by importance and last access time"
-      - thought: "Identify memories that can be merged into higher-level summaries"
-        action: "Find clusters of related episodic memories referencing the same entities"
-      - thought: "Evaluate impact of pruning on agent's task performance"
-        action: "Check which memories are referenced in recent successful sessions"
-    outcome_template: "Consolidation plan: {{plan}} affecting {{count}} memories"
+      - thought: "Assess the significance and reproducibility of the findings"
+        action: "Query citation network and replication attempts for this paper"
+      - thought: "Identify gaps in the literature that this direction could fill"
+        action: "Analyze citing papers and identify open questions"
+      - thought: "Evaluate resource requirements and funding availability"
+        action: "Check active grants, available datasets, and lab capacity"
+      - thought: "Consider collaboration opportunities and expertise gaps"
+        action: "Find researchers with complementary expertise at partner institutions"
+    outcome_template: "Decision: {{decision}} — {{rationale}}"
 
-  - id: tool_selection
-    task: "Determine which tool to invoke for user request in conversation {{conversation.conversation_id}}"
+  - id: dataset_selection
+    task: "Select appropriate dataset for experiment {{experiment.name}}"
     steps:
-      - thought: "Parse user intent and identify required information"
-        action: "Analyze conversation context and extract key parameters"
-      - thought: "Match intent against available tool capabilities"
-        action: "Query tool registry and rank by relevance to the request"
-      - thought: "Consider past tool usage patterns for similar requests"
-        action: "Search memory for similar past conversations and their tool calls"
-    outcome_template: "Selected tool: {{tool}} with parameters {{params}}"
+      - thought: "Identify datasets matching the experimental requirements"
+        action: "Query datasets by domain, size, format, and availability"
+      - thought: "Evaluate data quality and prior usage in published research"
+        action: "Check which papers have used each candidate dataset"
+      - thought: "Consider licensing, access restrictions, and computational requirements"
+        action: "Review dataset metadata for compatibility constraints"
+    outcome_template: "Selected dataset: {{dataset}} — {{rationale}}"
 
-  - id: entity_resolution
-    task: "Resolve ambiguous entity reference '{{entity.name}}' across conversations"
+  - id: collaboration_assessment
+    task: "Assess potential research collaboration with {{researcher.name}} at {{institution.name}}"
     steps:
-      - thought: "Search for all entities matching or similar to the reference"
-        action: "Query entity graph for name matches and fuzzy similarities"
-      - thought: "Use conversation context to disambiguate"
-        action: "Review surrounding conversation context and co-occurring entities"
-      - thought: "Check memory for prior resolutions of this entity"
-        action: "Search agent memories for previous references to this entity"
-    outcome_template: "Resolved to: {{resolved_entity}} with confidence {{confidence}}"
+      - thought: "Review the researcher's publication record and expertise"
+        action: "Query papers authored and citation metrics"
+      - thought: "Identify overlap and complementarity in research interests"
+        action: "Compare specializations and shared citation networks"
+      - thought: "Evaluate institutional compatibility and funding synergies"
+        action: "Check active grants and institutional agreements"
+    outcome_template: "Collaboration assessment: {{assessment}} — {{rationale}}"
 
-  - id: session_goal_assessment
-    task: "Evaluate whether session {{session.session_id}} achieved its stated goal"
+  - id: grant_proposal_strategy
+    task: "Develop grant proposal strategy for researcher {{researcher.name}} targeting {{grant.funding_agency}}"
     steps:
-      - thought: "Review the session goal and all conversations within the session"
-        action: "Query session details and all conversations linked via PART_OF_SESSION"
-      - thought: "Assess tool call success rates during the session"
-        action: "Check tool call outcomes for failures or timeouts that may have blocked progress"
-      - thought: "Compare extracted entities and memories against expected outcomes"
-        action: "Review entities extracted and memories created during the session"
-    outcome_template: "Goal achievement: {{status}}. Completion: {{percentage}}%. Gaps: {{gaps}}"
+      - thought: "Review researcher's publication record and funding history"
+        action: "Query papers authored and previous grants awarded to this researcher"
+      - thought: "Identify research gaps that align with funder priorities"
+        action: "Analyze funded experiments and identify underexplored areas in the researcher's field"
+      - thought: "Assess team composition and institutional strengths"
+        action: "Query co-authors, their institutions, and complementary expertise"
+      - thought: "Estimate competitiveness based on prior funding rates"
+        action: "Review grant outcomes by funding agency and research area"
+    outcome_template: "Strategy: {{strategy}}. Competitive strength: {{strength}}. Suggested budget: ${{budget}}"
 
-  - id: knowledge_gap_detection
-    task: "Identify knowledge gaps in agent {{agent.name}}'s memory about {{entity.name}}"
+  - id: reproducibility_assessment
+    task: "Assess reproducibility of findings from experiment {{experiment.name}}"
     steps:
-      - thought: "Catalog what the agent currently knows about this entity"
-        action: "Query all memories referencing this entity and their types"
-      - thought: "Compare against conversations where this entity was discussed"
-        action: "Find conversations that extracted this entity and check for unrecorded information"
-      - thought: "Identify topics related to this entity with no corresponding memories"
-        action: "Traverse entity relationships to find connected concepts with no memory coverage"
-    outcome_template: "Knowledge gaps found: {{count}}. Priority areas: {{areas}}"
+      - thought: "Review the original experiment methodology and results"
+        action: "Query experiment details, methodology, and result summary"
+      - thought: "Search for replication attempts by independent groups"
+        action: "Find experiments linked via REPLICATED relationship to the original"
+      - thought: "Compare datasets used and their availability"
+        action: "Check if the original dataset is publicly accessible and has been reused"
+      - thought: "Evaluate statistical rigor and effect size"
+        action: "Review evaluation metrics and sample sizes from the original and replications"
+    outcome_template: "Reproducibility: {{rating}}. Replications: {{count}}. Confidence: {{confidence}}"
 
-  - id: tool_failure_diagnosis
-    task: "Diagnose repeated failures of tool {{toolcall.tool_name}} invoked by agent {{agent.name}}"
+  - id: peer_review_synthesis
+    task: "Synthesize peer reviews for paper {{paper.title}} to guide revision"
     steps:
-      - thought: "Analyze recent failure patterns for this tool"
-        action: "Query tool calls filtered by tool name and failure status"
-      - thought: "Examine input parameters that led to failures vs successes"
-        action: "Compare input_params across successful and failed invocations"
-      - thought: "Check if failures correlate with specific conversation topics or entities"
-        action: "Link failed tool calls to their triggering conversations and extracted entities"
-      - thought: "Recommend corrective action or parameter adjustments"
-        action: "Identify parameter patterns most likely to succeed based on historical data"
-    outcome_template: "Root cause: {{cause}}. Fix: {{fix}}. Expected success rate improvement: {{improvement}}%"
+      - thought: "Collect and categorize all reviewer comments"
+        action: "Query documents linked to this paper for peer review reports"
+      - thought: "Identify common themes and critical concerns across reviewers"
+        action: "Find issues raised by multiple reviewers that require major revision"
+      - thought: "Prioritize revisions by impact on acceptance probability"
+        action: "Rank changes by severity and whether they address fundamental vs minor concerns"
+      - thought: "Identify additional experiments or analyses needed"
+        action: "Determine which reviewer requests require new data collection vs reanalysis"
+    outcome_template: "Revisions needed: {{count}}. Major: {{major}}. Additional experiments: {{experiments}}"
 
-  - id: conversation_escalation
-    task: "Decide whether to escalate conversation {{conversation.conversation_id}} to a human operator"
+  - id: literature_gap_analysis
+    task: "Identify gaps in the literature around the research area of {{paper.title}}"
     steps:
-      - thought: "Assess conversation sentiment and user satisfaction signals"
-        action: "Review conversation history for frustration indicators and repeated requests"
-      - thought: "Check if the agent has exhausted available tools and knowledge"
-        action: "Query tool calls made and memories accessed during this conversation"
-      - thought: "Evaluate the complexity of the remaining unresolved request"
-        action: "Compare against similar past conversations and their resolution patterns"
-    outcome_template: "Escalation decision: {{decision}}. Reason: {{reason}}. Priority: {{priority}}"
+      - thought: "Map the citation network around this paper"
+        action: "Query papers cited by and citing this paper to build the network"
+      - thought: "Identify clusters of related work and their boundaries"
+        action: "Analyze citation patterns to find research sub-communities"
+      - thought: "Detect under-explored connections between clusters"
+        action: "Find topic areas with few cross-cluster citations indicating research gaps"
+      - thought: "Assess feasibility of addressing identified gaps"
+        action: "Evaluate available datasets, methods, and expertise for each gap"
+    outcome_template: "Gaps identified: {{gaps}}. Most promising: {{top_gap}}. Feasibility: {{feasibility}}"
 
-  - id: memory_type_classification
-    task: "Classify incoming information from conversation {{conversation.conversation_id}} into appropriate memory types"
+  - id: data_management_plan
+    task: "Create a data management plan for experiment {{experiment.name}} using dataset {{dataset.name}}"
     steps:
-      - thought: "Analyze the nature of information extracted from the conversation"
-        action: "Review entities and context from the conversation"
-      - thought: "Determine if information is episodic, semantic, or procedural"
-        action: "Classify based on whether it describes events, facts, or how-to knowledge"
-      - thought: "Check for existing memories that should be updated vs creating new ones"
-        action: "Search for similar existing memories to prevent duplication"
-    outcome_template: "Classification: {{types}} across {{count}} new memories. Updated: {{updated}} existing"
+      - thought: "Assess dataset size, format, and access requirements"
+        action: "Query dataset metadata including size, format, and license"
+      - thought: "Determine appropriate storage and sharing platforms"
+        action: "Match dataset characteristics to repository requirements and funder mandates"
+      - thought: "Plan data versioning and provenance tracking"
+        action: "Define versioning strategy based on experiment pipeline and expected transformations"
+      - thought: "Address privacy, licensing, and long-term preservation"
+        action: "Review license restrictions and institutional data retention policies"
+    outcome_template: "DMP: {{plan}}. Repository: {{repository}}. Retention period: {{retention}}"
 
-  - id: agent_performance_review
-    task: "Review overall performance of agent {{agent.name}} across recent sessions"
+  - id: impact_assessment
+    task: "Assess research impact of researcher {{researcher.name}} for tenure review"
     steps:
-      - thought: "Analyze session outcomes and goal achievement rates"
-        action: "Query all recent sessions and their outcome status"
-      - thought: "Evaluate tool usage efficiency and error rates"
-        action: "Calculate tool call success rates and average durations"
-      - thought: "Assess memory utilization and knowledge growth"
-        action: "Review memory creation frequency, importance distribution, and access patterns"
-      - thought: "Identify areas for improvement in agent capabilities"
-        action: "Find conversation topics with low resolution rates or high escalation counts"
-    outcome_template: "Performance: {{rating}}. Strengths: {{strengths}}. Improvement areas: {{areas}}"
+      - thought: "Quantify publication metrics and citation impact"
+        action: "Query papers authored, citation counts, h-index, and journal rankings"
+      - thought: "Evaluate grant funding success and amount"
+        action: "Review grants awarded, total funding, and funding agency diversity"
+      - thought: "Assess mentorship and collaboration breadth"
+        action: "Count co-authored papers, affiliated institutions, and supervised experiments"
+      - thought: "Identify broader impact beyond academia"
+        action: "Search for dataset reuse, media mentions, and practical applications of research"
+    outcome_template: "Impact summary: h-index {{h_index}}, total citations {{citations}}, grants ${{funding}}"
 
 demo_scenarios:
-  - name: Agent Introspection
+  - name: Literature Review
     prompts:
-      - "What does agent Alpha remember about the user's project preferences?"
-      - "Show me all entities that agent Alpha has extracted this week"
-      - "Which tools does agent Alpha use most frequently?"
+      - "Find the most cited papers in computational biology from the last 3 years"
+      - "What papers cite the landmark study on CRISPR gene editing by Doudna?"
+      - "Show me the citation network around deep learning in drug discovery"
 
-  - name: Conversation Analysis
+  - name: Research Management
     prompts:
-      - "Summarize the key topics discussed across all conversations today"
-      - "Which conversations were escalated and why?"
-      - "Find conversations where the agent failed to resolve the user's request"
+      - "What grants are currently active and when do they expire?"
+      - "Show me all experiments that used the Genomics Benchmark dataset"
+      - "Which researchers at our institution have published in Nature?"
 
-  - name: Memory Management
+  - name: Collaboration & Impact
     prompts:
-      - "What are the most important memories stored by agent Alpha?"
-      - "Show me the entity graph extracted from recent conversations"
-      - "Which memories haven't been accessed in over 30 days?"
+      - "Find researchers working on similar topics to our lab's specialization"
+      - "What is the h-index distribution across our department?"
+      - "Which of our papers have been replicated by independent groups?"
 
 agent_tools:
-  - name: search_agent
-    description: Search for agents by name, model, or status
+  - name: search_researcher
+    description: Search for researchers by name, specialization, or institution
     cypher: |
-      MATCH (a:Agent)
-      WHERE toLower(a.name) CONTAINS toLower($query)
-         OR toLower(coalesce(a.model, '')) CONTAINS toLower($query)
-      OPTIONAL MATCH (a)-[r]-(related)
-      RETURN a, type(r) AS rel_type, related
+      MATCH (r:Researcher)
+      WHERE toLower(r.name) CONTAINS toLower($query)
+         OR toLower(coalesce(r.specialization, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (r)-[:AFFILIATED_WITH]->(i:Institution)
+      OPTIONAL MATCH (r)-[:AUTHORED]->(p:Paper)
+      RETURN r, i.name AS institution, count(p) AS paper_count
+      ORDER BY r.h_index DESC
       LIMIT 20
     parameters:
       - name: query
         type: string
-        description: Agent name, model, or keyword to search for
+        description: Researcher name or specialization to search for
 
-  - name: conversation_history
-    description: Get conversation history for a specific agent
+  - name: citation_network
+    description: Explore citation relationships for a paper
     cypher: |
-      MATCH (a:Agent {name: $agent_name})-[:PARTICIPATED_IN]->(c:Conversation)
-      OPTIONAL MATCH (c)-[:EXTRACTED]->(e:Entity)
-      OPTIONAL MATCH (c)<-[:TRIGGERED_BY]-(tc:ToolCall)
-      RETURN c, collect(DISTINCT e) AS entities, collect(DISTINCT tc) AS tool_calls
-      ORDER BY c.started_at DESC
-      LIMIT 20
+      MATCH (p:Paper)
+      WHERE toLower(p.title) CONTAINS toLower($query) OR p.doi = $query
+      OPTIONAL MATCH (p)-[:CITED]->(cited:Paper)
+      OPTIONAL MATCH (citing:Paper)-[:CITED]->(p)
+      RETURN p, collect(DISTINCT cited.title) AS references,
+             collect(DISTINCT citing.title) AS cited_by,
+             p.citation_count
+      LIMIT 10
     parameters:
-      - name: agent_name
-        type: string
-        description: Name of the agent
-
-  - name: memory_recall
-    description: Search agent memories by content or referenced entities
-    cypher: |
-      MATCH (a:Agent {name: $agent_name})-[:REMEMBERED]->(m:Memory)
-      WHERE toLower(m.content) CONTAINS toLower($query)
-      OPTIONAL MATCH (m)-[:REFERENCED]->(e:Entity)
-      RETURN m, collect(e) AS referenced_entities
-      ORDER BY m.importance DESC, m.last_accessed DESC
-      LIMIT 20
-    parameters:
-      - name: agent_name
-        type: string
-        description: Name of the agent
       - name: query
         type: string
-        description: Search term for memory content
+        description: Paper title or DOI to explore citations for
 
-  - name: tool_usage_stats
-    description: Analyze tool usage patterns for an agent
+  - name: dataset_usage
+    description: Find which papers and experiments have used a specific dataset
     cypher: |
-      MATCH (a:Agent {name: $agent_name})-[:INVOKED]->(tc:ToolCall)
-      WITH tc.tool_name AS tool, count(tc) AS call_count,
-           avg(tc.duration_ms) AS avg_duration,
-           sum(CASE WHEN tc.status = 'success' THEN 1 ELSE 0 END) AS successes
-      RETURN tool, call_count, avg_duration, successes,
-             toFloat(successes) / call_count AS success_rate
-      ORDER BY call_count DESC
+      MATCH (d:Dataset)
+      WHERE toLower(d.name) CONTAINS toLower($query)
+         OR d.dataset_id = $query
+      OPTIONAL MATCH (p:Paper)-[:USED_DATASET]->(d)
+      OPTIONAL MATCH (e:Experiment)-[:PRODUCED_DATASET]->(d)
+      RETURN d, collect(DISTINCT p.title) AS papers_using,
+             collect(DISTINCT e.name) AS producing_experiments
     parameters:
-      - name: agent_name
+      - name: query
         type: string
-        description: Name of the agent
+        description: Dataset name or ID to look up
 
-  - name: entity_graph
-    description: Explore the entity relationship graph extracted from conversations
+  - name: grant_analysis
+    description: Analyze grant funding status and associated research output
     cypher: |
-      MATCH (e:Entity)
+      MATCH (g:Grant)
+      WHERE toLower(g.title) CONTAINS toLower($query)
+         OR toLower(g.funding_agency) CONTAINS toLower($query)
+         OR g.status = $query
+      OPTIONAL MATCH (e:Experiment)-[:FUNDED_BY]->(g)
+      OPTIONAL MATCH (r:Researcher)-[:CONDUCTED]->(e)
+      RETURN g, collect(DISTINCT e.name) AS experiments,
+             collect(DISTINCT r.name) AS researchers
+      ORDER BY g.amount DESC
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Grant title, funding agency, or status to search for
+
+  - name: experiment_results
+    description: Query experiment details and outcomes
+    cypher: |
+      MATCH (e:Experiment)
       WHERE toLower(e.name) CONTAINS toLower($query)
-      OPTIONAL MATCH (e)<-[:EXTRACTED]-(c:Conversation)
-      OPTIONAL MATCH (e)<-[:REFERENCED]-(m:Memory)
-      OPTIONAL MATCH (e)<-[:REASONED_ABOUT]-(a:Agent)
-      RETURN e, collect(DISTINCT c) AS conversations,
-             collect(DISTINCT m) AS memories, collect(DISTINCT a) AS agents
-      LIMIT 20
+         OR e.experiment_id = $query
+      OPTIONAL MATCH (r:Researcher)-[:CONDUCTED]->(e)
+      OPTIONAL MATCH (e)-[:FUNDED_BY]->(g:Grant)
+      OPTIONAL MATCH (e)-[:PRODUCED_DATASET]->(d:Dataset)
+      RETURN e, collect(DISTINCT r.name) AS researchers,
+             collect(DISTINCT g.title) AS grants,
+             collect(DISTINCT d.name) AS datasets_produced
     parameters:
       - name: query
         type: string
-        description: Entity name or type to search for
+        description: Experiment name or ID to look up
 
-  - name: list_agents
-    description: "List agent records with optional limit"
+  - name: list_researchers
+    description: "List researcher records with optional limit"
     cypher: |
-      MATCH (n:Agent)
+      MATCH (n:Researcher)
       RETURN n
       ORDER BY n.name
       LIMIT toInteger($limit)
@@ -437,48 +472,52 @@ agent_tools:
         type: string
         description: "Maximum number of results to return (default: 10)"
 
-  - name: get_agent_by_id
-    description: "Get a specific agent by ID with all connections"
+  - name: get_researcher_by_id
+    description: "Get a specific researcher by ID with all connections"
     cypher: |
-      MATCH (n:Agent {agent_id: $id})
+      MATCH (n:Researcher {researcher_id: $id})
       OPTIONAL MATCH (n)-[r]-(related)
       RETURN n, type(r) AS relationship, labels(related) AS related_labels, related.name AS related_name
       LIMIT 50
     parameters:
       - name: id
         type: string
-        description: "The agent_id to look up"
+        description: "The researcher_id to look up"
 
 system_prompt: |
-  You are an AI assistant for agent memory and conversation intelligence. You have
-  access to a knowledge graph tracking AI agents, their conversations, extracted
-  entities, memories, tool usage, and session histories.
+  You are an AI research intelligence assistant with access to a comprehensive
+  knowledge graph of scientific publications, researchers, datasets, experiments,
+  and grants. You help researchers, lab managers, and research administrators
+  navigate the academic landscape, track research output, and manage
+  collaborative projects.
 
   Your capabilities include:
-  - Exploring agent memory stores and knowledge states
-  - Analyzing conversation patterns and entity extraction quality
-  - Reviewing tool usage statistics and performance
-  - Tracing reasoning chains across sessions
-  - Identifying knowledge gaps and memory consolidation opportunities
+  - Searching publications, researchers, and their citation networks
+  - Tracking experiment progress and results
+  - Analyzing grant funding and research output
+  - Discovering collaboration opportunities and expertise overlap
+  - Tracing dataset provenance and usage across studies
 
-  Always provide specific data from the knowledge graph. When analyzing agent behavior,
-  reference concrete conversations, memory entries, and tool invocations.
+  Always provide accurate, data-driven responses. When making recommendations,
+  cite specific publications, metrics, and research data from the knowledge graph.
 
 visualization:
   node_colors:
-    Agent: "#8b5cf6"
-    Conversation: "#0ea5e9"
-    Entity: "#f59e0b"
-    Memory: "#10b981"
-    ToolCall: "#ef4444"
-    Session: "#6366f1"
     Person: "#22c55e"
-    Organization: "#64748b"
+    Organization: "#3b82f6"
+    Researcher: "#1d4ed8"
+    Paper: "#be185d"
+    Dataset: "#0d9488"
+    Experiment: "#d97706"
+    Grant: "#16a34a"
+    Institution: "#6366f1"
   node_sizes:
-    Agent: 30
-    Conversation: 25
-    Entity: 20
-    Memory: 20
-    ToolCall: 15
-    Session: 25
-  default_cypher: "MATCH (a:Agent)-[r]-(n) RETURN a, r, n LIMIT 100"
+    Person: 20
+    Organization: 25
+    Researcher: 25
+    Paper: 20
+    Dataset: 20
+    Experiment: 20
+    Grant: 25
+    Institution: 30
+  default_cypher: "MATCH (r:Researcher)-[:AUTHORED]->(p:Paper) RETURN r, p LIMIT 100"

@@ -1,411 +1,436 @@
 {
-  "domain": "agent-memory",
+  "domain": "scientific-research",
   "entities": {
     "Person": [
       {
         "name": "Sarah Chen",
         "email": "sarah.chen@corp.net",
         "role": "Senior Analyst",
-        "description": "Sarah Chen, senior analyst specializing in agent memory."
+        "description": "Sarah Chen, senior analyst specializing in scientific research."
       },
       {
         "name": "James Morrison",
-        "email": "james.morrison@company.org",
+        "email": "james.morrison@corp.net",
         "role": "Project Manager",
-        "description": "Project Manager James Morrison \u2014 active in the agent memory sector with relevant domain expertise."
+        "description": "Project Manager James Morrison \u2014 active in the scientific research sector with relevant domain expertise."
       },
       {
         "name": "Maria Rodriguez",
         "email": "maria.rodriguez@company.org",
         "role": "Technical Lead",
-        "description": "Maria Rodriguez serves as technical lead, contributing to agent memory initiatives and operations."
+        "description": "Maria Rodriguez serves as technical lead, contributing to scientific research initiatives and operations."
       },
       {
         "name": "David Park",
-        "email": "david.park@corp.net",
+        "email": "david.park@acme.co",
         "role": "Research Director",
-        "description": "David Park, research director specializing in agent memory."
+        "description": "David Park, research director specializing in scientific research."
       },
       {
         "name": "Elena Volkov",
         "email": "elena.volkov@corp.net",
         "role": "Operations Manager",
-        "description": "Operations Manager Elena Volkov \u2014 active in the agent memory sector with relevant domain expertise."
+        "description": "Operations Manager Elena Volkov \u2014 active in the scientific research sector with relevant domain expertise."
       }
     ],
     "Organization": [
       {
         "name": "Meridian Consulting Group",
-        "description": "Meridian Consulting Group is a ai systems organization operating in the agent memory space.",
-        "industry": "AI Systems"
+        "description": "Meridian Consulting Group is a biotechnology organization operating in the scientific research space.",
+        "industry": "Biotechnology"
       },
       {
         "name": "Pacific Northwest Industries",
-        "description": "Memory Architecture entity Pacific Northwest Industries, providing services and resources for agent memory operations.",
-        "industry": "Memory Architecture"
+        "description": "Pharmaceutical Research entity Pacific Northwest Industries, providing services and resources for scientific research operations.",
+        "industry": "Pharmaceutical Research"
       },
       {
         "name": "Apex Financial Partners",
-        "description": "Apex Financial Partners \u2014 a agent infrastructure institution active in agent memory.",
-        "industry": "Agent Infrastructure"
+        "description": "Apex Financial Partners \u2014 a academic research institution active in scientific research.",
+        "industry": "Academic Research"
       },
       {
         "name": "Greenleaf Technologies",
-        "description": "Greenleaf Technologies is a cognitive computing organization operating in the agent memory space.",
-        "industry": "Cognitive Computing"
+        "description": "Greenleaf Technologies is a laboratory services organization operating in the scientific research space.",
+        "industry": "Laboratory Services"
       },
       {
         "name": "Summit Healthcare Systems",
-        "description": "AI Research entity Summit Healthcare Systems, providing services and resources for agent memory operations.",
-        "industry": "AI Research"
+        "description": "Scientific Publishing entity Summit Healthcare Systems, providing services and resources for scientific research operations.",
+        "industry": "Scientific Publishing"
       }
     ],
     "Location": [
       {
         "name": "Downtown Medical Center",
-        "address": "123 Main Street, Portland, OR 97201",
-        "latitude": 30.17,
-        "longitude": -88.83
+        "address": "789 Pine Boulevard, Seattle, WA 98101",
+        "latitude": 29.66,
+        "longitude": -120.52
       },
       {
         "name": "Westside Corporate Campus",
-        "address": "123 Main Street, Portland, OR 97201",
-        "latitude": 25.58,
-        "longitude": -114.92
+        "address": "258 Willow Way, Miami, FL 33101",
+        "latitude": 27.57,
+        "longitude": -77.4
       },
       {
         "name": "Harbor View Complex",
-        "address": "147 Birch Road, Atlanta, GA 30301",
-        "latitude": 41.14,
-        "longitude": -75.68
+        "address": "789 Pine Boulevard, Denver, CO 80202",
+        "latitude": 42.89,
+        "longitude": -82.14
       },
       {
         "name": "Mountain Ridge Facility",
-        "address": "369 Spruce Circle, Boston, MA 02101",
-        "latitude": 26.35,
-        "longitude": -95.62
+        "address": "741 Chestnut Terrace, Atlanta, GA 30301",
+        "latitude": 46.37,
+        "longitude": -107.12
       },
       {
         "name": "Riverside Research Park",
-        "address": "654 Cedar Lane, Chicago, IL 60601",
-        "latitude": 41.4,
-        "longitude": -106.63
+        "address": "258 Willow Way, San Francisco, CA 94105",
+        "latitude": 34.58,
+        "longitude": -93.94
       }
     ],
     "Event": [
       {
         "name": "Q4 Strategy Review",
-        "date": "2026-03-11T08:30:00",
-        "description": "Q4 Strategy Review, a event event recorded in the agent memory timeline."
+        "date": "2025-03-03T16:30:00",
+        "description": "Q4 Strategy Review, a event event recorded in the scientific research timeline."
       },
       {
         "name": "Annual Compliance Audit",
-        "date": "2026-05-31T16:30:00",
-        "description": "Event Annual Compliance Audit \u2014 occurred as part of agent memory activities."
+        "date": "2026-08-24T13:45:00",
+        "description": "Event Annual Compliance Audit \u2014 occurred as part of scientific research activities."
       },
       {
         "name": "Emergency Response Drill",
-        "date": "2025-09-20T16:45:00",
-        "description": "Recorded event: Emergency Response Drill, relevant to agent memory workflows."
+        "date": "2026-06-30T11:30:00",
+        "description": "Recorded event: Emergency Response Drill, relevant to scientific research workflows."
       },
       {
         "name": "Product Launch Summit",
-        "date": "2024-11-07T09:00:00",
-        "description": "Product Launch Summit, a event event recorded in the agent memory timeline."
+        "date": "2024-10-08T10:45:00",
+        "description": "Product Launch Summit, a event event recorded in the scientific research timeline."
       },
       {
         "name": "Board of Directors Meeting",
-        "date": "2026-05-10T10:00:00",
-        "description": "Event Board of Directors Meeting \u2014 occurred as part of agent memory activities."
+        "date": "2026-12-07T12:45:00",
+        "description": "Event Board of Directors Meeting \u2014 occurred as part of scientific research activities."
       }
     ],
     "Object": [
       {
         "name": "Primary Analysis Report",
-        "description": "Primary Analysis Report, a object used in agent memory workflows."
+        "description": "Primary Analysis Report, a object used in scientific research workflows."
       },
       {
         "name": "Standard Operating Procedure",
-        "description": "Object Standard Operating Procedure \u2014 cataloged for agent memory operations."
+        "description": "Object Standard Operating Procedure \u2014 cataloged for scientific research operations."
       },
       {
         "name": "Quarterly Assessment Document",
-        "description": "Quarterly Assessment Document is a object supporting agent memory processes."
+        "description": "Quarterly Assessment Document is a object supporting scientific research processes."
       },
       {
         "name": "Technical Specification",
-        "description": "Technical Specification, a object used in agent memory workflows."
+        "description": "Technical Specification, a object used in scientific research workflows."
       },
       {
         "name": "Compliance Certificate",
-        "description": "Object Compliance Certificate \u2014 cataloged for agent memory operations."
+        "description": "Object Compliance Certificate \u2014 cataloged for scientific research operations."
       }
     ],
-    "Agent": [
+    "Researcher": [
       {
-        "name": "Jennifer Walsh, Realtor",
-        "agent_id": "AGE-2025-0000",
-        "model": "Jennifer Walsh, Realtor - Model",
-        "version": "Jennifer Walsh, Realtor - Version",
-        "capabilities": "Jennifer Walsh, Realtor - Capabilities",
-        "status": "active"
+        "name": "Dr. Sarah Chen (Genomics)",
+        "researcher_id": "RES-2026-0000",
+        "orcid": "Dr. Sarah Chen (Genomics) - Orcid",
+        "title": "professor",
+        "h_index": 8830,
+        "specialization": "Cardiology",
+        "email": "dr..(genomics)@acme.co"
       },
       {
-        "name": "Marcus Thompson, Broker",
-        "agent_id": "AGE-2026-0001",
-        "model": "Marcus Thompson, Broker - Model",
-        "version": "Marcus Thompson, Broker - Version",
-        "capabilities": "Marcus Thompson, Broker - Capabilities",
-        "status": "idle"
+        "name": "Prof. James Okafor (Physics)",
+        "researcher_id": "RES-2026-0001",
+        "orcid": "Prof. James Okafor (Physics) - Orcid",
+        "title": "associate_professor",
+        "h_index": 473,
+        "specialization": "Oncology",
+        "email": "prof..(physics)@example.com"
       },
       {
-        "name": "Sandra Liu, CCIM",
-        "agent_id": "AGE-2026-0002",
-        "model": "Sandra Liu, CCIM - Model",
-        "version": "Sandra Liu, CCIM - Version",
-        "capabilities": "Sandra Liu, CCIM - Capabilities",
-        "status": "suspended"
+        "name": "Dr. Elena Volkov (Neuroscience)",
+        "researcher_id": "RES-2025-0002",
+        "orcid": "Dr. Elena Volkov (Neuroscience) - Orcid",
+        "title": "assistant_professor",
+        "h_index": 1655,
+        "specialization": "Neurology",
+        "email": "dr..(neuroscience)@acme.co"
       },
       {
-        "name": "David Brennan, CRS",
-        "agent_id": "AGE-2026-0003",
-        "model": "David Brennan, CRS - Model",
-        "version": "David Brennan, CRS - Version",
-        "capabilities": "David Brennan, CRS - Capabilities",
-        "status": "retired"
+        "name": "Prof. Raj Patel (Materials Science)",
+        "researcher_id": "RES-2024-0003",
+        "orcid": "Prof. Raj Patel (Materials Science) - Orcid",
+        "title": "postdoc",
+        "h_index": 4563,
+        "specialization": "Orthopedics",
+        "email": "prof..science)@acme.co"
       },
       {
-        "name": "Amy Richardson, ABR",
-        "agent_id": "AGE-2025-0004",
-        "model": "Amy Richardson, ABR - Model",
-        "version": "Amy Richardson, ABR - Version",
-        "capabilities": "Amy Richardson, ABR - Capabilities",
-        "status": "active"
+        "name": "Dr. Maria Santos (Epidemiology)",
+        "researcher_id": "RES-2024-0004",
+        "orcid": "Dr. Maria Santos (Epidemiology) - Orcid",
+        "title": "phd_student",
+        "h_index": 4986,
+        "specialization": "Pediatrics",
+        "email": "dr..(epidemiology)@corp.net"
       }
     ],
-    "Conversation": [
+    "Paper": [
       {
-        "name": "Customer Onboarding Chat",
-        "conversation_id": "CON-2025-0000",
-        "topic": "Customer Onboarding Chat - Topic",
-        "started_at": "2026-08-11T10:45:00",
-        "ended_at": "2025-07-06T16:45:00",
-        "message_count": 29,
+        "name": "Graph Neural Networks for Drug Discovery",
+        "doi": "Graph Neural Networks for Drug Discovery - Doi",
+        "title": "Senior Analyst",
+        "abstract": "Graph Neural Networks for Drug Discovery - Abstract",
+        "journal": "Graph Neural Networks for Drug Discovery - Journal",
+        "publication_date": "2024-05-31",
+        "citation_count": 82,
+        "paper_type": "journal_article"
+      },
+      {
+        "name": "Quantum Error Correction at Scale",
+        "doi": "Quantum Error Correction at Scale - Doi",
+        "title": "Project Manager",
+        "abstract": "Quantum Error Correction at Scale - Abstract",
+        "journal": "Quantum Error Correction at Scale - Journal",
+        "publication_date": "2025-09-14",
+        "citation_count": 44,
+        "paper_type": "conference_paper"
+      },
+      {
+        "name": "mRNA Vaccine Stability Optimization",
+        "doi": "mRNA Vaccine Stability Optimization - Doi",
+        "title": "Technical Lead",
+        "abstract": "mRNA Vaccine Stability Optimization - Abstract",
+        "journal": "mRNA Vaccine Stability Optimization - Journal",
+        "publication_date": "2024-12-14",
+        "citation_count": 26,
+        "paper_type": "preprint"
+      },
+      {
+        "name": "Dark Matter Detection via Gravitational Lensing",
+        "doi": "Dark Matter Detection via Gravitational Lensing - Doi",
+        "title": "Research Director",
+        "abstract": "Dark Matter Detection via Gravitational Lensing - Abstract",
+        "journal": "Dark Matter Detection via Gravitational Lensing - Journal",
+        "publication_date": "2026-07-21",
+        "citation_count": 53,
+        "paper_type": "review"
+      },
+      {
+        "name": "CRISPR Off-Target Effects Meta-Analysis",
+        "doi": "CRISPR Off-Target Effects Meta-Analysis - Doi",
+        "title": "Operations Manager",
+        "abstract": "CRISPR Off-Target Effects Meta-Analysis - Abstract",
+        "journal": "CRISPR Off-Target Effects Meta-Analysis - Journal",
+        "publication_date": "2024-04-25",
+        "citation_count": 17,
+        "paper_type": "meta_analysis"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Municipal Spending 2020-2025",
+        "dataset_id": "DS-2026-0000",
+        "description": "Municipal Spending 2020-2025, a dataset relevant to scientific research operations.",
+        "format": "csv",
+        "size_gb": 520.81,
+        "license": "cc_by",
+        "access_url": "Municipal Spending 2020-2025 - Access Url"
+      },
+      {
+        "name": "Campaign Finance Records",
+        "dataset_id": "DS-2024-0001",
+        "description": "Dataset Campaign Finance Records \u2014 part of the scientific research knowledge graph.",
+        "format": "json",
+        "size_gb": 103.9,
+        "license": "cc_by_sa",
+        "access_url": "Campaign Finance Records - Access Url"
+      },
+      {
+        "name": "Public School Performance Metrics",
+        "dataset_id": "DS-2026-0002",
+        "description": "Public School Performance Metrics is a dataset tracked within the scientific research domain.",
+        "format": "hdf5",
+        "size_gb": 992.19,
+        "license": "cc0",
+        "access_url": "Public School Performance Metrics - Access Url"
+      },
+      {
+        "name": "Air Quality Index by County",
+        "dataset_id": "DS-2024-0003",
+        "description": "Air Quality Index by County, a dataset relevant to scientific research operations.",
+        "format": "netcdf",
+        "size_gb": 697.96,
+        "license": "mit",
+        "access_url": "Air Quality Index by County - Access Url"
+      },
+      {
+        "name": "Hospital Readmission Rates",
+        "dataset_id": "DS-2025-0004",
+        "description": "Dataset Hospital Readmission Rates \u2014 part of the scientific research knowledge graph.",
+        "format": "parquet",
+        "size_gb": 275.01,
+        "license": "gpl",
+        "access_url": "Hospital Readmission Rates - Access Url"
+      }
+    ],
+    "Experiment": [
+      {
+        "name": "Fine-tuning Run FT-042",
+        "experiment_id": "EXP-2026-0000",
+        "methodology": "Fine-tuning Run FT-042 - Methodology",
+        "start_date": "2024-06-06",
+        "end_date": "2025-09-27",
+        "status": "planned",
+        "result_summary": "Fine-tuning Run FT-042 - Result Summary"
+      },
+      {
+        "name": "RAG Pipeline Comparison",
+        "experiment_id": "EXP-2025-0001",
+        "methodology": "RAG Pipeline Comparison - Methodology",
+        "start_date": "2024-12-15",
+        "end_date": "2024-01-08",
+        "status": "in_progress",
+        "result_summary": "RAG Pipeline Comparison - Result Summary"
+      },
+      {
+        "name": "Prompt Engineering A/B Test",
+        "experiment_id": "EXP-2025-0002",
+        "methodology": "Prompt Engineering A/B Test - Methodology",
+        "start_date": "2025-01-15",
+        "end_date": "2026-06-27",
+        "status": "completed",
+        "result_summary": "Prompt Engineering A/B Test - Result Summary"
+      },
+      {
+        "name": "Temperature Sweep Study",
+        "experiment_id": "EXP-2025-0003",
+        "methodology": "Temperature Sweep Study - Methodology",
+        "start_date": "2025-01-02",
+        "end_date": "2025-04-14",
+        "status": "failed",
+        "result_summary": "Temperature Sweep Study - Result Summary"
+      },
+      {
+        "name": "Context Window Scaling",
+        "experiment_id": "EXP-2026-0004",
+        "methodology": "Context Window Scaling - Methodology",
+        "start_date": "2025-10-17",
+        "end_date": "2025-10-13",
+        "status": "abandoned",
+        "result_summary": "Context Window Scaling - Result Summary"
+      }
+    ],
+    "Grant": [
+      {
+        "name": "NIH R01 Grant #GM-123456",
+        "grant_id": "GRA-2026-0000",
+        "title": "Senior Analyst",
+        "funding_agency": "NIH R01 Grant #GM-123456 - Funding Agency",
+        "amount": 364286.97,
+        "currency": "USD",
+        "start_date": "2026-02-28",
+        "end_date": "2024-01-01",
+        "status": "submitted"
+      },
+      {
+        "name": "NSF CAREER Award #2025-789",
+        "grant_id": "GRA-2024-0001",
+        "title": "Project Manager",
+        "funding_agency": "NSF CAREER Award #2025-789 - Funding Agency",
+        "amount": 51155.51,
+        "currency": "EUR",
+        "start_date": "2024-02-06",
+        "end_date": "2026-10-27",
+        "status": "under_review"
+      },
+      {
+        "name": "ERC Starting Grant #101034",
+        "grant_id": "GRA-2025-0002",
+        "title": "Technical Lead",
+        "funding_agency": "ERC Starting Grant #101034 - Funding Agency",
+        "amount": 22136.73,
+        "currency": "GBP",
+        "start_date": "2025-04-14",
+        "end_date": "2026-03-24",
+        "status": "awarded"
+      },
+      {
+        "name": "DARPA Contract #HR0011-25",
+        "grant_id": "GRA-2024-0003",
+        "title": "Research Director",
+        "funding_agency": "DARPA Contract #HR0011-25 - Funding Agency",
+        "amount": 194227.78,
+        "currency": "JPY",
+        "start_date": "2024-02-11",
+        "end_date": "2024-04-22",
         "status": "active"
       },
       {
-        "name": "Technical Support Session",
-        "conversation_id": "CON-2026-0001",
-        "topic": "Technical Support Session - Topic",
-        "started_at": "2026-05-13T13:45:00",
-        "ended_at": "2024-08-29T15:30:00",
-        "message_count": 17,
+        "name": "DOE ARPA-E Award #DE-0042",
+        "grant_id": "GRA-2026-0004",
+        "title": "Operations Manager",
+        "funding_agency": "DOE ARPA-E Award #DE-0042 - Funding Agency",
+        "amount": 240353.7,
+        "currency": "CAD",
+        "start_date": "2026-06-24",
+        "end_date": "2025-09-17",
         "status": "completed"
-      },
-      {
-        "name": "Product Discovery Thread",
-        "conversation_id": "CON-2025-0002",
-        "topic": "Product Discovery Thread - Topic",
-        "started_at": "2025-06-13T13:15:00",
-        "ended_at": "2024-04-17T08:45:00",
-        "message_count": 40,
-        "status": "abandoned"
-      },
-      {
-        "name": "Bug Report Discussion",
-        "conversation_id": "CON-2025-0003",
-        "topic": "Bug Report Discussion - Topic",
-        "started_at": "2024-06-07T12:15:00",
-        "ended_at": "2025-11-25T16:45:00",
-        "message_count": 40,
-        "status": "escalated"
-      },
-      {
-        "name": "Weekly Standup Recap",
-        "conversation_id": "CON-2024-0004",
-        "topic": "Weekly Standup Recap - Topic",
-        "started_at": "2024-10-19T11:45:00",
-        "ended_at": "2024-08-11T11:45:00",
-        "message_count": 53,
-        "status": "active"
       }
     ],
-    "Entity": [
+    "Institution": [
       {
-        "name": "Acme Corporation",
-        "entity_id": "ENT-2024-0000",
-        "entity_type": "person",
-        "confidence": 0.62,
-        "source_text": "Acme Corporation - Source Text"
+        "name": "MIT Lincoln Laboratory",
+        "institution_id": "INS-2025-0000",
+        "institution_type": "university",
+        "country": "United States",
+        "ranking": 395,
+        "department": "MIT Lincoln Laboratory - Department"
       },
       {
-        "name": "Project Phoenix",
-        "entity_id": "ENT-2024-0001",
-        "entity_type": "place",
-        "confidence": 0.95,
-        "source_text": "Project Phoenix - Source Text"
+        "name": "Stanford Bio-X Institute",
+        "institution_id": "INS-2026-0001",
+        "institution_type": "research_institute",
+        "country": "United Kingdom",
+        "ranking": 7451,
+        "department": "Stanford Bio-X Institute - Department"
       },
       {
-        "name": "Q1 Revenue Target",
-        "entity_id": "ENT-2026-0002",
-        "entity_type": "concept",
-        "confidence": 0.77,
-        "source_text": "Q1 Revenue Target - Source Text"
+        "name": "CERN European Particle Physics",
+        "institution_id": "INS-2025-0002",
+        "institution_type": "national_lab",
+        "country": "Canada",
+        "ranking": 1329,
+        "department": "CERN European Particle Physics - Department"
       },
       {
-        "name": "Customer Segment Alpha",
-        "entity_id": "ENT-2026-0003",
-        "entity_type": "event",
-        "confidence": 0.8,
-        "source_text": "Customer Segment Alpha - Source Text"
+        "name": "Max Planck Institute",
+        "institution_id": "INS-2025-0003",
+        "institution_type": "hospital",
+        "country": "Germany",
+        "ranking": 2584,
+        "department": "Max Planck Institute - Department"
       },
       {
-        "name": "Production Database",
-        "entity_id": "ENT-2024-0004",
-        "entity_type": "product",
-        "confidence": 0.6,
-        "source_text": "Production Database - Source Text"
-      }
-    ],
-    "Memory": [
-      {
-        "name": "User Preference: Dark Mode",
-        "memory_id": "MEM-2026-0000",
-        "content": "User Preference: Dark Mode - Content",
-        "memory_type": "episodic",
-        "importance": 189.02,
-        "created_at": "2026-12-08T13:45:00",
-        "last_accessed": "2026-02-03T16:30:00"
-      },
-      {
-        "name": "Context: Previous Order History",
-        "memory_id": "MEM-2026-0001",
-        "content": "Context: Previous Order History - Content",
-        "memory_type": "semantic",
-        "importance": 948.84,
-        "created_at": "2025-02-26T10:30:00",
-        "last_accessed": "2026-09-13T15:30:00"
-      },
-      {
-        "name": "Learned: Communication Style",
-        "memory_id": "MEM-2025-0002",
-        "content": "Learned: Communication Style - Content",
-        "memory_type": "procedural",
-        "importance": 993.34,
-        "created_at": "2025-01-24T12:00:00",
-        "last_accessed": "2026-12-07T11:45:00"
-      },
-      {
-        "name": "Fact: Team Size is 12",
-        "memory_id": "MEM-2025-0003",
-        "content": "Fact: Team Size is 12 - Content",
-        "memory_type": "working",
-        "importance": 541.96,
-        "created_at": "2024-02-18T09:15:00",
-        "last_accessed": "2025-04-02T14:45:00"
-      },
-      {
-        "name": "User Goal: Reduce Response Time",
-        "memory_id": "MEM-2025-0004",
-        "content": "User Goal: Reduce Response Time - Content",
-        "memory_type": "episodic",
-        "importance": 407.8,
-        "created_at": "2026-01-19T14:30:00",
-        "last_accessed": "2026-12-03T14:00:00"
-      }
-    ],
-    "ToolCall": [
-      {
-        "name": "search_knowledge_base(auth)",
-        "call_id": "TOO-2025-0000",
-        "tool_name": "search_knowledge_base(auth)",
-        "input_params": "search_knowledge_base(auth) - Input Params",
-        "output_summary": "search_knowledge_base(auth) - Output Summary",
-        "duration_ms": 9382,
-        "status": "success",
-        "called_at": "2026-05-05T10:15:00"
-      },
-      {
-        "name": "create_ticket(high priority)",
-        "call_id": "TOO-2024-0001",
-        "tool_name": "create_ticket(high priority)",
-        "input_params": "create_ticket(high priority) - Input Params",
-        "output_summary": "create_ticket(high priority) - Output Summary",
-        "duration_ms": 7465,
-        "status": "failure",
-        "called_at": "2024-08-05T09:15:00"
-      },
-      {
-        "name": "fetch_metrics(api service)",
-        "call_id": "TOO-2026-0002",
-        "tool_name": "fetch_metrics(api service)",
-        "input_params": "fetch_metrics(api service) - Input Params",
-        "output_summary": "fetch_metrics(api service) - Output Summary",
-        "duration_ms": 302,
-        "status": "timeout",
-        "called_at": "2024-11-12T14:00:00"
-      },
-      {
-        "name": "run_query(MATCH nodes)",
-        "call_id": "TOO-2024-0003",
-        "tool_name": "run_query(MATCH nodes)",
-        "input_params": "run_query(MATCH nodes) - Input Params",
-        "output_summary": "run_query(MATCH nodes) - Output Summary",
-        "duration_ms": 3607,
-        "status": "cancelled",
-        "called_at": "2026-04-18T09:45:00"
-      },
-      {
-        "name": "send_notification(ops channel)",
-        "call_id": "TOO-2024-0004",
-        "tool_name": "send_notification(ops channel)",
-        "input_params": "send_notification(ops channel) - Input Params",
-        "output_summary": "send_notification(ops channel) - Output Summary",
-        "duration_ms": 2436,
-        "status": "success",
-        "called_at": "2025-07-21T17:00:00"
-      }
-    ],
-    "Session": [
-      {
-        "name": "Morning Briefing 2025-01-15",
-        "session_id": "SES-2025-0000",
-        "started_at": "2026-12-22T09:00:00",
-        "ended_at": "2026-05-28T13:45:00",
-        "goal": "Morning Briefing 2025-01-15 - Goal",
-        "outcome": "achieved"
-      },
-      {
-        "name": "API Debug Session",
-        "session_id": "SES-2024-0001",
-        "started_at": "2024-11-27T14:15:00",
-        "ended_at": "2024-01-12T15:15:00",
-        "goal": "API Debug Session - Goal",
-        "outcome": "partial"
-      },
-      {
-        "name": "Data Migration Planning",
-        "session_id": "SES-2026-0002",
-        "started_at": "2025-11-26T15:15:00",
-        "ended_at": "2026-03-03T15:15:00",
-        "goal": "Data Migration Planning - Goal",
-        "outcome": "failed"
-      },
-      {
-        "name": "Customer Demo Walkthrough",
-        "session_id": "SES-2025-0003",
-        "started_at": "2024-07-21T15:45:00",
-        "ended_at": "2025-09-28T13:45:00",
-        "goal": "Customer Demo Walkthrough - Goal",
-        "outcome": "ongoing"
-      },
-      {
-        "name": "Incident Triage #847",
-        "session_id": "SES-2024-0004",
-        "started_at": "2026-02-28T08:30:00",
-        "ended_at": "2025-12-20T17:45:00",
-        "goal": "Incident Triage #847 - Goal",
-        "outcome": "achieved"
+        "name": "Oxford Nanopore Research",
+        "institution_id": "INS-2025-0004",
+        "institution_type": "industry_lab",
+        "country": "France",
+        "ranking": 2815,
+        "department": "Oxford Nanopore Research - Department"
       }
     ]
   },
@@ -415,28 +440,28 @@
       "source_label": "Person",
       "source_name": "Sarah Chen",
       "target_label": "Organization",
-      "target_name": "Summit Healthcare Systems"
+      "target_name": "Greenleaf Technologies"
     },
     {
       "type": "WORKS_FOR",
       "source_label": "Person",
       "source_name": "Sarah Chen",
       "target_label": "Organization",
-      "target_name": "Meridian Consulting Group"
+      "target_name": "Apex Financial Partners"
     },
     {
       "type": "WORKS_FOR",
       "source_label": "Person",
       "source_name": "James Morrison",
       "target_label": "Organization",
-      "target_name": "Apex Financial Partners"
+      "target_name": "Pacific Northwest Industries"
     },
     {
       "type": "WORKS_FOR",
       "source_label": "Person",
       "source_name": "Maria Rodriguez",
       "target_label": "Organization",
-      "target_name": "Pacific Northwest Industries"
+      "target_name": "Summit Healthcare Systems"
     },
     {
       "type": "WORKS_FOR",
@@ -450,6 +475,13 @@
       "source_label": "Person",
       "source_name": "David Park",
       "target_label": "Organization",
+      "target_name": "Pacific Northwest Industries"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "David Park",
+      "target_label": "Organization",
       "target_name": "Greenleaf Technologies"
     },
     {
@@ -457,866 +489,891 @@
       "source_label": "Person",
       "source_name": "Elena Volkov",
       "target_label": "Organization",
-      "target_name": "Apex Financial Partners"
+      "target_name": "Meridian Consulting Group"
     },
     {
       "type": "LOCATED_AT",
       "source_label": "Organization",
       "source_name": "Meridian Consulting Group",
+      "target_label": "Location",
+      "target_name": "Riverside Research Park"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Pacific Northwest Industries",
       "target_label": "Location",
       "target_name": "Harbor View Complex"
     },
     {
       "type": "LOCATED_AT",
       "source_label": "Organization",
-      "source_name": "Meridian Consulting Group",
+      "source_name": "Pacific Northwest Industries",
+      "target_label": "Location",
+      "target_name": "Mountain Ridge Facility"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Apex Financial Partners",
+      "target_label": "Location",
+      "target_name": "Harbor View Complex"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Greenleaf Technologies",
+      "target_label": "Location",
+      "target_name": "Riverside Research Park"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Greenleaf Technologies",
       "target_label": "Location",
       "target_name": "Downtown Medical Center"
     },
     {
       "type": "LOCATED_AT",
       "source_label": "Organization",
-      "source_name": "Pacific Northwest Industries",
+      "source_name": "Summit Healthcare Systems",
       "target_label": "Location",
-      "target_name": "Mountain Ridge Facility"
-    },
-    {
-      "type": "LOCATED_AT",
-      "source_label": "Organization",
-      "source_name": "Pacific Northwest Industries",
-      "target_label": "Location",
-      "target_name": "Westside Corporate Campus"
-    },
-    {
-      "type": "LOCATED_AT",
-      "source_label": "Organization",
-      "source_name": "Apex Financial Partners",
-      "target_label": "Location",
-      "target_name": "Riverside Research Park"
-    },
-    {
-      "type": "LOCATED_AT",
-      "source_label": "Organization",
-      "source_name": "Apex Financial Partners",
-      "target_label": "Location",
-      "target_name": "Westside Corporate Campus"
-    },
-    {
-      "type": "LOCATED_AT",
-      "source_label": "Organization",
-      "source_name": "Greenleaf Technologies",
-      "target_label": "Location",
-      "target_name": "Riverside Research Park"
-    },
-    {
-      "type": "LOCATED_AT",
-      "source_label": "Organization",
-      "source_name": "Greenleaf Technologies",
-      "target_label": "Location",
-      "target_name": "Westside Corporate Campus"
+      "target_name": "Harbor View Complex"
     },
     {
       "type": "LOCATED_AT",
       "source_label": "Organization",
       "source_name": "Summit Healthcare Systems",
       "target_label": "Location",
-      "target_name": "Riverside Research Park"
-    },
-    {
-      "type": "LOCATED_AT",
-      "source_label": "Organization",
-      "source_name": "Summit Healthcare Systems",
-      "target_label": "Location",
-      "target_name": "Mountain Ridge Facility"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "Jennifer Walsh, Realtor",
-      "target_label": "Memory",
-      "target_name": "User Preference: Dark Mode"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "Memory",
-      "target_name": "Learned: Communication Style"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "Sandra Liu, CCIM",
-      "target_label": "Memory",
-      "target_name": "User Goal: Reduce Response Time"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "Sandra Liu, CCIM",
-      "target_label": "Memory",
-      "target_name": "Learned: Communication Style"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "Memory",
-      "target_name": "Learned: Communication Style"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "Memory",
-      "target_name": "User Goal: Reduce Response Time"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "Memory",
-      "target_name": "Fact: Team Size is 12"
-    },
-    {
-      "type": "REMEMBERED",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "Memory",
-      "target_name": "User Preference: Dark Mode"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Customer Onboarding Chat",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Technical Support Session",
-      "target_label": "Entity",
-      "target_name": "Acme Corporation"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Technical Support Session",
-      "target_label": "Entity",
-      "target_name": "Customer Segment Alpha"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Product Discovery Thread",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Product Discovery Thread",
-      "target_label": "Entity",
-      "target_name": "Customer Segment Alpha"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Bug Report Discussion",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Weekly Standup Recap",
-      "target_label": "Entity",
-      "target_name": "Customer Segment Alpha"
-    },
-    {
-      "type": "EXTRACTED",
-      "source_label": "Conversation",
-      "source_name": "Weekly Standup Recap",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Jennifer Walsh, Realtor",
-      "target_label": "Entity",
-      "target_name": "Production Database"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Jennifer Walsh, Realtor",
-      "target_label": "Entity",
-      "target_name": "Acme Corporation"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "Entity",
-      "target_name": "Customer Segment Alpha"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "Entity",
-      "target_name": "Q1 Revenue Target"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Sandra Liu, CCIM",
-      "target_label": "Entity",
-      "target_name": "Customer Segment Alpha"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "Entity",
-      "target_name": "Acme Corporation"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "Entity",
-      "target_name": "Q1 Revenue Target"
-    },
-    {
-      "type": "REASONED_ABOUT",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "Entity",
-      "target_name": "Production Database"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Jennifer Walsh, Realtor",
-      "target_label": "ToolCall",
-      "target_name": "fetch_metrics(api service)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Jennifer Walsh, Realtor",
-      "target_label": "ToolCall",
-      "target_name": "send_notification(ops channel)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "ToolCall",
-      "target_name": "run_query(MATCH nodes)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "ToolCall",
-      "target_name": "send_notification(ops channel)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Sandra Liu, CCIM",
-      "target_label": "ToolCall",
-      "target_name": "create_ticket(high priority)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "ToolCall",
-      "target_name": "run_query(MATCH nodes)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "ToolCall",
-      "target_name": "fetch_metrics(api service)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "ToolCall",
-      "target_name": "fetch_metrics(api service)"
-    },
-    {
-      "type": "INVOKED",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "ToolCall",
-      "target_name": "search_knowledge_base(auth)"
+      "target_name": "Westside Corporate Campus"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "Jennifer Walsh, Realtor",
-      "target_label": "Conversation",
-      "target_name": "Product Discovery Thread"
+      "source_label": "Person",
+      "source_name": "Sarah Chen",
+      "target_label": "Event",
+      "target_name": "Q4 Strategy Review"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "Conversation",
-      "target_name": "Technical Support Session"
+      "source_label": "Person",
+      "source_name": "Sarah Chen",
+      "target_label": "Event",
+      "target_name": "Product Launch Summit"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "Marcus Thompson, Broker",
-      "target_label": "Conversation",
-      "target_name": "Product Discovery Thread"
+      "source_label": "Person",
+      "source_name": "James Morrison",
+      "target_label": "Event",
+      "target_name": "Board of Directors Meeting"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "Sandra Liu, CCIM",
-      "target_label": "Conversation",
-      "target_name": "Bug Report Discussion"
+      "source_label": "Person",
+      "source_name": "James Morrison",
+      "target_label": "Event",
+      "target_name": "Annual Compliance Audit"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "Sandra Liu, CCIM",
-      "target_label": "Conversation",
-      "target_name": "Technical Support Session"
+      "source_label": "Person",
+      "source_name": "Maria Rodriguez",
+      "target_label": "Event",
+      "target_name": "Q4 Strategy Review"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "David Brennan, CRS",
-      "target_label": "Conversation",
-      "target_name": "Bug Report Discussion"
+      "source_label": "Person",
+      "source_name": "David Park",
+      "target_label": "Event",
+      "target_name": "Board of Directors Meeting"
     },
     {
       "type": "PARTICIPATED_IN",
-      "source_label": "Agent",
-      "source_name": "Amy Richardson, ABR",
-      "target_label": "Conversation",
-      "target_name": "Product Discovery Thread"
+      "source_label": "Person",
+      "source_name": "David Park",
+      "target_label": "Event",
+      "target_name": "Annual Compliance Audit"
     },
     {
-      "type": "REFERENCED",
-      "source_label": "Memory",
-      "source_name": "User Preference: Dark Mode",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Elena Volkov",
+      "target_label": "Event",
+      "target_name": "Board of Directors Meeting"
     },
     {
-      "type": "REFERENCED",
-      "source_label": "Memory",
-      "source_name": "Context: Previous Order History",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Sarah Chen (Genomics)",
+      "target_label": "Paper",
+      "target_name": "CRISPR Off-Target Effects Meta-Analysis"
     },
     {
-      "type": "REFERENCED",
-      "source_label": "Memory",
-      "source_name": "Context: Previous Order History",
-      "target_label": "Entity",
-      "target_name": "Production Database"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Prof. James Okafor (Physics)",
+      "target_label": "Paper",
+      "target_name": "Dark Matter Detection via Gravitational Lensing"
     },
     {
-      "type": "REFERENCED",
-      "source_label": "Memory",
-      "source_name": "Learned: Communication Style",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Elena Volkov (Neuroscience)",
+      "target_label": "Paper",
+      "target_name": "Quantum Error Correction at Scale"
     },
     {
-      "type": "REFERENCED",
-      "source_label": "Memory",
-      "source_name": "Fact: Team Size is 12",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Elena Volkov (Neuroscience)",
+      "target_label": "Paper",
+      "target_name": "Graph Neural Networks for Drug Discovery"
     },
     {
-      "type": "REFERENCED",
-      "source_label": "Memory",
-      "source_name": "User Goal: Reduce Response Time",
-      "target_label": "Entity",
-      "target_name": "Project Phoenix"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Prof. Raj Patel (Materials Science)",
+      "target_label": "Paper",
+      "target_name": "CRISPR Off-Target Effects Meta-Analysis"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Customer Onboarding Chat",
-      "target_label": "Session",
-      "target_name": "Morning Briefing 2025-01-15"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Maria Santos (Epidemiology)",
+      "target_label": "Paper",
+      "target_name": "Graph Neural Networks for Drug Discovery"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Customer Onboarding Chat",
-      "target_label": "Session",
-      "target_name": "API Debug Session"
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Maria Santos (Epidemiology)",
+      "target_label": "Paper",
+      "target_name": "mRNA Vaccine Stability Optimization"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Technical Support Session",
-      "target_label": "Session",
-      "target_name": "Incident Triage #847"
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Graph Neural Networks for Drug Discovery",
+      "target_label": "Paper",
+      "target_name": "CRISPR Off-Target Effects Meta-Analysis"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Technical Support Session",
-      "target_label": "Session",
-      "target_name": "Customer Demo Walkthrough"
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Quantum Error Correction at Scale",
+      "target_label": "Paper",
+      "target_name": "mRNA Vaccine Stability Optimization"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Product Discovery Thread",
-      "target_label": "Session",
-      "target_name": "Morning Briefing 2025-01-15"
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "mRNA Vaccine Stability Optimization",
+      "target_label": "Paper",
+      "target_name": "Dark Matter Detection via Gravitational Lensing"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Bug Report Discussion",
-      "target_label": "Session",
-      "target_name": "API Debug Session"
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Dark Matter Detection via Gravitational Lensing",
+      "target_label": "Paper",
+      "target_name": "Graph Neural Networks for Drug Discovery"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Bug Report Discussion",
-      "target_label": "Session",
-      "target_name": "Customer Demo Walkthrough"
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Dark Matter Detection via Gravitational Lensing",
+      "target_label": "Paper",
+      "target_name": "mRNA Vaccine Stability Optimization"
     },
     {
-      "type": "PART_OF_SESSION",
-      "source_label": "Conversation",
-      "source_name": "Weekly Standup Recap",
-      "target_label": "Session",
-      "target_name": "Morning Briefing 2025-01-15"
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "CRISPR Off-Target Effects Meta-Analysis",
+      "target_label": "Paper",
+      "target_name": "Quantum Error Correction at Scale"
     },
     {
-      "type": "TRIGGERED_BY",
-      "source_label": "ToolCall",
-      "source_name": "search_knowledge_base(auth)",
-      "target_label": "Conversation",
-      "target_name": "Customer Onboarding Chat"
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Fine-tuning Run FT-042",
+      "target_label": "Grant",
+      "target_name": "NIH R01 Grant #GM-123456"
     },
     {
-      "type": "TRIGGERED_BY",
-      "source_label": "ToolCall",
-      "source_name": "create_ticket(high priority)",
-      "target_label": "Conversation",
-      "target_name": "Weekly Standup Recap"
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Fine-tuning Run FT-042",
+      "target_label": "Grant",
+      "target_name": "ERC Starting Grant #101034"
     },
     {
-      "type": "TRIGGERED_BY",
-      "source_label": "ToolCall",
-      "source_name": "fetch_metrics(api service)",
-      "target_label": "Conversation",
-      "target_name": "Bug Report Discussion"
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "RAG Pipeline Comparison",
+      "target_label": "Grant",
+      "target_name": "DOE ARPA-E Award #DE-0042"
     },
     {
-      "type": "TRIGGERED_BY",
-      "source_label": "ToolCall",
-      "source_name": "run_query(MATCH nodes)",
-      "target_label": "Conversation",
-      "target_name": "Technical Support Session"
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "RAG Pipeline Comparison",
+      "target_label": "Grant",
+      "target_name": "NIH R01 Grant #GM-123456"
     },
     {
-      "type": "TRIGGERED_BY",
-      "source_label": "ToolCall",
-      "source_name": "run_query(MATCH nodes)",
-      "target_label": "Conversation",
-      "target_name": "Weekly Standup Recap"
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Prompt Engineering A/B Test",
+      "target_label": "Grant",
+      "target_name": "NIH R01 Grant #GM-123456"
     },
     {
-      "type": "TRIGGERED_BY",
-      "source_label": "ToolCall",
-      "source_name": "send_notification(ops channel)",
-      "target_label": "Conversation",
-      "target_name": "Weekly Standup Recap"
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Prompt Engineering A/B Test",
+      "target_label": "Grant",
+      "target_name": "NSF CAREER Award #2025-789"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Temperature Sweep Study",
+      "target_label": "Grant",
+      "target_name": "ERC Starting Grant #101034"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Temperature Sweep Study",
+      "target_label": "Grant",
+      "target_name": "DARPA Contract #HR0011-25"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Context Window Scaling",
+      "target_label": "Grant",
+      "target_name": "DOE ARPA-E Award #DE-0042"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Fine-tuning Run FT-042",
+      "target_label": "Experiment",
+      "target_name": "Context Window Scaling"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "RAG Pipeline Comparison",
+      "target_label": "Experiment",
+      "target_name": "Fine-tuning Run FT-042"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "RAG Pipeline Comparison",
+      "target_label": "Experiment",
+      "target_name": "Temperature Sweep Study"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Prompt Engineering A/B Test",
+      "target_label": "Experiment",
+      "target_name": "Temperature Sweep Study"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Temperature Sweep Study",
+      "target_label": "Experiment",
+      "target_name": "Prompt Engineering A/B Test"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Temperature Sweep Study",
+      "target_label": "Experiment",
+      "target_name": "Context Window Scaling"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Context Window Scaling",
+      "target_label": "Experiment",
+      "target_name": "RAG Pipeline Comparison"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Context Window Scaling",
+      "target_label": "Experiment",
+      "target_name": "Temperature Sweep Study"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Graph Neural Networks for Drug Discovery",
+      "target_label": "Dataset",
+      "target_name": "Campaign Finance Records"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Graph Neural Networks for Drug Discovery",
+      "target_label": "Dataset",
+      "target_name": "Public School Performance Metrics"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Quantum Error Correction at Scale",
+      "target_label": "Dataset",
+      "target_name": "Municipal Spending 2020-2025"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "mRNA Vaccine Stability Optimization",
+      "target_label": "Dataset",
+      "target_name": "Municipal Spending 2020-2025"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Dark Matter Detection via Gravitational Lensing",
+      "target_label": "Dataset",
+      "target_name": "Campaign Finance Records"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "CRISPR Off-Target Effects Meta-Analysis",
+      "target_label": "Dataset",
+      "target_name": "Campaign Finance Records"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "CRISPR Off-Target Effects Meta-Analysis",
+      "target_label": "Dataset",
+      "target_name": "Public School Performance Metrics"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Dr. Sarah Chen (Genomics)",
+      "target_label": "Institution",
+      "target_name": "Stanford Bio-X Institute"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Prof. James Okafor (Physics)",
+      "target_label": "Institution",
+      "target_name": "Stanford Bio-X Institute"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Dr. Elena Volkov (Neuroscience)",
+      "target_label": "Institution",
+      "target_name": "Max Planck Institute"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Prof. Raj Patel (Materials Science)",
+      "target_label": "Institution",
+      "target_name": "Oxford Nanopore Research"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Dr. Maria Santos (Epidemiology)",
+      "target_label": "Institution",
+      "target_name": "Oxford Nanopore Research"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Sarah Chen (Genomics)",
+      "target_label": "Experiment",
+      "target_name": "Context Window Scaling"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Prof. James Okafor (Physics)",
+      "target_label": "Experiment",
+      "target_name": "Temperature Sweep Study"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Elena Volkov (Neuroscience)",
+      "target_label": "Experiment",
+      "target_name": "RAG Pipeline Comparison"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Prof. Raj Patel (Materials Science)",
+      "target_label": "Experiment",
+      "target_name": "Fine-tuning Run FT-042"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Prof. Raj Patel (Materials Science)",
+      "target_label": "Experiment",
+      "target_name": "Temperature Sweep Study"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Dr. Maria Santos (Epidemiology)",
+      "target_label": "Experiment",
+      "target_name": "Prompt Engineering A/B Test"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Fine-tuning Run FT-042",
+      "target_label": "Dataset",
+      "target_name": "Air Quality Index by County"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "RAG Pipeline Comparison",
+      "target_label": "Dataset",
+      "target_name": "Air Quality Index by County"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "RAG Pipeline Comparison",
+      "target_label": "Dataset",
+      "target_name": "Hospital Readmission Rates"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Prompt Engineering A/B Test",
+      "target_label": "Dataset",
+      "target_name": "Campaign Finance Records"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Prompt Engineering A/B Test",
+      "target_label": "Dataset",
+      "target_name": "Hospital Readmission Rates"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Temperature Sweep Study",
+      "target_label": "Dataset",
+      "target_name": "Campaign Finance Records"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Context Window Scaling",
+      "target_label": "Dataset",
+      "target_name": "Hospital Readmission Rates"
     }
   ],
   "documents": [
     {
-      "template_id": "agent_session_log",
-      "template_name": "Agent Session Log",
-      "title": "Agent Session Log: Jennifer Walsh, Realtor",
-      "content": "# Agent Session Log\n\n**Date:** 2026-10-04  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal: Dr. Sarah Chen (Genomics)",
+      "content": "# Grant Proposal\n\n**Date:** 2025-11-27  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Grant: NIH R01 Grant #GM-123456\n\n## Summary\n\nThis grant proposal documents research grant proposals and funding applications. It pertains to Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Grant: NIH R01 Grant #GM-123456 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Grant: NIH R01 Grant #GM-123456 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Grant: NIH R01 Grant #GM-123456, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior grant proposal records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "agent_session_log",
-      "template_name": "Agent Session Log",
-      "title": "Agent Session Log: Marcus Thompson, Broker",
-      "content": "# Agent Session Log\n\n**Date:** 2026-05-01  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal: Prof. James Okafor (Physics)",
+      "content": "# Grant Proposal\n\n**Date:** 2024-11-18  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Grant: NSF CAREER Award #2025-789\n\n## Summary\n\nThis grant proposal documents research grant proposals and funding applications. It pertains to Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Grant: NSF CAREER Award #2025-789 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Grant: NSF CAREER Award #2025-789 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Grant: NSF CAREER Award #2025-789, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior grant proposal records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "agent_session_log",
-      "template_name": "Agent Session Log",
-      "title": "Agent Session Log: Sandra Liu, CCIM",
-      "content": "# Agent Session Log\n\n**Date:** 2025-06-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal: Dr. Elena Volkov (Neuroscience)",
+      "content": "# Grant Proposal\n\n**Date:** 2025-03-17  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Grant: ERC Starting Grant #101034\n\n## Summary\n\nThis grant proposal documents research grant proposals and funding applications. It pertains to Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Grant: ERC Starting Grant #101034 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Grant: ERC Starting Grant #101034 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Grant: ERC Starting Grant #101034, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior grant proposal records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "agent_session_log",
-      "template_name": "Agent Session Log",
-      "title": "Agent Session Log: David Brennan, CRS",
-      "content": "# Agent Session Log\n\n**Date:** 2024-05-18  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal: Prof. Raj Patel (Materials Science)",
+      "content": "# Grant Proposal\n\n**Date:** 2026-03-30  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Grant: DARPA Contract #HR0011-25\n\n## Summary\n\nThis grant proposal documents research grant proposals and funding applications. It pertains to Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Grant: DARPA Contract #HR0011-25 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Grant: DARPA Contract #HR0011-25 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Grant: DARPA Contract #HR0011-25, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior grant proposal records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "agent_session_log",
-      "template_name": "Agent Session Log",
-      "title": "Agent Session Log: Amy Richardson, ABR",
-      "content": "# Agent Session Log\n\n**Date:** 2025-05-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal: Dr. Maria Santos (Epidemiology)",
+      "content": "# Grant Proposal\n\n**Date:** 2026-02-21  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Grant: DOE ARPA-E Award #DE-0042\n\n## Summary\n\nThis grant proposal documents research grant proposals and funding applications. It pertains to Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Grant: DOE ARPA-E Award #DE-0042 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Grant: DOE ARPA-E Award #DE-0042 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Grant: DOE ARPA-E Award #DE-0042, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior grant proposal records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "memory_snapshot",
-      "template_name": "Memory Snapshot",
-      "title": "Memory Snapshot: Jennifer Walsh, Realtor",
-      "content": "# Memory Snapshot\n\n**Date:** 2024-05-30  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review: Graph Neural Networks for Drug Discovery",
+      "content": "# Peer Review\n\n**Date:** 2026-11-14  \n**Domain:** Scientific Research  \n**Reference:** Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory\n\n## Summary\n\nThis peer review documents peer review reports for submitted manuscripts. It pertains to Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior peer review records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "memory_snapshot",
-      "template_name": "Memory Snapshot",
-      "title": "Memory Snapshot: Marcus Thompson, Broker",
-      "content": "# Memory Snapshot\n\n**Date:** 2025-05-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review: Quantum Error Correction at Scale",
+      "content": "# Peer Review\n\n**Date:** 2025-02-09  \n**Domain:** Scientific Research  \n**Reference:** Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute\n\n## Summary\n\nThis peer review documents peer review reports for submitted manuscripts. It pertains to Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior peer review records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "memory_snapshot",
-      "template_name": "Memory Snapshot",
-      "title": "Memory Snapshot: Sandra Liu, CCIM",
-      "content": "# Memory Snapshot\n\n**Date:** 2026-08-17  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review: mRNA Vaccine Stability Optimization",
+      "content": "# Peer Review\n\n**Date:** 2026-06-24  \n**Domain:** Scientific Research  \n**Reference:** Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics\n\n## Summary\n\nThis peer review documents peer review reports for submitted manuscripts. It pertains to Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior peer review records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "memory_snapshot",
-      "template_name": "Memory Snapshot",
-      "title": "Memory Snapshot: David Brennan, CRS",
-      "content": "# Memory Snapshot\n\n**Date:** 2025-01-22  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review: Dark Matter Detection via Gravitational Lensing",
+      "content": "# Peer Review\n\n**Date:** 2024-05-31  \n**Domain:** Scientific Research  \n**Reference:** Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute\n\n## Summary\n\nThis peer review documents peer review reports for submitted manuscripts. It pertains to Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior peer review records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "memory_snapshot",
-      "template_name": "Memory Snapshot",
-      "title": "Memory Snapshot: Amy Richardson, ABR",
-      "content": "# Memory Snapshot\n\n**Date:** 2024-02-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review: CRISPR Off-Target Effects Meta-Analysis",
+      "content": "# Peer Review\n\n**Date:** 2024-10-24  \n**Domain:** Scientific Research  \n**Reference:** Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research\n\n## Summary\n\nThis peer review documents peer review reports for submitted manuscripts. It pertains to Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior peer review records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "tool_trace",
-      "template_name": "Tool Execution Trace",
-      "title": "Tool Execution Trace: Jennifer Walsh, Realtor",
-      "content": "# Tool Execution Trace\n\n**Date:** 2026-02-25  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry: Dr. Sarah Chen (Genomics)",
+      "content": "# Lab Notebook Entry\n\n**Date:** 2025-04-25  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Dr. Sarah Chen (Genomics), Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025\n\n## Summary\n\nThis lab notebook entry documents daily lab notebook entries documenting experimental work. It pertains to Researcher: Dr. Sarah Chen (Genomics), Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Dr. Sarah Chen (Genomics), Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Dr. Sarah Chen (Genomics), Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior lab notebook entry records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "tool_trace",
-      "template_name": "Tool Execution Trace",
-      "title": "Tool Execution Trace: Marcus Thompson, Broker",
-      "content": "# Tool Execution Trace\n\n**Date:** 2025-05-02  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry: Prof. James Okafor (Physics)",
+      "content": "# Lab Notebook Entry\n\n**Date:** 2024-10-13  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Prof. James Okafor (Physics), Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records\n\n## Summary\n\nThis lab notebook entry documents daily lab notebook entries documenting experimental work. It pertains to Researcher: Prof. James Okafor (Physics), Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Prof. James Okafor (Physics), Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Prof. James Okafor (Physics), Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior lab notebook entry records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "tool_trace",
-      "template_name": "Tool Execution Trace",
-      "title": "Tool Execution Trace: Sandra Liu, CCIM",
-      "content": "# Tool Execution Trace\n\n**Date:** 2024-03-07  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry: Dr. Elena Volkov (Neuroscience)",
+      "content": "# Lab Notebook Entry\n\n**Date:** 2025-03-01  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Dr. Elena Volkov (Neuroscience), Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics\n\n## Summary\n\nThis lab notebook entry documents daily lab notebook entries documenting experimental work. It pertains to Researcher: Dr. Elena Volkov (Neuroscience), Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Dr. Elena Volkov (Neuroscience), Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Dr. Elena Volkov (Neuroscience), Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior lab notebook entry records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "tool_trace",
-      "template_name": "Tool Execution Trace",
-      "title": "Tool Execution Trace: David Brennan, CRS",
-      "content": "# Tool Execution Trace\n\n**Date:** 2024-06-14  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry: Prof. Raj Patel (Materials Science)",
+      "content": "# Lab Notebook Entry\n\n**Date:** 2025-08-31  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Prof. Raj Patel (Materials Science), Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County\n\n## Summary\n\nThis lab notebook entry documents daily lab notebook entries documenting experimental work. It pertains to Researcher: Prof. Raj Patel (Materials Science), Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Prof. Raj Patel (Materials Science), Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Prof. Raj Patel (Materials Science), Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior lab notebook entry records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "tool_trace",
-      "template_name": "Tool Execution Trace",
-      "title": "Tool Execution Trace: Amy Richardson, ABR",
-      "content": "# Tool Execution Trace\n\n**Date:** 2024-04-29  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry: Dr. Maria Santos (Epidemiology)",
+      "content": "# Lab Notebook Entry\n\n**Date:** 2024-06-09  \n**Domain:** Scientific Research  \n**Reference:** Researcher: Dr. Maria Santos (Epidemiology), Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates\n\n## Summary\n\nThis lab notebook entry documents daily lab notebook entries documenting experimental work. It pertains to Researcher: Dr. Maria Santos (Epidemiology), Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Researcher: Dr. Maria Santos (Epidemiology), Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Researcher: Dr. Maria Santos (Epidemiology), Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior lab notebook entry records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "conversation_summary",
-      "template_name": "Conversation Summary",
-      "title": "Conversation Summary: Jennifer Walsh, Realtor",
-      "content": "# Conversation Summary\n\n**Date:** 2024-11-09  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log: Fine-tuning Run FT-042",
+      "content": "# Experiment Log\n\n**Date:** 2025-05-18  \n**Domain:** Scientific Research  \n**Reference:** Experiment: Fine-tuning Run FT-042, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Dataset: Municipal Spending 2020-2025\n\n## Summary\n\nThis experiment log documents formal experiment design and results documentation. It pertains to Experiment: Fine-tuning Run FT-042, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Dataset: Municipal Spending 2020-2025 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Experiment: Fine-tuning Run FT-042, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Dataset: Municipal Spending 2020-2025 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Experiment: Fine-tuning Run FT-042, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Dataset: Municipal Spending 2020-2025, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior experiment log records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "conversation_summary",
-      "template_name": "Conversation Summary",
-      "title": "Conversation Summary: Marcus Thompson, Broker",
-      "content": "# Conversation Summary\n\n**Date:** 2026-04-30  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log: RAG Pipeline Comparison",
+      "content": "# Experiment Log\n\n**Date:** 2025-05-20  \n**Domain:** Scientific Research  \n**Reference:** Experiment: RAG Pipeline Comparison, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Dataset: Campaign Finance Records\n\n## Summary\n\nThis experiment log documents formal experiment design and results documentation. It pertains to Experiment: RAG Pipeline Comparison, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Dataset: Campaign Finance Records and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Experiment: RAG Pipeline Comparison, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Dataset: Campaign Finance Records are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Experiment: RAG Pipeline Comparison, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Dataset: Campaign Finance Records, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior experiment log records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "conversation_summary",
-      "template_name": "Conversation Summary",
-      "title": "Conversation Summary: Sandra Liu, CCIM",
-      "content": "# Conversation Summary\n\n**Date:** 2025-10-16  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log: Prompt Engineering A/B Test",
+      "content": "# Experiment Log\n\n**Date:** 2025-10-08  \n**Domain:** Scientific Research  \n**Reference:** Experiment: Prompt Engineering A/B Test, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Dataset: Public School Performance Metrics\n\n## Summary\n\nThis experiment log documents formal experiment design and results documentation. It pertains to Experiment: Prompt Engineering A/B Test, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Dataset: Public School Performance Metrics and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Experiment: Prompt Engineering A/B Test, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Dataset: Public School Performance Metrics are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Experiment: Prompt Engineering A/B Test, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Dataset: Public School Performance Metrics, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior experiment log records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "conversation_summary",
-      "template_name": "Conversation Summary",
-      "title": "Conversation Summary: David Brennan, CRS",
-      "content": "# Conversation Summary\n\n**Date:** 2024-05-07  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log: Temperature Sweep Study",
+      "content": "# Experiment Log\n\n**Date:** 2024-07-12  \n**Domain:** Scientific Research  \n**Reference:** Experiment: Temperature Sweep Study, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Dataset: Air Quality Index by County\n\n## Summary\n\nThis experiment log documents formal experiment design and results documentation. It pertains to Experiment: Temperature Sweep Study, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Dataset: Air Quality Index by County and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Experiment: Temperature Sweep Study, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Dataset: Air Quality Index by County are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Experiment: Temperature Sweep Study, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Dataset: Air Quality Index by County, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior experiment log records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "conversation_summary",
-      "template_name": "Conversation Summary",
-      "title": "Conversation Summary: Amy Richardson, ABR",
-      "content": "# Conversation Summary\n\n**Date:** 2026-05-13  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log: Context Window Scaling",
+      "content": "# Experiment Log\n\n**Date:** 2025-11-27  \n**Domain:** Scientific Research  \n**Reference:** Experiment: Context Window Scaling, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Dataset: Hospital Readmission Rates\n\n## Summary\n\nThis experiment log documents formal experiment design and results documentation. It pertains to Experiment: Context Window Scaling, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Dataset: Hospital Readmission Rates and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Experiment: Context Window Scaling, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Dataset: Hospital Readmission Rates are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Experiment: Context Window Scaling, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Dataset: Hospital Readmission Rates, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior experiment log records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "entity_extraction_log",
-      "template_name": "Entity Extraction Log",
-      "title": "Entity Extraction Log: Customer Onboarding Chat",
-      "content": "# Entity Extraction Log\n\n**Date:** 2026-07-24  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Customer Onboarding Chat, Entity: Acme Corporation\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Customer Onboarding Chat, Entity: Acme Corporation and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Customer Onboarding Chat, Entity: Acme Corporation are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Customer Onboarding Chat, Entity: Acme Corporation, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft: Graph Neural Networks for Drug Discovery",
+      "content": "# Publication Draft\n\n**Date:** 2025-03-13  \n**Domain:** Scientific Research  \n**Reference:** Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025\n\n## Summary\n\nThis publication draft documents draft sections of academic publications. It pertains to Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025 and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025 are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: Graph Neural Networks for Drug Discovery, Researcher: Dr. Sarah Chen (Genomics), Institution: MIT Lincoln Laboratory, Experiment: Fine-tuning Run FT-042, Dataset: Municipal Spending 2020-2025, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior publication draft records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "entity_extraction_log",
-      "template_name": "Entity Extraction Log",
-      "title": "Entity Extraction Log: Technical Support Session",
-      "content": "# Entity Extraction Log\n\n**Date:** 2025-12-15  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Technical Support Session, Entity: Project Phoenix\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Technical Support Session, Entity: Project Phoenix and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Technical Support Session, Entity: Project Phoenix are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Technical Support Session, Entity: Project Phoenix, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft: Quantum Error Correction at Scale",
+      "content": "# Publication Draft\n\n**Date:** 2025-09-06  \n**Domain:** Scientific Research  \n**Reference:** Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records\n\n## Summary\n\nThis publication draft documents draft sections of academic publications. It pertains to Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: Quantum Error Correction at Scale, Researcher: Prof. James Okafor (Physics), Institution: Stanford Bio-X Institute, Experiment: RAG Pipeline Comparison, Dataset: Campaign Finance Records, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior publication draft records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "entity_extraction_log",
-      "template_name": "Entity Extraction Log",
-      "title": "Entity Extraction Log: Product Discovery Thread",
-      "content": "# Entity Extraction Log\n\n**Date:** 2026-12-19  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Product Discovery Thread, Entity: Q1 Revenue Target\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Product Discovery Thread, Entity: Q1 Revenue Target and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Product Discovery Thread, Entity: Q1 Revenue Target are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Product Discovery Thread, Entity: Q1 Revenue Target, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft: mRNA Vaccine Stability Optimization",
+      "content": "# Publication Draft\n\n**Date:** 2026-10-09  \n**Domain:** Scientific Research  \n**Reference:** Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics\n\n## Summary\n\nThis publication draft documents draft sections of academic publications. It pertains to Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: mRNA Vaccine Stability Optimization, Researcher: Dr. Elena Volkov (Neuroscience), Institution: CERN European Particle Physics, Experiment: Prompt Engineering A/B Test, Dataset: Public School Performance Metrics, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior publication draft records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "entity_extraction_log",
-      "template_name": "Entity Extraction Log",
-      "title": "Entity Extraction Log: Bug Report Discussion",
-      "content": "# Entity Extraction Log\n\n**Date:** 2026-07-13  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Bug Report Discussion, Entity: Customer Segment Alpha\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Bug Report Discussion, Entity: Customer Segment Alpha and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Bug Report Discussion, Entity: Customer Segment Alpha are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Bug Report Discussion, Entity: Customer Segment Alpha, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft: Dark Matter Detection via Gravitational Lensing",
+      "content": "# Publication Draft\n\n**Date:** 2026-05-10  \n**Domain:** Scientific Research  \n**Reference:** Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County\n\n## Summary\n\nThis publication draft documents draft sections of academic publications. It pertains to Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: Dark Matter Detection via Gravitational Lensing, Researcher: Prof. Raj Patel (Materials Science), Institution: Max Planck Institute, Experiment: Temperature Sweep Study, Dataset: Air Quality Index by County, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior publication draft records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     },
     {
-      "template_id": "entity_extraction_log",
-      "template_name": "Entity Extraction Log",
-      "title": "Entity Extraction Log: Weekly Standup Recap",
-      "content": "# Entity Extraction Log\n\n**Date:** 2024-01-22  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Weekly Standup Recap, Entity: Production Database\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Weekly Standup Recap, Entity: Production Database and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Weekly Standup Recap, Entity: Production Database are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Weekly Standup Recap, Entity: Production Database, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft: CRISPR Off-Target Effects Meta-Analysis",
+      "content": "# Publication Draft\n\n**Date:** 2024-05-15  \n**Domain:** Scientific Research  \n**Reference:** Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates\n\n## Summary\n\nThis publication draft documents draft sections of academic publications. It pertains to Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates and was prepared as part of standard scientific research operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Paper: CRISPR Off-Target Effects Meta-Analysis, Researcher: Dr. Maria Santos (Epidemiology), Institution: Oxford Nanopore Research, Experiment: Context Window Scaling, Dataset: Hospital Readmission Rates, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior publication draft records for historical context and trend analysis.\n\n---\n\n*Document generated for Scientific Research context graph application.*"
     }
   ],
   "traces": [
     {
-      "id": "memory_consolidation",
-      "task": "Decide which memories to consolidate or prune for agent Sandra Liu, CCIM",
+      "id": "research_direction",
+      "task": "Evaluate whether to pursue research direction based on Senior Analyst findings",
       "steps": [
         {
-          "thought": "Assess memory usage and identify low-importance or redundant memories",
-          "action": "Query all memories sorted by importance and last access time",
-          "observation": "Found 8 relevant records in the agent memory knowledge graph. Top result: Mountain Ridge Facility with 6 connected entities."
+          "thought": "Assess the significance and reproducibility of the findings",
+          "action": "Query citation network and replication attempts for this paper",
+          "observation": "Found 4 relevant records in the scientific research knowledge graph. Top result: Pacific Northwest Industries with 4 connected entities."
         },
         {
-          "thought": "Identify memories that can be merged into higher-level summaries",
-          "action": "Find clusters of related episodic memories referencing the same entities",
-          "observation": "Action completed for Primary Analysis Report. Results consistent with expected agent memory domain patterns."
+          "thought": "Identify gaps in the literature that this direction could fill",
+          "action": "Analyze citing papers and identify open questions",
+          "observation": "Analysis of Dr. Elena Volkov (Neuroscience) complete. Key metrics computed and compared against historical baselines \u2014 2 indicators flagged for review."
         },
         {
-          "thought": "Evaluate impact of pruning on agent's task performance",
-          "action": "Check which memories are referenced in recent successful sessions",
-          "observation": "Verified run_query(MATCH nodes) against agent memory standards. All 7 checked parameters within acceptable thresholds."
+          "thought": "Evaluate resource requirements and funding availability",
+          "action": "Check active grants, available datasets, and lab capacity",
+          "observation": "Verified Harbor View Complex against scientific research standards. All 6 checked parameters within acceptable thresholds."
+        },
+        {
+          "thought": "Consider collaboration opportunities and expertise gaps",
+          "action": "Find researchers with complementary expertise at partner institutions",
+          "observation": "Found 11 relevant records in the scientific research knowledge graph. Top result: Stanford Bio-X Institute with 2 connected entities."
         }
       ],
-      "outcome": "Consolidation plan: the assessed criteria affecting the assessed criteria memories"
+      "outcome": "Decision: Approve \u2014 analysis of available data and alignment with operational guidelines"
     },
     {
-      "id": "tool_selection",
-      "task": "Determine which tool to invoke for user request in conversation CON-2026-0001",
+      "id": "dataset_selection",
+      "task": "Select appropriate dataset for experiment Prompt Engineering A/B Test",
       "steps": [
         {
-          "thought": "Parse user intent and identify required information",
-          "action": "Analyze conversation context and extract key parameters",
-          "observation": "Analysis of Production Database complete. Key metrics computed and compared against historical baselines \u2014 2 indicators flagged for review."
+          "thought": "Identify datasets matching the experimental requirements",
+          "action": "Query datasets by domain, size, format, and availability",
+          "observation": "Found 8 relevant records in the scientific research knowledge graph. Top result: Municipal Spending 2020-2025 with 6 connected entities."
         },
         {
-          "thought": "Match intent against available tool capabilities",
-          "action": "Query tool registry and rank by relevance to the request",
-          "observation": "Found 9 relevant records in the agent memory knowledge graph. Top result: Marcus Thompson, Broker with 4 connected entities."
+          "thought": "Evaluate data quality and prior usage in published research",
+          "action": "Check which papers have used each candidate dataset",
+          "observation": "Verified Hospital Readmission Rates against scientific research standards. All 7 checked parameters within acceptable thresholds."
         },
         {
-          "thought": "Consider past tool usage patterns for similar requests",
-          "action": "Search memory for similar past conversations and their tool calls",
-          "observation": "Found 9 relevant records in the agent memory knowledge graph. Top result: Customer Onboarding Chat with 4 connected entities."
+          "thought": "Consider licensing, access restrictions, and computational requirements",
+          "action": "Review dataset metadata for compatibility constraints",
+          "observation": "Review of CERN European Particle Physics completed. Identified 5 key factors relevant to the current decision context."
         }
       ],
-      "outcome": "Selected tool: the assessed criteria with parameters the assessed criteria"
+      "outcome": "Selected dataset: the assessed criteria \u2014 analysis of available data and alignment with operational guidelines"
     },
     {
-      "id": "entity_resolution",
-      "task": "Resolve ambiguous entity reference 'Q1 Revenue Target' across conversations",
+      "id": "collaboration_assessment",
+      "task": "Assess potential research collaboration with Prof. Raj Patel (Materials Science) at Oxford Nanopore Research",
       "steps": [
         {
-          "thought": "Search for all entities matching or similar to the reference",
-          "action": "Query entity graph for name matches and fuzzy similarities",
-          "observation": "Found 5 relevant records in the agent memory knowledge graph. Top result: Compliance Certificate with 3 connected entities."
+          "thought": "Review the researcher's publication record and expertise",
+          "action": "Query papers authored and citation metrics",
+          "observation": "Found 3 relevant records in the scientific research knowledge graph. Top result: Public School Performance Metrics with 4 connected entities."
         },
         {
-          "thought": "Use conversation context to disambiguate",
-          "action": "Review surrounding conversation context and co-occurring entities",
-          "observation": "Review of Apex Financial Partners completed. Identified 2 key factors relevant to the current decision context."
+          "thought": "Identify overlap and complementarity in research interests",
+          "action": "Compare specializations and shared citation networks",
+          "observation": "Action completed for ERC Starting Grant #101034. Results consistent with expected scientific research domain patterns."
         },
         {
-          "thought": "Check memory for prior resolutions of this entity",
-          "action": "Search agent memories for previous references to this entity",
-          "observation": "Found 7 relevant records in the agent memory knowledge graph. Top result: Westside Corporate Campus with 3 connected entities."
+          "thought": "Evaluate institutional compatibility and funding synergies",
+          "action": "Check active grants and institutional agreements",
+          "observation": "Verified Standard Operating Procedure against scientific research standards. All 4 checked parameters within acceptable thresholds."
         }
       ],
-      "outcome": "Resolved to: the assessed criteria with confidence high confidence"
+      "outcome": "Collaboration assessment: the assessed criteria \u2014 analysis of available data and alignment with operational guidelines"
     },
     {
-      "id": "session_goal_assessment",
-      "task": "Evaluate whether session SES-2024-0004 achieved its stated goal",
+      "id": "grant_proposal_strategy",
+      "task": "Develop grant proposal strategy for researcher Dr. Elena Volkov (Neuroscience) targeting NSF CAREER Award #2025-789 - Funding Agency",
       "steps": [
         {
-          "thought": "Review the session goal and all conversations within the session",
-          "action": "Query session details and all conversations linked via PART_OF_SESSION",
-          "observation": "Found 8 relevant records in the agent memory knowledge graph. Top result: Sandra Liu, CCIM with 3 connected entities."
+          "thought": "Review researcher's publication record and funding history",
+          "action": "Query papers authored and previous grants awarded to this researcher",
+          "observation": "Found 3 relevant records in the scientific research knowledge graph. Top result: Campaign Finance Records with 4 connected entities."
         },
         {
-          "thought": "Assess tool call success rates during the session",
-          "action": "Check tool call outcomes for failures or timeouts that may have blocked progress",
-          "observation": "Verified Maria Rodriguez against agent memory standards. All 3 checked parameters within acceptable thresholds."
+          "thought": "Identify research gaps that align with funder priorities",
+          "action": "Analyze funded experiments and identify underexplored areas in the researcher's field",
+          "observation": "Found 11 relevant records in the scientific research knowledge graph. Top result: DOE ARPA-E Award #DE-0042 with 2 connected entities."
         },
         {
-          "thought": "Compare extracted entities and memories against expected outcomes",
-          "action": "Review entities extracted and memories created during the session",
-          "observation": "Review of Incident Triage #847 completed. Identified 3 key factors relevant to the current decision context."
+          "thought": "Assess team composition and institutional strengths",
+          "action": "Query co-authors, their institutions, and complementary expertise",
+          "observation": "Found 7 relevant records in the scientific research knowledge graph. Top result: Municipal Spending 2020-2025 with 6 connected entities."
+        },
+        {
+          "thought": "Estimate competitiveness based on prior funding rates",
+          "action": "Review grant outcomes by funding agency and research area",
+          "observation": "Found 8 relevant records in the scientific research knowledge graph. Top result: ERC Starting Grant #101034 with 3 connected entities."
         }
       ],
-      "outcome": "Goal achievement: resolved. Completion: the assessed criteria%. Gaps: the assessed criteria"
+      "outcome": "Strategy: the assessed criteria. Competitive strength: the assessed criteria. Suggested budget: $the assessed criteria"
     },
     {
-      "id": "knowledge_gap_detection",
-      "task": "Identify knowledge gaps in agent David Brennan, CRS's memory about Q1 Revenue Target",
+      "id": "reproducibility_assessment",
+      "task": "Assess reproducibility of findings from experiment Fine-tuning Run FT-042",
       "steps": [
         {
-          "thought": "Catalog what the agent currently knows about this entity",
-          "action": "Query all memories referencing this entity and their types",
-          "observation": "Found 9 relevant records in the agent memory knowledge graph. Top result: Weekly Standup Recap with 5 connected entities."
+          "thought": "Review the original experiment methodology and results",
+          "action": "Query experiment details, methodology, and result summary",
+          "observation": "Found 7 relevant records in the scientific research knowledge graph. Top result: Summit Healthcare Systems with 2 connected entities."
         },
         {
-          "thought": "Compare against conversations where this entity was discussed",
-          "action": "Find conversations that extracted this entity and check for unrecorded information",
-          "observation": "Verified Technical Specification against agent memory standards. All 4 checked parameters within acceptable thresholds."
+          "thought": "Search for replication attempts by independent groups",
+          "action": "Find experiments linked via REPLICATED relationship to the original",
+          "observation": "Action completed for Prof. Raj Patel (Materials Science). Results consistent with expected scientific research domain patterns."
         },
         {
-          "thought": "Identify topics related to this entity with no corresponding memories",
-          "action": "Traverse entity relationships to find connected concepts with no memory coverage",
-          "observation": "Action completed for Marcus Thompson, Broker. Results consistent with expected agent memory domain patterns."
+          "thought": "Compare datasets used and their availability",
+          "action": "Check if the original dataset is publicly accessible and has been reused",
+          "observation": "Verified Emergency Response Drill against scientific research standards. All 7 checked parameters within acceptable thresholds."
+        },
+        {
+          "thought": "Evaluate statistical rigor and effect size",
+          "action": "Review evaluation metrics and sample sizes from the original and replications",
+          "observation": "Review of Dr. Sarah Chen (Genomics) completed. Identified 2 key factors relevant to the current decision context."
         }
       ],
-      "outcome": "Knowledge gaps found: the assessed criteria. Priority areas: the assessed criteria"
+      "outcome": "Reproducibility: the assessed criteria. Replications: the assessed criteria. Confidence: high confidence"
     },
     {
-      "id": "tool_failure_diagnosis",
-      "task": "Diagnose repeated failures of tool fetch_metrics(api service) invoked by agent Sandra Liu, CCIM",
+      "id": "peer_review_synthesis",
+      "task": "Synthesize peer reviews for paper Project Manager to guide revision",
       "steps": [
         {
-          "thought": "Analyze recent failure patterns for this tool",
-          "action": "Query tool calls filtered by tool name and failure status",
-          "observation": "Found 7 relevant records in the agent memory knowledge graph. Top result: Product Launch Summit with 4 connected entities."
+          "thought": "Collect and categorize all reviewer comments",
+          "action": "Query documents linked to this paper for peer review reports",
+          "observation": "Found 7 relevant records in the scientific research knowledge graph. Top result: Prof. James Okafor (Physics) with 4 connected entities."
         },
         {
-          "thought": "Examine input parameters that led to failures vs successes",
-          "action": "Compare input_params across successful and failed invocations",
-          "observation": "Action completed for Annual Compliance Audit. Results consistent with expected agent memory domain patterns."
+          "thought": "Identify common themes and critical concerns across reviewers",
+          "action": "Find issues raised by multiple reviewers that require major revision",
+          "observation": "Review of Municipal Spending 2020-2025 completed. Identified 3 key factors relevant to the current decision context."
         },
         {
-          "thought": "Check if failures correlate with specific conversation topics or entities",
-          "action": "Link failed tool calls to their triggering conversations and extracted entities",
-          "observation": "Action completed for Emergency Response Drill. Results consistent with expected agent memory domain patterns."
+          "thought": "Prioritize revisions by impact on acceptance probability",
+          "action": "Rank changes by severity and whether they address fundamental vs minor concerns",
+          "observation": "Action completed for Sarah Chen. Results consistent with expected scientific research domain patterns."
         },
         {
-          "thought": "Recommend corrective action or parameter adjustments",
-          "action": "Identify parameter patterns most likely to succeed based on historical data",
-          "observation": "Action completed for run_query(MATCH nodes). Results consistent with expected agent memory domain patterns."
+          "thought": "Identify additional experiments or analyses needed",
+          "action": "Determine which reviewer requests require new data collection vs reanalysis",
+          "observation": "Review of Primary Analysis Report completed. Identified 4 key factors relevant to the current decision context."
         }
       ],
-      "outcome": "Root cause: the assessed criteria. Fix: the assessed criteria. Expected success rate improvement: the assessed criteria%"
+      "outcome": "Revisions needed: the assessed criteria. Major: the assessed criteria. Additional experiments: the assessed criteria"
     },
     {
-      "id": "conversation_escalation",
-      "task": "Decide whether to escalate conversation CON-2025-0003 to a human operator",
+      "id": "literature_gap_analysis",
+      "task": "Identify gaps in the literature around the research area of Research Director",
       "steps": [
         {
-          "thought": "Assess conversation sentiment and user satisfaction signals",
-          "action": "Review conversation history for frustration indicators and repeated requests",
-          "observation": "Review of Morning Briefing 2025-01-15 completed. Identified 3 key factors relevant to the current decision context."
+          "thought": "Map the citation network around this paper",
+          "action": "Query papers cited by and citing this paper to build the network",
+          "observation": "Found 9 relevant records in the scientific research knowledge graph. Top result: Public School Performance Metrics with 2 connected entities."
         },
         {
-          "thought": "Check if the agent has exhausted available tools and knowledge",
-          "action": "Query tool calls made and memories accessed during this conversation",
-          "observation": "Found 3 relevant records in the agent memory knowledge graph. Top result: Mountain Ridge Facility with 6 connected entities."
+          "thought": "Identify clusters of related work and their boundaries",
+          "action": "Analyze citation patterns to find research sub-communities",
+          "observation": "Found 12 relevant records in the scientific research knowledge graph. Top result: Prof. Raj Patel (Materials Science) with 3 connected entities."
         },
         {
-          "thought": "Evaluate the complexity of the remaining unresolved request",
-          "action": "Compare against similar past conversations and their resolution patterns",
-          "observation": "Action completed for Acme Corporation. Results consistent with expected agent memory domain patterns."
+          "thought": "Detect under-explored connections between clusters",
+          "action": "Find topic areas with few cross-cluster citations indicating research gaps",
+          "observation": "Found 7 relevant records in the scientific research knowledge graph. Top result: Standard Operating Procedure with 3 connected entities."
+        },
+        {
+          "thought": "Assess feasibility of addressing identified gaps",
+          "action": "Evaluate available datasets, methods, and expertise for each gap",
+          "observation": "Action completed for Harbor View Complex. Results consistent with expected scientific research domain patterns."
         }
       ],
-      "outcome": "Escalation decision: Approve. Reason: the assessed criteria. Priority: high"
+      "outcome": "Gaps identified: the assessed criteria. Most promising: the assessed criteria. Feasibility: the assessed criteria"
     },
     {
-      "id": "memory_type_classification",
-      "task": "Classify incoming information from conversation CON-2024-0004 into appropriate memory types",
+      "id": "data_management_plan",
+      "task": "Create a data management plan for experiment Context Window Scaling using dataset Air Quality Index by County",
       "steps": [
         {
-          "thought": "Analyze the nature of information extracted from the conversation",
-          "action": "Review entities and context from the conversation",
-          "observation": "Review of Annual Compliance Audit completed. Identified 2 key factors relevant to the current decision context."
+          "thought": "Assess dataset size, format, and access requirements",
+          "action": "Query dataset metadata including size, format, and license",
+          "observation": "Found 3 relevant records in the scientific research knowledge graph. Top result: Westside Corporate Campus with 3 connected entities."
         },
         {
-          "thought": "Determine if information is episodic, semantic, or procedural",
-          "action": "Classify based on whether it describes events, facts, or how-to knowledge",
-          "observation": "Action completed for Morning Briefing 2025-01-15. Results consistent with expected agent memory domain patterns."
+          "thought": "Determine appropriate storage and sharing platforms",
+          "action": "Match dataset characteristics to repository requirements and funder mandates",
+          "observation": "Action completed for Summit Healthcare Systems. Results consistent with expected scientific research domain patterns."
         },
         {
-          "thought": "Check for existing memories that should be updated vs creating new ones",
-          "action": "Search for similar existing memories to prevent duplication",
-          "observation": "Found 5 relevant records in the agent memory knowledge graph. Top result: Fact: Team Size is 12 with 2 connected entities."
+          "thought": "Plan data versioning and provenance tracking",
+          "action": "Define versioning strategy based on experiment pipeline and expected transformations",
+          "observation": "Action completed for Harbor View Complex. Results consistent with expected scientific research domain patterns."
+        },
+        {
+          "thought": "Address privacy, licensing, and long-term preservation",
+          "action": "Review license restrictions and institutional data retention policies",
+          "observation": "Review of NSF CAREER Award #2025-789 completed. Identified 2 key factors relevant to the current decision context."
         }
       ],
-      "outcome": "Classification: the assessed criteria across the assessed criteria new memories. Updated: the assessed criteria existing"
+      "outcome": "DMP: the assessed criteria. Repository: the assessed criteria. Retention period: the assessed criteria"
     },
     {
-      "id": "agent_performance_review",
-      "task": "Review overall performance of agent Sandra Liu, CCIM across recent sessions",
+      "id": "impact_assessment",
+      "task": "Assess research impact of researcher Dr. Maria Santos (Epidemiology) for tenure review",
       "steps": [
         {
-          "thought": "Analyze session outcomes and goal achievement rates",
-          "action": "Query all recent sessions and their outcome status",
-          "observation": "Found 12 relevant records in the agent memory knowledge graph. Top result: David Brennan, CRS with 2 connected entities."
+          "thought": "Quantify publication metrics and citation impact",
+          "action": "Query papers authored, citation counts, h-index, and journal rankings",
+          "observation": "Found 6 relevant records in the scientific research knowledge graph. Top result: Stanford Bio-X Institute with 3 connected entities."
         },
         {
-          "thought": "Evaluate tool usage efficiency and error rates",
-          "action": "Calculate tool call success rates and average durations",
-          "observation": "Analysis of David Park complete. Key metrics computed and compared against historical baselines \u2014 5 indicators flagged for review."
+          "thought": "Evaluate grant funding success and amount",
+          "action": "Review grants awarded, total funding, and funding agency diversity",
+          "observation": "Review of RAG Pipeline Comparison completed. Identified 5 key factors relevant to the current decision context."
         },
         {
-          "thought": "Assess memory utilization and knowledge growth",
-          "action": "Review memory creation frequency, importance distribution, and access patterns",
-          "observation": "Review of Amy Richardson, ABR completed. Identified 4 key factors relevant to the current decision context."
+          "thought": "Assess mentorship and collaboration breadth",
+          "action": "Count co-authored papers, affiliated institutions, and supervised experiments",
+          "observation": "Action completed for Temperature Sweep Study. Results consistent with expected scientific research domain patterns."
         },
         {
-          "thought": "Identify areas for improvement in agent capabilities",
-          "action": "Find conversation topics with low resolution rates or high escalation counts",
-          "observation": "Action completed for run_query(MATCH nodes). Results consistent with expected agent memory domain patterns."
+          "thought": "Identify broader impact beyond academia",
+          "action": "Search for dataset reuse, media mentions, and practical applications of research",
+          "observation": "Found 7 relevant records in the scientific research knowledge graph. Top result: Technical Specification with 6 connected entities."
         }
       ],
-      "outcome": "Performance: the assessed criteria. Strengths: the assessed criteria. Improvement areas: the assessed criteria"
+      "outcome": "Impact summary: h-index the assessed criteria, total citations the assessed criteria, grants $the assessed criteria"
     }
   ]
 }

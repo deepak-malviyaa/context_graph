@@ -89,14 +89,14 @@ export function DocumentBrowser() {
 
   return (
     <Flex direction="column" h="100%">
-      <Box px={4} py={3} borderBottom="1px solid" borderColor="whiteAlpha.200" bg="whiteAlpha.50" backdropFilter="blur(8px)" zIndex={10}>
-        <Heading size="sm" color="white" letterSpacing="tight">
+      <Box px={4} py={3} borderBottom="1px solid" borderColor="blackAlpha.200" bg="rgba(255,255,255,0.6)" backdropFilter="blur(8px)" zIndex={10}>
+        <Heading size="sm" color="gray.900" letterSpacing="tight">
           <HStack gap={2}>
             <FileText size={16} color="#22d3ee"/>
             <span>Documents</span>
           </HStack>
         </Heading>
-        <Text fontSize="xs" color="gray.400" mt={1} letterSpacing="wide">
+        <Text fontSize="xs" color="gray.600" mt={1} letterSpacing="wide">
           {documents.length} domain documents
         </Text>
       </Box>
@@ -109,7 +109,7 @@ export function DocumentBrowser() {
           gap={1.5}
           flexWrap="wrap"
           borderBottom="1px solid"
-          borderColor="whiteAlpha.100"
+          borderColor="blackAlpha.100"
         >
           <Badge
             cursor="pointer"
@@ -117,9 +117,9 @@ export function DocumentBrowser() {
             onClick={() => setFilterTemplate("")}
             size="sm"
             bg={!filterTemplate ? "linear-gradient(135deg, #a78bfa, #22d3ee)" : "transparent"}
-            color={!filterTemplate ? "#0a0a14" : "gray.300"}
-            borderColor="whiteAlpha.300"
-            _hover={{ bg: !filterTemplate ? undefined : "whiteAlpha.100" }}
+            color={!filterTemplate ? "#0a0a14" : "gray.700"}
+            borderColor="blackAlpha.300"
+            _hover={{ bg: !filterTemplate ? undefined : "whiteAlpha.700" }}
           >
             All
           </Badge>
@@ -131,9 +131,9 @@ export function DocumentBrowser() {
               variant={filterTemplate === id ? "solid" : "outline"}
               onClick={() => setFilterTemplate(id)}
               bg={filterTemplate === id ? "linear-gradient(135deg, #a78bfa, #22d3ee)" : "transparent"}
-              color={filterTemplate === id ? "#0a0a14" : "gray.300"}
-              borderColor="whiteAlpha.300"
-              _hover={{ bg: filterTemplate === id ? undefined : "whiteAlpha.100" }}
+              color={filterTemplate === id ? "#0a0a14" : "gray.700"}
+              borderColor="blackAlpha.300"
+              _hover={{ bg: filterTemplate === id ? undefined : "whiteAlpha.700" }}
             >
               {name}
             </Badge>
@@ -155,7 +155,7 @@ export function DocumentBrowser() {
             <ArrowLeft size={12} />
             <Text>Back to list</Text>
           </HStack>
-          <Heading size="sm" mb={2} color="white">
+          <Heading size="sm" mb={2} color="gray.900">
             {selectedDoc.document.title}
           </Heading>
           <Badge mb={3} size="sm" bg="rgba(34,211,238,0.15)" color="cyan.300" border="1px solid" borderColor="cyan.700">
@@ -173,7 +173,7 @@ export function DocumentBrowser() {
           <Box
             fontSize="sm"
             lineHeight="tall"
-            color="gray.200"
+            color="gray.800"
             className="markdown-content"
           >
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -196,7 +196,7 @@ export function DocumentBrowser() {
               <Flex justify="center" mb={3}>
                 <FileText size={32} color="#22d3ee" />
               </Flex>
-              <Text fontSize="sm" color="gray.300" textAlign="center" fontWeight="medium">
+              <Text fontSize="sm" color="gray.700" textAlign="center" fontWeight="medium">
                 No documents loaded
               </Text>
               <Text fontSize="xs" color="gray.500" textAlign="center" mt={2} lineHeight="tall">
@@ -216,12 +216,12 @@ export function DocumentBrowser() {
                 p={3}
                 borderRadius="lg"
                 border="1px solid"
-                borderColor="whiteAlpha.150"
-                bg="whiteAlpha.50"
+                borderColor="blackAlpha.200"
+                bg="rgba(255,255,255,0.62)"
                 backdropFilter="blur(8px)"
                 cursor="pointer"
                 onClick={() => selectDocument(doc.title)}
-                _hover={{ borderColor: "cyan.400", bg: "whiteAlpha.100", transform: "translateY(-1px)", boxShadow: "0 4px 16px rgba(34,211,238,0.15)" }}
+                _hover={{ borderColor: "cyan.400", bg: "rgba(255,255,255,0.9)", transform: "translateY(-1px)", boxShadow: "0 4px 16px rgba(34,211,238,0.15)" }}
                 transition="all 0.2s cubic-bezier(0.16, 1, 0.3, 1)"
                 role="button"
                 tabIndex={0}
@@ -229,13 +229,13 @@ export function DocumentBrowser() {
                   if (e.key === "Enter") selectDocument(doc.title);
                 }}
               >
-                <Text fontSize="sm" fontWeight="medium" lineClamp={1} color="gray.100">
+                <Text fontSize="sm" fontWeight="medium" lineClamp={1} color="gray.800">
                   {doc.title}
                 </Text>
                 <Badge size="sm" mt={1.5} bg="rgba(34,211,238,0.15)" color="cyan.300" border="1px solid" borderColor="cyan.700">
                   {doc.template_name}
                 </Badge>
-                <Text fontSize="xs" color="gray.400" mt={2} lineClamp={2}>
+                <Text fontSize="xs" color="gray.600" mt={2} lineClamp={2}>
                   {doc.preview}
                 </Text>
               </Box>
@@ -251,8 +251,8 @@ export function DocumentBrowser() {
                 disabled={page === 0}
                 aria-label="Previous page"
                 color="gray.300"
-                borderColor="whiteAlpha.300"
-                _hover={{ bg: "whiteAlpha.100" }}
+                borderColor="blackAlpha.300"
+                _hover={{ bg: "whiteAlpha.700" }}
               >
                 <ChevronLeft size={14} /> Prev
               </Button>
@@ -266,8 +266,8 @@ export function DocumentBrowser() {
                 disabled={!hasMore}
                 aria-label="Next page"
                 color="gray.300"
-                borderColor="whiteAlpha.300"
-                _hover={{ bg: "whiteAlpha.100" }}
+                borderColor="blackAlpha.300"
+                _hover={{ bg: "whiteAlpha.700" }}
               >
                 Next <ChevronRight size={14} />
               </Button>

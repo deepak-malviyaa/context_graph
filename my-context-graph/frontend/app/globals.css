@@ -1,17 +1,17 @@
 @layer reset, base, tokens, recipes, utilities;
 
 :root {
-  --bg-base: #0a0a14;
-  --bg-elev-1: #11111d;
-  --bg-elev-2: #161624;
+  --bg-base: #eef3ff;
+  --bg-elev-1: #f7f9ff;
+  --bg-elev-2: #ffffff;
   --accent-cyan: #22d3ee;
-  --accent-violet: #a78bfa;
+  --accent-violet: #8b5cf6;
   --accent-pink: #f472b6;
   --accent-emerald: #34d399;
-  --text-primary: #e8e8f0;
-  --text-muted: #9ca0b3;
-  --border-soft: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --border-soft: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.2);
 }
 
 * {
@@ -24,7 +24,7 @@ html,
 body {
   height: 100%;
   color: var(--text-primary);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-display), "Space Grotesk", "Segoe UI", sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   -webkit-font-smoothing: antialiased;
   background: var(--bg-base);
@@ -38,11 +38,11 @@ body::before {
   inset: -20%;
   z-index: -2;
   background:
-    radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(34, 211, 238, 0.28), transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(244, 114, 182, 0.25), transparent 45%),
-    radial-gradient(circle at 90% 90%, rgba(52, 211, 153, 0.2), transparent 40%);
-  filter: blur(80px) saturate(140%);
+    radial-gradient(circle at 12% 18%, rgba(139, 92, 246, 0.28), transparent 42%),
+    radial-gradient(circle at 82% 20%, rgba(34, 211, 238, 0.23), transparent 45%),
+    radial-gradient(circle at 48% 84%, rgba(56, 189, 248, 0.16), transparent 44%),
+    radial-gradient(circle at 90% 78%, rgba(244, 114, 182, 0.16), transparent 40%);
+  filter: blur(72px) saturate(130%);
   animation: aurora-shift 25s ease-in-out infinite alternate;
 }
 
@@ -52,8 +52,8 @@ body::after {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(10, 10, 20, 0.4) 0%, rgba(10, 10, 20, 0.85) 100%),
-    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(238, 243, 255, 0.8) 100%),
+    radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.08) 1px, transparent 0);
   background-size: 100% 100%, 22px 22px;
   pointer-events: none;
 }
@@ -64,19 +64,18 @@ body::after {
   100% { transform: translate(-3%, 2%) rotate(-8deg); }
 }
 
-/* Glass surfaces — dark mode */
 .glass {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.06) 0%,
-    rgba(255, 255, 255, 0.02) 100%
+    rgba(255, 255, 255, 0.76) 0%,
+    rgba(255, 255, 255, 0.52) 100%
   );
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid var(--border-soft);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 16px 40px rgba(99, 102, 241, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
   position: relative;
 }
 
@@ -86,7 +85,7 @@ body::after {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.3), transparent 40%, rgba(34, 211, 238, 0.2));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), transparent 40%, rgba(34, 211, 238, 0.25));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -95,40 +94,40 @@ body::after {
 }
 
 .glass-chat-bubble-user {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.18), rgba(34, 211, 238, 0.18));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(34, 211, 238, 0.28));
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(167, 139, 250, 0.35);
-  color: var(--text-primary);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  color: white;
   box-shadow:
-    0 4px 24px rgba(167, 139, 250, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 8px 24px rgba(139, 92, 246, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .glass-chat-bubble-ai {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(16px);
-  border: 1px solid var(--border-soft);
-  color: var(--text-primary);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #f1f5f9;
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    0 8px 24px rgba(15, 23, 42, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .glass-input {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.5);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 28px rgba(99, 102, 241, 0.15);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-input:focus-within {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(167, 139, 250, 0.5);
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(139, 92, 246, 0.6);
   box-shadow:
-    0 8px 32px rgba(167, 139, 250, 0.2),
-    0 0 0 4px rgba(167, 139, 250, 0.08);
+    0 14px 32px rgba(139, 92, 246, 0.2),
+    0 0 0 4px rgba(139, 92, 246, 0.15);
 }
 
 /* Animated gradient text */
@@ -150,9 +149,9 @@ body::after {
 
 /* Glow chip — for suggested prompts */
 .glow-chip {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-soft);
-  color: var(--text-primary);
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #f1f5f9;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -162,16 +161,16 @@ body::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(167, 139, 250, 0.15) 50%, transparent 70%);
+  background: linear-gradient(110deg, transparent 30%, rgba(167, 139, 250, 0.25) 50%, transparent 70%);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }
 
 .glow-chip:hover {
-  border-color: rgba(167, 139, 250, 0.5);
-  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(139, 92, 246, 0.6);
+  background: rgba(139, 92, 246, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(167, 139, 250, 0.2);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
 }
 
 .glow-chip:hover::before {
@@ -182,7 +181,7 @@ body::after {
 .glow-button {
   background: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%) !important;
   border: none !important;
-  color: #0a0a14 !important;
+  color: #0f172a !important;
   box-shadow: 0 4px 16px rgba(167, 139, 250, 0.4) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -227,7 +226,7 @@ body::after {
 }
 
 .shimmer-text {
-  background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.4) 100%);
+  background: linear-gradient(90deg, rgba(71,85,105,0.4) 0%, rgba(15,23,42,0.85) 50%, rgba(71,85,105,0.4) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -271,8 +270,8 @@ body::after {
 
 /* Selection */
 ::selection {
-  background: rgba(167, 139, 250, 0.35);
-  color: #fff;
+  background: rgba(139, 92, 246, 0.25);
+  color: #111827;
 }
 
 /* Markdown content styling for chat messages */
@@ -294,15 +293,15 @@ body::after {
 }
 .markdown-content li { margin-bottom: 0.15em; }
 .markdown-content code {
-  background: rgba(167, 139, 250, 0.15);
-  color: #ddd6fe;
+  background: rgba(139, 92, 246, 0.12);
+  color: #5b21b6;
   padding: 0.1em 0.35em;
   border-radius: 4px;
   font-size: 0.88em;
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-family: var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
 }
 .markdown-content pre {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.74);
   border: 1px solid var(--border-soft);
   padding: 0.85em;
   border-radius: 8px;
@@ -312,7 +311,7 @@ body::after {
 .markdown-content pre code {
   background: none;
   padding: 0;
-  color: #e8e8f0;
+  color: #0f172a;
 }
 .markdown-content table {
   border-collapse: collapse;

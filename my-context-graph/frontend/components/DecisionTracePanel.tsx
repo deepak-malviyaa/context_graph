@@ -54,18 +54,18 @@ export function DecisionTracePanel() {
         px={4}
         py={3}
         borderBottom="1px solid"
-        borderColor="whiteAlpha.200"
-        bg="whiteAlpha.50"
+        borderColor="blackAlpha.200"
+        bg="rgba(255,255,255,0.6)"
         backdropFilter="blur(8px)"
         zIndex={10}
       >
-        <Heading size="sm" color="white" letterSpacing="tight">
+        <Heading size="sm" color="gray.900" letterSpacing="tight">
           <HStack gap={2}>
             <GitBranch size={16} color="#a78bfa" />
             <span>Decision Traces</span>
           </HStack>
         </Heading>
-        <Text fontSize="xs" color="gray.400" mt={1} letterSpacing="wide">
+        <Text fontSize="xs" color="gray.600" mt={1} letterSpacing="wide">
           Reasoning provenance & causal chains
         </Text>
       </Box>
@@ -76,7 +76,7 @@ export function DecisionTracePanel() {
             <Flex justify="center" mb={3}>
               <GitBranch size={32} color="#a78bfa" />
             </Flex>
-            <Text fontSize="sm" color="gray.300" textAlign="center" fontWeight="medium">
+            <Text fontSize="sm" color="gray.600" textAlign="center" fontWeight="medium">
               No decision traces yet
             </Text>
             <Text fontSize="xs" color="gray.500" textAlign="center" mt={2} lineHeight="tall">
@@ -96,24 +96,21 @@ export function DecisionTracePanel() {
               p={3}
               borderRadius="lg"
               border="1px solid"
-              borderColor={
-                selectedTrace?.id === trace.id ? "purple.400" : "whiteAlpha.150"
-              }
-              bg={selectedTrace?.id === trace.id ? "whiteAlpha.100" : "whiteAlpha.50"}
+              borderColor={selectedTrace?.id === trace.id ? "purple.400" : "blackAlpha.200"}
+              bg={selectedTrace?.id === trace.id ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.62)"}
               backdropFilter="blur(10px)"
               cursor="pointer"
               onClick={() => setSelectedTrace(trace)}
               _hover={{
                 borderColor: "purple.300",
-                bg: "whiteAlpha.100",
+                bg: "rgba(255,255,255,0.9)",
                 transform: "translateY(-1px)",
                 boxShadow: "0 4px 16px rgba(167,139,250,0.15)",
               }}
               transition="all 0.2s cubic-bezier(0.16, 1, 0.3, 1)"
               boxShadow={selectedTrace?.id === trace.id ? "0 4px 16px rgba(167,139,250,0.2)" : "none"}
             >
-            >
-              <Text fontSize="sm" fontWeight="medium" lineClamp={2} color="gray.100">
+              <Text fontSize="sm" fontWeight="medium" lineClamp={2} color="gray.800">
                 {trace.task}
               </Text>
               <HStack mt={2} gap={2}>
@@ -136,8 +133,8 @@ export function DecisionTracePanel() {
       {selectedTrace && (
         <Box
           borderTop="1px solid"
-          borderColor="whiteAlpha.200"
-          bg="blackAlpha.300"
+          borderColor="blackAlpha.200"
+          bg="rgba(255,255,255,0.72)"
           backdropFilter="blur(5px)"
           px={4}
           py={3}
@@ -145,7 +142,7 @@ export function DecisionTracePanel() {
           overflow="auto"
           className="msg-animate"
         >
-          <Text fontSize="sm" fontWeight="bold" mb={3} color="white">
+          <Text fontSize="sm" fontWeight="bold" mb={3} color="gray.900">
             {selectedTrace.task}
           </Text>
           <VStack gap={3} align="stretch">
@@ -153,20 +150,20 @@ export function DecisionTracePanel() {
               <Box key={i} pl={3} borderLeft="2px solid" borderColor="purple.400">
                 <HStack gap={2}>
                   <Brain size={12} color="#a78bfa" />
-                  <Text fontSize="xs" color="gray.300">
+                  <Text fontSize="xs" color="gray.700">
                     {step.thought}
                   </Text>
                 </HStack>
                 <HStack mt={1} gap={2}>
                   <Wrench size={12} color="#22d3ee" />
-                  <Text fontSize="xs" fontFamily="mono" color="cyan.300">
+                  <Text fontSize="xs" fontFamily="mono" color="cyan.700">
                     {step.action}
                   </Text>
                 </HStack>
                 {step.observation && (
                   <HStack mt={1} gap={2}>
                     <Eye size={12} color="#34d399" />
-                    <Text fontSize="xs" color="green.300">
+                    <Text fontSize="xs" color="green.700">
                       {step.observation}
                     </Text>
                   </HStack>
@@ -179,7 +176,7 @@ export function DecisionTracePanel() {
               <Text fontSize="xs" fontWeight="bold" color="green.300" mb={1}>
                 OUTCOME
               </Text>
-              <Text fontSize="xs" color="gray.200">{selectedTrace.outcome}</Text>
+              <Text fontSize="xs" color="gray.700">{selectedTrace.outcome}</Text>
             </Box>
           )}
         </Box>

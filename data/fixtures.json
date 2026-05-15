@@ -1,0 +1,1322 @@
+{
+  "domain": "agent-memory",
+  "entities": {
+    "Person": [
+      {
+        "name": "Sarah Chen",
+        "email": "sarah.chen@corp.net",
+        "role": "Senior Analyst",
+        "description": "Sarah Chen, senior analyst specializing in agent memory."
+      },
+      {
+        "name": "James Morrison",
+        "email": "james.morrison@company.org",
+        "role": "Project Manager",
+        "description": "Project Manager James Morrison \u2014 active in the agent memory sector with relevant domain expertise."
+      },
+      {
+        "name": "Maria Rodriguez",
+        "email": "maria.rodriguez@company.org",
+        "role": "Technical Lead",
+        "description": "Maria Rodriguez serves as technical lead, contributing to agent memory initiatives and operations."
+      },
+      {
+        "name": "David Park",
+        "email": "david.park@corp.net",
+        "role": "Research Director",
+        "description": "David Park, research director specializing in agent memory."
+      },
+      {
+        "name": "Elena Volkov",
+        "email": "elena.volkov@corp.net",
+        "role": "Operations Manager",
+        "description": "Operations Manager Elena Volkov \u2014 active in the agent memory sector with relevant domain expertise."
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Meridian Consulting Group",
+        "description": "Meridian Consulting Group is a ai systems organization operating in the agent memory space.",
+        "industry": "AI Systems"
+      },
+      {
+        "name": "Pacific Northwest Industries",
+        "description": "Memory Architecture entity Pacific Northwest Industries, providing services and resources for agent memory operations.",
+        "industry": "Memory Architecture"
+      },
+      {
+        "name": "Apex Financial Partners",
+        "description": "Apex Financial Partners \u2014 a agent infrastructure institution active in agent memory.",
+        "industry": "Agent Infrastructure"
+      },
+      {
+        "name": "Greenleaf Technologies",
+        "description": "Greenleaf Technologies is a cognitive computing organization operating in the agent memory space.",
+        "industry": "Cognitive Computing"
+      },
+      {
+        "name": "Summit Healthcare Systems",
+        "description": "AI Research entity Summit Healthcare Systems, providing services and resources for agent memory operations.",
+        "industry": "AI Research"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Downtown Medical Center",
+        "address": "123 Main Street, Portland, OR 97201",
+        "latitude": 30.17,
+        "longitude": -88.83
+      },
+      {
+        "name": "Westside Corporate Campus",
+        "address": "123 Main Street, Portland, OR 97201",
+        "latitude": 25.58,
+        "longitude": -114.92
+      },
+      {
+        "name": "Harbor View Complex",
+        "address": "147 Birch Road, Atlanta, GA 30301",
+        "latitude": 41.14,
+        "longitude": -75.68
+      },
+      {
+        "name": "Mountain Ridge Facility",
+        "address": "369 Spruce Circle, Boston, MA 02101",
+        "latitude": 26.35,
+        "longitude": -95.62
+      },
+      {
+        "name": "Riverside Research Park",
+        "address": "654 Cedar Lane, Chicago, IL 60601",
+        "latitude": 41.4,
+        "longitude": -106.63
+      }
+    ],
+    "Event": [
+      {
+        "name": "Q4 Strategy Review",
+        "date": "2026-03-11T08:30:00",
+        "description": "Q4 Strategy Review, a event event recorded in the agent memory timeline."
+      },
+      {
+        "name": "Annual Compliance Audit",
+        "date": "2026-05-31T16:30:00",
+        "description": "Event Annual Compliance Audit \u2014 occurred as part of agent memory activities."
+      },
+      {
+        "name": "Emergency Response Drill",
+        "date": "2025-09-20T16:45:00",
+        "description": "Recorded event: Emergency Response Drill, relevant to agent memory workflows."
+      },
+      {
+        "name": "Product Launch Summit",
+        "date": "2024-11-07T09:00:00",
+        "description": "Product Launch Summit, a event event recorded in the agent memory timeline."
+      },
+      {
+        "name": "Board of Directors Meeting",
+        "date": "2026-05-10T10:00:00",
+        "description": "Event Board of Directors Meeting \u2014 occurred as part of agent memory activities."
+      }
+    ],
+    "Object": [
+      {
+        "name": "Primary Analysis Report",
+        "description": "Primary Analysis Report, a object used in agent memory workflows."
+      },
+      {
+        "name": "Standard Operating Procedure",
+        "description": "Object Standard Operating Procedure \u2014 cataloged for agent memory operations."
+      },
+      {
+        "name": "Quarterly Assessment Document",
+        "description": "Quarterly Assessment Document is a object supporting agent memory processes."
+      },
+      {
+        "name": "Technical Specification",
+        "description": "Technical Specification, a object used in agent memory workflows."
+      },
+      {
+        "name": "Compliance Certificate",
+        "description": "Object Compliance Certificate \u2014 cataloged for agent memory operations."
+      }
+    ],
+    "Agent": [
+      {
+        "name": "Jennifer Walsh, Realtor",
+        "agent_id": "AGE-2025-0000",
+        "model": "Jennifer Walsh, Realtor - Model",
+        "version": "Jennifer Walsh, Realtor - Version",
+        "capabilities": "Jennifer Walsh, Realtor - Capabilities",
+        "status": "active"
+      },
+      {
+        "name": "Marcus Thompson, Broker",
+        "agent_id": "AGE-2026-0001",
+        "model": "Marcus Thompson, Broker - Model",
+        "version": "Marcus Thompson, Broker - Version",
+        "capabilities": "Marcus Thompson, Broker - Capabilities",
+        "status": "idle"
+      },
+      {
+        "name": "Sandra Liu, CCIM",
+        "agent_id": "AGE-2026-0002",
+        "model": "Sandra Liu, CCIM - Model",
+        "version": "Sandra Liu, CCIM - Version",
+        "capabilities": "Sandra Liu, CCIM - Capabilities",
+        "status": "suspended"
+      },
+      {
+        "name": "David Brennan, CRS",
+        "agent_id": "AGE-2026-0003",
+        "model": "David Brennan, CRS - Model",
+        "version": "David Brennan, CRS - Version",
+        "capabilities": "David Brennan, CRS - Capabilities",
+        "status": "retired"
+      },
+      {
+        "name": "Amy Richardson, ABR",
+        "agent_id": "AGE-2025-0004",
+        "model": "Amy Richardson, ABR - Model",
+        "version": "Amy Richardson, ABR - Version",
+        "capabilities": "Amy Richardson, ABR - Capabilities",
+        "status": "active"
+      }
+    ],
+    "Conversation": [
+      {
+        "name": "Customer Onboarding Chat",
+        "conversation_id": "CON-2025-0000",
+        "topic": "Customer Onboarding Chat - Topic",
+        "started_at": "2026-08-11T10:45:00",
+        "ended_at": "2025-07-06T16:45:00",
+        "message_count": 29,
+        "status": "active"
+      },
+      {
+        "name": "Technical Support Session",
+        "conversation_id": "CON-2026-0001",
+        "topic": "Technical Support Session - Topic",
+        "started_at": "2026-05-13T13:45:00",
+        "ended_at": "2024-08-29T15:30:00",
+        "message_count": 17,
+        "status": "completed"
+      },
+      {
+        "name": "Product Discovery Thread",
+        "conversation_id": "CON-2025-0002",
+        "topic": "Product Discovery Thread - Topic",
+        "started_at": "2025-06-13T13:15:00",
+        "ended_at": "2024-04-17T08:45:00",
+        "message_count": 40,
+        "status": "abandoned"
+      },
+      {
+        "name": "Bug Report Discussion",
+        "conversation_id": "CON-2025-0003",
+        "topic": "Bug Report Discussion - Topic",
+        "started_at": "2024-06-07T12:15:00",
+        "ended_at": "2025-11-25T16:45:00",
+        "message_count": 40,
+        "status": "escalated"
+      },
+      {
+        "name": "Weekly Standup Recap",
+        "conversation_id": "CON-2024-0004",
+        "topic": "Weekly Standup Recap - Topic",
+        "started_at": "2024-10-19T11:45:00",
+        "ended_at": "2024-08-11T11:45:00",
+        "message_count": 53,
+        "status": "active"
+      }
+    ],
+    "Entity": [
+      {
+        "name": "Acme Corporation",
+        "entity_id": "ENT-2024-0000",
+        "entity_type": "person",
+        "confidence": 0.62,
+        "source_text": "Acme Corporation - Source Text"
+      },
+      {
+        "name": "Project Phoenix",
+        "entity_id": "ENT-2024-0001",
+        "entity_type": "place",
+        "confidence": 0.95,
+        "source_text": "Project Phoenix - Source Text"
+      },
+      {
+        "name": "Q1 Revenue Target",
+        "entity_id": "ENT-2026-0002",
+        "entity_type": "concept",
+        "confidence": 0.77,
+        "source_text": "Q1 Revenue Target - Source Text"
+      },
+      {
+        "name": "Customer Segment Alpha",
+        "entity_id": "ENT-2026-0003",
+        "entity_type": "event",
+        "confidence": 0.8,
+        "source_text": "Customer Segment Alpha - Source Text"
+      },
+      {
+        "name": "Production Database",
+        "entity_id": "ENT-2024-0004",
+        "entity_type": "product",
+        "confidence": 0.6,
+        "source_text": "Production Database - Source Text"
+      }
+    ],
+    "Memory": [
+      {
+        "name": "User Preference: Dark Mode",
+        "memory_id": "MEM-2026-0000",
+        "content": "User Preference: Dark Mode - Content",
+        "memory_type": "episodic",
+        "importance": 189.02,
+        "created_at": "2026-12-08T13:45:00",
+        "last_accessed": "2026-02-03T16:30:00"
+      },
+      {
+        "name": "Context: Previous Order History",
+        "memory_id": "MEM-2026-0001",
+        "content": "Context: Previous Order History - Content",
+        "memory_type": "semantic",
+        "importance": 948.84,
+        "created_at": "2025-02-26T10:30:00",
+        "last_accessed": "2026-09-13T15:30:00"
+      },
+      {
+        "name": "Learned: Communication Style",
+        "memory_id": "MEM-2025-0002",
+        "content": "Learned: Communication Style - Content",
+        "memory_type": "procedural",
+        "importance": 993.34,
+        "created_at": "2025-01-24T12:00:00",
+        "last_accessed": "2026-12-07T11:45:00"
+      },
+      {
+        "name": "Fact: Team Size is 12",
+        "memory_id": "MEM-2025-0003",
+        "content": "Fact: Team Size is 12 - Content",
+        "memory_type": "working",
+        "importance": 541.96,
+        "created_at": "2024-02-18T09:15:00",
+        "last_accessed": "2025-04-02T14:45:00"
+      },
+      {
+        "name": "User Goal: Reduce Response Time",
+        "memory_id": "MEM-2025-0004",
+        "content": "User Goal: Reduce Response Time - Content",
+        "memory_type": "episodic",
+        "importance": 407.8,
+        "created_at": "2026-01-19T14:30:00",
+        "last_accessed": "2026-12-03T14:00:00"
+      }
+    ],
+    "ToolCall": [
+      {
+        "name": "search_knowledge_base(auth)",
+        "call_id": "TOO-2025-0000",
+        "tool_name": "search_knowledge_base(auth)",
+        "input_params": "search_knowledge_base(auth) - Input Params",
+        "output_summary": "search_knowledge_base(auth) - Output Summary",
+        "duration_ms": 9382,
+        "status": "success",
+        "called_at": "2026-05-05T10:15:00"
+      },
+      {
+        "name": "create_ticket(high priority)",
+        "call_id": "TOO-2024-0001",
+        "tool_name": "create_ticket(high priority)",
+        "input_params": "create_ticket(high priority) - Input Params",
+        "output_summary": "create_ticket(high priority) - Output Summary",
+        "duration_ms": 7465,
+        "status": "failure",
+        "called_at": "2024-08-05T09:15:00"
+      },
+      {
+        "name": "fetch_metrics(api service)",
+        "call_id": "TOO-2026-0002",
+        "tool_name": "fetch_metrics(api service)",
+        "input_params": "fetch_metrics(api service) - Input Params",
+        "output_summary": "fetch_metrics(api service) - Output Summary",
+        "duration_ms": 302,
+        "status": "timeout",
+        "called_at": "2024-11-12T14:00:00"
+      },
+      {
+        "name": "run_query(MATCH nodes)",
+        "call_id": "TOO-2024-0003",
+        "tool_name": "run_query(MATCH nodes)",
+        "input_params": "run_query(MATCH nodes) - Input Params",
+        "output_summary": "run_query(MATCH nodes) - Output Summary",
+        "duration_ms": 3607,
+        "status": "cancelled",
+        "called_at": "2026-04-18T09:45:00"
+      },
+      {
+        "name": "send_notification(ops channel)",
+        "call_id": "TOO-2024-0004",
+        "tool_name": "send_notification(ops channel)",
+        "input_params": "send_notification(ops channel) - Input Params",
+        "output_summary": "send_notification(ops channel) - Output Summary",
+        "duration_ms": 2436,
+        "status": "success",
+        "called_at": "2025-07-21T17:00:00"
+      }
+    ],
+    "Session": [
+      {
+        "name": "Morning Briefing 2025-01-15",
+        "session_id": "SES-2025-0000",
+        "started_at": "2026-12-22T09:00:00",
+        "ended_at": "2026-05-28T13:45:00",
+        "goal": "Morning Briefing 2025-01-15 - Goal",
+        "outcome": "achieved"
+      },
+      {
+        "name": "API Debug Session",
+        "session_id": "SES-2024-0001",
+        "started_at": "2024-11-27T14:15:00",
+        "ended_at": "2024-01-12T15:15:00",
+        "goal": "API Debug Session - Goal",
+        "outcome": "partial"
+      },
+      {
+        "name": "Data Migration Planning",
+        "session_id": "SES-2026-0002",
+        "started_at": "2025-11-26T15:15:00",
+        "ended_at": "2026-03-03T15:15:00",
+        "goal": "Data Migration Planning - Goal",
+        "outcome": "failed"
+      },
+      {
+        "name": "Customer Demo Walkthrough",
+        "session_id": "SES-2025-0003",
+        "started_at": "2024-07-21T15:45:00",
+        "ended_at": "2025-09-28T13:45:00",
+        "goal": "Customer Demo Walkthrough - Goal",
+        "outcome": "ongoing"
+      },
+      {
+        "name": "Incident Triage #847",
+        "session_id": "SES-2024-0004",
+        "started_at": "2026-02-28T08:30:00",
+        "ended_at": "2025-12-20T17:45:00",
+        "goal": "Incident Triage #847 - Goal",
+        "outcome": "achieved"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Sarah Chen",
+      "target_label": "Organization",
+      "target_name": "Summit Healthcare Systems"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Sarah Chen",
+      "target_label": "Organization",
+      "target_name": "Meridian Consulting Group"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "James Morrison",
+      "target_label": "Organization",
+      "target_name": "Apex Financial Partners"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Maria Rodriguez",
+      "target_label": "Organization",
+      "target_name": "Pacific Northwest Industries"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Maria Rodriguez",
+      "target_label": "Organization",
+      "target_name": "Meridian Consulting Group"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "David Park",
+      "target_label": "Organization",
+      "target_name": "Greenleaf Technologies"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Elena Volkov",
+      "target_label": "Organization",
+      "target_name": "Apex Financial Partners"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Meridian Consulting Group",
+      "target_label": "Location",
+      "target_name": "Harbor View Complex"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Meridian Consulting Group",
+      "target_label": "Location",
+      "target_name": "Downtown Medical Center"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Pacific Northwest Industries",
+      "target_label": "Location",
+      "target_name": "Mountain Ridge Facility"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Pacific Northwest Industries",
+      "target_label": "Location",
+      "target_name": "Westside Corporate Campus"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Apex Financial Partners",
+      "target_label": "Location",
+      "target_name": "Riverside Research Park"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Apex Financial Partners",
+      "target_label": "Location",
+      "target_name": "Westside Corporate Campus"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Greenleaf Technologies",
+      "target_label": "Location",
+      "target_name": "Riverside Research Park"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Greenleaf Technologies",
+      "target_label": "Location",
+      "target_name": "Westside Corporate Campus"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Summit Healthcare Systems",
+      "target_label": "Location",
+      "target_name": "Riverside Research Park"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Summit Healthcare Systems",
+      "target_label": "Location",
+      "target_name": "Mountain Ridge Facility"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Jennifer Walsh, Realtor",
+      "target_label": "Memory",
+      "target_name": "User Preference: Dark Mode"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "Memory",
+      "target_name": "Learned: Communication Style"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Sandra Liu, CCIM",
+      "target_label": "Memory",
+      "target_name": "User Goal: Reduce Response Time"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Sandra Liu, CCIM",
+      "target_label": "Memory",
+      "target_name": "Learned: Communication Style"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "Memory",
+      "target_name": "Learned: Communication Style"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "Memory",
+      "target_name": "User Goal: Reduce Response Time"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "Memory",
+      "target_name": "Fact: Team Size is 12"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "Memory",
+      "target_name": "User Preference: Dark Mode"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Customer Onboarding Chat",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Technical Support Session",
+      "target_label": "Entity",
+      "target_name": "Acme Corporation"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Technical Support Session",
+      "target_label": "Entity",
+      "target_name": "Customer Segment Alpha"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Product Discovery Thread",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Product Discovery Thread",
+      "target_label": "Entity",
+      "target_name": "Customer Segment Alpha"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Bug Report Discussion",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Weekly Standup Recap",
+      "target_label": "Entity",
+      "target_name": "Customer Segment Alpha"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Weekly Standup Recap",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Jennifer Walsh, Realtor",
+      "target_label": "Entity",
+      "target_name": "Production Database"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Jennifer Walsh, Realtor",
+      "target_label": "Entity",
+      "target_name": "Acme Corporation"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "Entity",
+      "target_name": "Customer Segment Alpha"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "Entity",
+      "target_name": "Q1 Revenue Target"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Sandra Liu, CCIM",
+      "target_label": "Entity",
+      "target_name": "Customer Segment Alpha"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "Entity",
+      "target_name": "Acme Corporation"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "Entity",
+      "target_name": "Q1 Revenue Target"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "Entity",
+      "target_name": "Production Database"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Jennifer Walsh, Realtor",
+      "target_label": "ToolCall",
+      "target_name": "fetch_metrics(api service)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Jennifer Walsh, Realtor",
+      "target_label": "ToolCall",
+      "target_name": "send_notification(ops channel)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "ToolCall",
+      "target_name": "run_query(MATCH nodes)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "ToolCall",
+      "target_name": "send_notification(ops channel)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Sandra Liu, CCIM",
+      "target_label": "ToolCall",
+      "target_name": "create_ticket(high priority)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "ToolCall",
+      "target_name": "run_query(MATCH nodes)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "ToolCall",
+      "target_name": "fetch_metrics(api service)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "ToolCall",
+      "target_name": "fetch_metrics(api service)"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "ToolCall",
+      "target_name": "search_knowledge_base(auth)"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Jennifer Walsh, Realtor",
+      "target_label": "Conversation",
+      "target_name": "Product Discovery Thread"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "Conversation",
+      "target_name": "Technical Support Session"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Marcus Thompson, Broker",
+      "target_label": "Conversation",
+      "target_name": "Product Discovery Thread"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Sandra Liu, CCIM",
+      "target_label": "Conversation",
+      "target_name": "Bug Report Discussion"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Sandra Liu, CCIM",
+      "target_label": "Conversation",
+      "target_name": "Technical Support Session"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "David Brennan, CRS",
+      "target_label": "Conversation",
+      "target_name": "Bug Report Discussion"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Amy Richardson, ABR",
+      "target_label": "Conversation",
+      "target_name": "Product Discovery Thread"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "User Preference: Dark Mode",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Context: Previous Order History",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Context: Previous Order History",
+      "target_label": "Entity",
+      "target_name": "Production Database"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Learned: Communication Style",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Fact: Team Size is 12",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "User Goal: Reduce Response Time",
+      "target_label": "Entity",
+      "target_name": "Project Phoenix"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Customer Onboarding Chat",
+      "target_label": "Session",
+      "target_name": "Morning Briefing 2025-01-15"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Customer Onboarding Chat",
+      "target_label": "Session",
+      "target_name": "API Debug Session"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Technical Support Session",
+      "target_label": "Session",
+      "target_name": "Incident Triage #847"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Technical Support Session",
+      "target_label": "Session",
+      "target_name": "Customer Demo Walkthrough"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Product Discovery Thread",
+      "target_label": "Session",
+      "target_name": "Morning Briefing 2025-01-15"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Bug Report Discussion",
+      "target_label": "Session",
+      "target_name": "API Debug Session"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Bug Report Discussion",
+      "target_label": "Session",
+      "target_name": "Customer Demo Walkthrough"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Weekly Standup Recap",
+      "target_label": "Session",
+      "target_name": "Morning Briefing 2025-01-15"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "search_knowledge_base(auth)",
+      "target_label": "Conversation",
+      "target_name": "Customer Onboarding Chat"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "create_ticket(high priority)",
+      "target_label": "Conversation",
+      "target_name": "Weekly Standup Recap"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "fetch_metrics(api service)",
+      "target_label": "Conversation",
+      "target_name": "Bug Report Discussion"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "run_query(MATCH nodes)",
+      "target_label": "Conversation",
+      "target_name": "Technical Support Session"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "run_query(MATCH nodes)",
+      "target_label": "Conversation",
+      "target_name": "Weekly Standup Recap"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "send_notification(ops channel)",
+      "target_label": "Conversation",
+      "target_name": "Weekly Standup Recap"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log: Jennifer Walsh, Realtor",
+      "content": "# Agent Session Log\n\n**Date:** 2026-10-04  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, Session: Morning Briefing 2025-01-15, ToolCall: search_knowledge_base(auth), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log: Marcus Thompson, Broker",
+      "content": "# Agent Session Log\n\n**Date:** 2026-05-01  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, Session: API Debug Session, ToolCall: create_ticket(high priority), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log: Sandra Liu, CCIM",
+      "content": "# Agent Session Log\n\n**Date:** 2025-06-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, Session: Data Migration Planning, ToolCall: fetch_metrics(api service), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log: David Brennan, CRS",
+      "content": "# Agent Session Log\n\n**Date:** 2024-05-18  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, Session: Customer Demo Walkthrough, ToolCall: run_query(MATCH nodes), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log: Amy Richardson, ABR",
+      "content": "# Agent Session Log\n\n**Date:** 2025-05-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel)\n\n## Summary\n\nThis agent session log documents detailed log of an agent's reasoning and actions during a session. It pertains to Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel) and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel) are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, Session: Incident Triage #847, ToolCall: send_notification(ops channel), the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior agent session log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot: Jennifer Walsh, Realtor",
+      "content": "# Memory Snapshot\n\n**Date:** 2024-05-30  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, Memory: User Preference: Dark Mode, Entity: Acme Corporation, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot: Marcus Thompson, Broker",
+      "content": "# Memory Snapshot\n\n**Date:** 2025-05-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, Memory: Context: Previous Order History, Entity: Project Phoenix, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot: Sandra Liu, CCIM",
+      "content": "# Memory Snapshot\n\n**Date:** 2026-08-17  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, Memory: Learned: Communication Style, Entity: Q1 Revenue Target, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot: David Brennan, CRS",
+      "content": "# Memory Snapshot\n\n**Date:** 2025-01-22  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, Memory: Fact: Team Size is 12, Entity: Customer Segment Alpha, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot: Amy Richardson, ABR",
+      "content": "# Memory Snapshot\n\n**Date:** 2024-02-12  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database\n\n## Summary\n\nThis memory snapshot documents point-in-time snapshot of an agent's memory state. It pertains to Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, Memory: User Goal: Reduce Response Time, Entity: Production Database, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior memory snapshot records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace: Jennifer Walsh, Realtor",
+      "content": "# Tool Execution Trace\n\n**Date:** 2026-02-25  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, ToolCall: search_knowledge_base(auth), Conversation: Customer Onboarding Chat, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace: Marcus Thompson, Broker",
+      "content": "# Tool Execution Trace\n\n**Date:** 2025-05-02  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, ToolCall: create_ticket(high priority), Conversation: Technical Support Session, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace: Sandra Liu, CCIM",
+      "content": "# Tool Execution Trace\n\n**Date:** 2024-03-07  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, ToolCall: fetch_metrics(api service), Conversation: Product Discovery Thread, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace: David Brennan, CRS",
+      "content": "# Tool Execution Trace\n\n**Date:** 2024-06-14  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, ToolCall: run_query(MATCH nodes), Conversation: Bug Report Discussion, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace: Amy Richardson, ABR",
+      "content": "# Tool Execution Trace\n\n**Date:** 2024-04-29  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap\n\n## Summary\n\nThis tool execution trace documents detailed trace of tool calls and their results. It pertains to Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, ToolCall: send_notification(ops channel), Conversation: Weekly Standup Recap, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior tool execution trace records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary: Jennifer Walsh, Realtor",
+      "content": "# Conversation Summary\n\n**Date:** 2024-11-09  \n**Domain:** Agent Memory  \n**Reference:** Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Jennifer Walsh, Realtor, Conversation: Customer Onboarding Chat, Entity: Acme Corporation, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary: Marcus Thompson, Broker",
+      "content": "# Conversation Summary\n\n**Date:** 2026-04-30  \n**Domain:** Agent Memory  \n**Reference:** Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Marcus Thompson, Broker, Conversation: Technical Support Session, Entity: Project Phoenix, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary: Sandra Liu, CCIM",
+      "content": "# Conversation Summary\n\n**Date:** 2025-10-16  \n**Domain:** Agent Memory  \n**Reference:** Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Sandra Liu, CCIM, Conversation: Product Discovery Thread, Entity: Q1 Revenue Target, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary: David Brennan, CRS",
+      "content": "# Conversation Summary\n\n**Date:** 2024-05-07  \n**Domain:** Agent Memory  \n**Reference:** Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: David Brennan, CRS, Conversation: Bug Report Discussion, Entity: Customer Segment Alpha, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary: Amy Richardson, ABR",
+      "content": "# Conversation Summary\n\n**Date:** 2026-05-13  \n**Domain:** Agent Memory  \n**Reference:** Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database\n\n## Summary\n\nThis conversation summary documents summary of a conversation with key points and entities. It pertains to Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Agent: Amy Richardson, ABR, Conversation: Weekly Standup Recap, Entity: Production Database, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior conversation summary records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log: Customer Onboarding Chat",
+      "content": "# Entity Extraction Log\n\n**Date:** 2026-07-24  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Customer Onboarding Chat, Entity: Acme Corporation\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Customer Onboarding Chat, Entity: Acme Corporation and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Customer Onboarding Chat, Entity: Acme Corporation are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Customer Onboarding Chat, Entity: Acme Corporation, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log: Technical Support Session",
+      "content": "# Entity Extraction Log\n\n**Date:** 2025-12-15  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Technical Support Session, Entity: Project Phoenix\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Technical Support Session, Entity: Project Phoenix and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Technical Support Session, Entity: Project Phoenix are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Technical Support Session, Entity: Project Phoenix, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log: Product Discovery Thread",
+      "content": "# Entity Extraction Log\n\n**Date:** 2026-12-19  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Product Discovery Thread, Entity: Q1 Revenue Target\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Product Discovery Thread, Entity: Q1 Revenue Target and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Product Discovery Thread, Entity: Q1 Revenue Target are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Product Discovery Thread, Entity: Q1 Revenue Target, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log: Bug Report Discussion",
+      "content": "# Entity Extraction Log\n\n**Date:** 2026-07-13  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Bug Report Discussion, Entity: Customer Segment Alpha\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Bug Report Discussion, Entity: Customer Segment Alpha and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Bug Report Discussion, Entity: Customer Segment Alpha are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Bug Report Discussion, Entity: Customer Segment Alpha, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log: Weekly Standup Recap",
+      "content": "# Entity Extraction Log\n\n**Date:** 2024-01-22  \n**Domain:** Agent Memory  \n**Reference:** Conversation: Weekly Standup Recap, Entity: Production Database\n\n## Summary\n\nThis entity extraction log documents log of entities extracted from conversations and their relationships. It pertains to Conversation: Weekly Standup Recap, Entity: Production Database and was prepared as part of standard agent memory operations.\n\n## Details\n\nThe following information has been compiled based on available records and observations. All referenced entities have been verified against the current knowledge graph.\n\nKey findings and observations related to Conversation: Weekly Standup Recap, Entity: Production Database are documented below. This record should be reviewed in conjunction with related documents and entity records for complete context.\n\n## Recommendations\n\nBased on the analysis of Conversation: Weekly Standup Recap, Entity: Production Database, the following actions are recommended for continued monitoring and follow-up. Please refer to the relevant entity profiles and prior entity extraction log records for historical context and trend analysis.\n\n---\n\n*Document generated for Agent Memory context graph application.*"
+    }
+  ],
+  "traces": [
+    {
+      "id": "memory_consolidation",
+      "task": "Decide which memories to consolidate or prune for agent Sandra Liu, CCIM",
+      "steps": [
+        {
+          "thought": "Assess memory usage and identify low-importance or redundant memories",
+          "action": "Query all memories sorted by importance and last access time",
+          "observation": "Found 8 relevant records in the agent memory knowledge graph. Top result: Mountain Ridge Facility with 6 connected entities."
+        },
+        {
+          "thought": "Identify memories that can be merged into higher-level summaries",
+          "action": "Find clusters of related episodic memories referencing the same entities",
+          "observation": "Action completed for Primary Analysis Report. Results consistent with expected agent memory domain patterns."
+        },
+        {
+          "thought": "Evaluate impact of pruning on agent's task performance",
+          "action": "Check which memories are referenced in recent successful sessions",
+          "observation": "Verified run_query(MATCH nodes) against agent memory standards. All 7 checked parameters within acceptable thresholds."
+        }
+      ],
+      "outcome": "Consolidation plan: the assessed criteria affecting the assessed criteria memories"
+    },
+    {
+      "id": "tool_selection",
+      "task": "Determine which tool to invoke for user request in conversation CON-2026-0001",
+      "steps": [
+        {
+          "thought": "Parse user intent and identify required information",
+          "action": "Analyze conversation context and extract key parameters",
+          "observation": "Analysis of Production Database complete. Key metrics computed and compared against historical baselines \u2014 2 indicators flagged for review."
+        },
+        {
+          "thought": "Match intent against available tool capabilities",
+          "action": "Query tool registry and rank by relevance to the request",
+          "observation": "Found 9 relevant records in the agent memory knowledge graph. Top result: Marcus Thompson, Broker with 4 connected entities."
+        },
+        {
+          "thought": "Consider past tool usage patterns for similar requests",
+          "action": "Search memory for similar past conversations and their tool calls",
+          "observation": "Found 9 relevant records in the agent memory knowledge graph. Top result: Customer Onboarding Chat with 4 connected entities."
+        }
+      ],
+      "outcome": "Selected tool: the assessed criteria with parameters the assessed criteria"
+    },
+    {
+      "id": "entity_resolution",
+      "task": "Resolve ambiguous entity reference 'Q1 Revenue Target' across conversations",
+      "steps": [
+        {
+          "thought": "Search for all entities matching or similar to the reference",
+          "action": "Query entity graph for name matches and fuzzy similarities",
+          "observation": "Found 5 relevant records in the agent memory knowledge graph. Top result: Compliance Certificate with 3 connected entities."
+        },
+        {
+          "thought": "Use conversation context to disambiguate",
+          "action": "Review surrounding conversation context and co-occurring entities",
+          "observation": "Review of Apex Financial Partners completed. Identified 2 key factors relevant to the current decision context."
+        },
+        {
+          "thought": "Check memory for prior resolutions of this entity",
+          "action": "Search agent memories for previous references to this entity",
+          "observation": "Found 7 relevant records in the agent memory knowledge graph. Top result: Westside Corporate Campus with 3 connected entities."
+        }
+      ],
+      "outcome": "Resolved to: the assessed criteria with confidence high confidence"
+    },
+    {
+      "id": "session_goal_assessment",
+      "task": "Evaluate whether session SES-2024-0004 achieved its stated goal",
+      "steps": [
+        {
+          "thought": "Review the session goal and all conversations within the session",
+          "action": "Query session details and all conversations linked via PART_OF_SESSION",
+          "observation": "Found 8 relevant records in the agent memory knowledge graph. Top result: Sandra Liu, CCIM with 3 connected entities."
+        },
+        {
+          "thought": "Assess tool call success rates during the session",
+          "action": "Check tool call outcomes for failures or timeouts that may have blocked progress",
+          "observation": "Verified Maria Rodriguez against agent memory standards. All 3 checked parameters within acceptable thresholds."
+        },
+        {
+          "thought": "Compare extracted entities and memories against expected outcomes",
+          "action": "Review entities extracted and memories created during the session",
+          "observation": "Review of Incident Triage #847 completed. Identified 3 key factors relevant to the current decision context."
+        }
+      ],
+      "outcome": "Goal achievement: resolved. Completion: the assessed criteria%. Gaps: the assessed criteria"
+    },
+    {
+      "id": "knowledge_gap_detection",
+      "task": "Identify knowledge gaps in agent David Brennan, CRS's memory about Q1 Revenue Target",
+      "steps": [
+        {
+          "thought": "Catalog what the agent currently knows about this entity",
+          "action": "Query all memories referencing this entity and their types",
+          "observation": "Found 9 relevant records in the agent memory knowledge graph. Top result: Weekly Standup Recap with 5 connected entities."
+        },
+        {
+          "thought": "Compare against conversations where this entity was discussed",
+          "action": "Find conversations that extracted this entity and check for unrecorded information",
+          "observation": "Verified Technical Specification against agent memory standards. All 4 checked parameters within acceptable thresholds."
+        },
+        {
+          "thought": "Identify topics related to this entity with no corresponding memories",
+          "action": "Traverse entity relationships to find connected concepts with no memory coverage",
+          "observation": "Action completed for Marcus Thompson, Broker. Results consistent with expected agent memory domain patterns."
+        }
+      ],
+      "outcome": "Knowledge gaps found: the assessed criteria. Priority areas: the assessed criteria"
+    },
+    {
+      "id": "tool_failure_diagnosis",
+      "task": "Diagnose repeated failures of tool fetch_metrics(api service) invoked by agent Sandra Liu, CCIM",
+      "steps": [
+        {
+          "thought": "Analyze recent failure patterns for this tool",
+          "action": "Query tool calls filtered by tool name and failure status",
+          "observation": "Found 7 relevant records in the agent memory knowledge graph. Top result: Product Launch Summit with 4 connected entities."
+        },
+        {
+          "thought": "Examine input parameters that led to failures vs successes",
+          "action": "Compare input_params across successful and failed invocations",
+          "observation": "Action completed for Annual Compliance Audit. Results consistent with expected agent memory domain patterns."
+        },
+        {
+          "thought": "Check if failures correlate with specific conversation topics or entities",
+          "action": "Link failed tool calls to their triggering conversations and extracted entities",
+          "observation": "Action completed for Emergency Response Drill. Results consistent with expected agent memory domain patterns."
+        },
+        {
+          "thought": "Recommend corrective action or parameter adjustments",
+          "action": "Identify parameter patterns most likely to succeed based on historical data",
+          "observation": "Action completed for run_query(MATCH nodes). Results consistent with expected agent memory domain patterns."
+        }
+      ],
+      "outcome": "Root cause: the assessed criteria. Fix: the assessed criteria. Expected success rate improvement: the assessed criteria%"
+    },
+    {
+      "id": "conversation_escalation",
+      "task": "Decide whether to escalate conversation CON-2025-0003 to a human operator",
+      "steps": [
+        {
+          "thought": "Assess conversation sentiment and user satisfaction signals",
+          "action": "Review conversation history for frustration indicators and repeated requests",
+          "observation": "Review of Morning Briefing 2025-01-15 completed. Identified 3 key factors relevant to the current decision context."
+        },
+        {
+          "thought": "Check if the agent has exhausted available tools and knowledge",
+          "action": "Query tool calls made and memories accessed during this conversation",
+          "observation": "Found 3 relevant records in the agent memory knowledge graph. Top result: Mountain Ridge Facility with 6 connected entities."
+        },
+        {
+          "thought": "Evaluate the complexity of the remaining unresolved request",
+          "action": "Compare against similar past conversations and their resolution patterns",
+          "observation": "Action completed for Acme Corporation. Results consistent with expected agent memory domain patterns."
+        }
+      ],
+      "outcome": "Escalation decision: Approve. Reason: the assessed criteria. Priority: high"
+    },
+    {
+      "id": "memory_type_classification",
+      "task": "Classify incoming information from conversation CON-2024-0004 into appropriate memory types",
+      "steps": [
+        {
+          "thought": "Analyze the nature of information extracted from the conversation",
+          "action": "Review entities and context from the conversation",
+          "observation": "Review of Annual Compliance Audit completed. Identified 2 key factors relevant to the current decision context."
+        },
+        {
+          "thought": "Determine if information is episodic, semantic, or procedural",
+          "action": "Classify based on whether it describes events, facts, or how-to knowledge",
+          "observation": "Action completed for Morning Briefing 2025-01-15. Results consistent with expected agent memory domain patterns."
+        },
+        {
+          "thought": "Check for existing memories that should be updated vs creating new ones",
+          "action": "Search for similar existing memories to prevent duplication",
+          "observation": "Found 5 relevant records in the agent memory knowledge graph. Top result: Fact: Team Size is 12 with 2 connected entities."
+        }
+      ],
+      "outcome": "Classification: the assessed criteria across the assessed criteria new memories. Updated: the assessed criteria existing"
+    },
+    {
+      "id": "agent_performance_review",
+      "task": "Review overall performance of agent Sandra Liu, CCIM across recent sessions",
+      "steps": [
+        {
+          "thought": "Analyze session outcomes and goal achievement rates",
+          "action": "Query all recent sessions and their outcome status",
+          "observation": "Found 12 relevant records in the agent memory knowledge graph. Top result: David Brennan, CRS with 2 connected entities."
+        },
+        {
+          "thought": "Evaluate tool usage efficiency and error rates",
+          "action": "Calculate tool call success rates and average durations",
+          "observation": "Analysis of David Park complete. Key metrics computed and compared against historical baselines \u2014 5 indicators flagged for review."
+        },
+        {
+          "thought": "Assess memory utilization and knowledge growth",
+          "action": "Review memory creation frequency, importance distribution, and access patterns",
+          "observation": "Review of Amy Richardson, ABR completed. Identified 4 key factors relevant to the current decision context."
+        },
+        {
+          "thought": "Identify areas for improvement in agent capabilities",
+          "action": "Find conversation topics with low resolution rates or high escalation counts",
+          "observation": "Action completed for run_query(MATCH nodes). Results consistent with expected agent memory domain patterns."
+        }
+      ],
+      "outcome": "Performance: the assessed criteria. Strengths: the assessed criteria. Improvement areas: the assessed criteria"
+    }
+  ]
+}

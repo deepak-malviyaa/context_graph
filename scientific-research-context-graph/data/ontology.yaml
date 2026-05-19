@@ -1,0 +1,523 @@
+inherits: _base
+
+domain:
+  id: scientific-research
+  name: Scientific Research
+  description: Research collaboration, publication tracking, grant management, and experiment analysis
+  tagline: "AI-powered Research Intelligence"
+  emoji: "\U0001F52C"
+
+entity_types:
+  - label: Researcher
+    pole_type: OBJECT
+    subtype: ACADEMIC
+    color: "#1d4ed8"
+    icon: user-circle
+    properties:
+      - name: researcher_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: orcid
+        type: string
+        unique: true
+      - name: title
+        type: string
+        enum: [professor, associate_professor, assistant_professor, postdoc, phd_student, research_scientist]
+      - name: h_index
+        type: integer
+      - name: specialization
+        type: string
+      - name: email
+        type: string
+
+  - label: Paper
+    pole_type: OBJECT
+    subtype: PUBLICATION
+    color: "#be185d"
+    icon: file-text
+    properties:
+      - name: doi
+        type: string
+        required: true
+        unique: true
+      - name: title
+        type: string
+        required: true
+      - name: abstract
+        type: string
+      - name: journal
+        type: string
+      - name: publication_date
+        type: date
+      - name: citation_count
+        type: integer
+      - name: paper_type
+        type: string
+        enum: [journal_article, conference_paper, preprint, review, meta_analysis]
+
+  - label: Dataset
+    pole_type: OBJECT
+    subtype: DATA_RESOURCE
+    color: "#0d9488"
+    icon: database
+    properties:
+      - name: dataset_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: string
+      - name: format
+        type: string
+        enum: [csv, json, hdf5, netcdf, parquet, sql, custom]
+      - name: size_gb
+        type: float
+      - name: license
+        type: string
+        enum: [cc_by, cc_by_sa, cc0, mit, gpl, proprietary, restricted]
+      - name: access_url
+        type: string
+
+  - label: Experiment
+    pole_type: EVENT
+    subtype: RESEARCH_ACTIVITY
+    color: "#d97706"
+    icon: flask
+    properties:
+      - name: experiment_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: methodology
+        type: string
+      - name: start_date
+        type: date
+      - name: end_date
+        type: date
+      - name: status
+        type: string
+        enum: [planned, in_progress, completed, failed, abandoned]
+      - name: result_summary
+        type: string
+
+  - label: Grant
+    pole_type: OBJECT
+    subtype: FUNDING
+    color: "#16a34a"
+    icon: banknote
+    properties:
+      - name: grant_id
+        type: string
+        required: true
+        unique: true
+      - name: title
+        type: string
+        required: true
+      - name: funding_agency
+        type: string
+        required: true
+      - name: amount
+        type: float
+      - name: currency
+        type: string
+        default: USD
+      - name: start_date
+        type: date
+      - name: end_date
+        type: date
+      - name: status
+        type: string
+        enum: [submitted, under_review, awarded, active, completed, rejected]
+
+  - label: Institution
+    pole_type: OBJECT
+    subtype: ACADEMIC_ORG
+    color: "#6366f1"
+    icon: building
+    properties:
+      - name: institution_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: institution_type
+        type: string
+        enum: [university, research_institute, national_lab, hospital, industry_lab]
+      - name: country
+        type: string
+      - name: ranking
+        type: integer
+      - name: department
+        type: string
+
+relationships:
+  - type: AUTHORED
+    source: Researcher
+    target: Paper
+  - type: CITED
+    source: Paper
+    target: Paper
+  - type: FUNDED_BY
+    source: Experiment
+    target: Grant
+  - type: REPLICATED
+    source: Experiment
+    target: Experiment
+  - type: USED_DATASET
+    source: Paper
+    target: Dataset
+  - type: AFFILIATED_WITH
+    source: Researcher
+    target: Institution
+  - type: CONDUCTED
+    source: Researcher
+    target: Experiment
+  - type: PRODUCED_DATASET
+    source: Experiment
+    target: Dataset
+
+document_templates:
+  - id: grant_proposal
+    name: Grant Proposal
+    description: Research grant proposals and funding applications
+    count: 6
+    prompt_template: |
+      Write a grant proposal from {{researcher.name}} at {{institution.name}}
+      for the {{grant.title}} grant from {{grant.funding_agency}}.
+      Requested amount: ${{grant.amount}}. Research area: {{researcher.specialization}}.
+      Include background, objectives, methodology, timeline, and expected impact.
+    required_entities: [Researcher, Institution, Grant]
+
+  - id: peer_review
+    name: Peer Review
+    description: Peer review reports for submitted manuscripts
+    count: 8
+    prompt_template: |
+      Write a peer review for the paper "{{paper.title}}" submitted to
+      {{paper.journal}}. Reviewer: {{researcher.name}} from {{institution.name}}.
+      Include assessment of methodology, results, significance,
+      and recommendation (accept, revise, reject).
+    required_entities: [Paper, Researcher, Institution]
+
+  - id: lab_notebook
+    name: Lab Notebook Entry
+    description: Daily lab notebook entries documenting experimental work
+    count: 12
+    prompt_template: |
+      Write a lab notebook entry by {{researcher.name}} for experiment
+      "{{experiment.name}}" ({{experiment.experiment_id}}) on {{date}}.
+      Methodology: {{experiment.methodology}}. Include observations,
+      measurements, deviations from protocol, and preliminary analysis.
+    required_entities: [Researcher, Experiment, Dataset]
+
+  - id: experiment_log
+    name: Experiment Log
+    description: Formal experiment design and results documentation
+    count: 8
+    prompt_template: |
+      Write an experiment log for "{{experiment.name}}" conducted by
+      {{researcher.name}} at {{institution.name}}. Status: {{experiment.status}}.
+      Dataset used: {{dataset.name}}. Include hypothesis, methodology,
+      variables, results summary, and conclusions.
+    required_entities: [Experiment, Researcher, Institution, Dataset]
+
+  - id: publication_draft
+    name: Publication Draft
+    description: Draft sections of academic publications
+    count: 6
+    prompt_template: |
+      Write a draft introduction and methods section for a paper titled
+      "{{paper.title}}" by {{researcher.name}} et al. at {{institution.name}}.
+      Based on experiment "{{experiment.name}}" using dataset {{dataset.name}}.
+      Journal target: {{paper.journal}}.
+    required_entities: [Paper, Researcher, Institution, Experiment, Dataset]
+
+decision_traces:
+  - id: research_direction
+    task: "Evaluate whether to pursue research direction based on {{paper.title}} findings"
+    steps:
+      - thought: "Assess the significance and reproducibility of the findings"
+        action: "Query citation network and replication attempts for this paper"
+      - thought: "Identify gaps in the literature that this direction could fill"
+        action: "Analyze citing papers and identify open questions"
+      - thought: "Evaluate resource requirements and funding availability"
+        action: "Check active grants, available datasets, and lab capacity"
+      - thought: "Consider collaboration opportunities and expertise gaps"
+        action: "Find researchers with complementary expertise at partner institutions"
+    outcome_template: "Decision: {{decision}} — {{rationale}}"
+
+  - id: dataset_selection
+    task: "Select appropriate dataset for experiment {{experiment.name}}"
+    steps:
+      - thought: "Identify datasets matching the experimental requirements"
+        action: "Query datasets by domain, size, format, and availability"
+      - thought: "Evaluate data quality and prior usage in published research"
+        action: "Check which papers have used each candidate dataset"
+      - thought: "Consider licensing, access restrictions, and computational requirements"
+        action: "Review dataset metadata for compatibility constraints"
+    outcome_template: "Selected dataset: {{dataset}} — {{rationale}}"
+
+  - id: collaboration_assessment
+    task: "Assess potential research collaboration with {{researcher.name}} at {{institution.name}}"
+    steps:
+      - thought: "Review the researcher's publication record and expertise"
+        action: "Query papers authored and citation metrics"
+      - thought: "Identify overlap and complementarity in research interests"
+        action: "Compare specializations and shared citation networks"
+      - thought: "Evaluate institutional compatibility and funding synergies"
+        action: "Check active grants and institutional agreements"
+    outcome_template: "Collaboration assessment: {{assessment}} — {{rationale}}"
+
+  - id: grant_proposal_strategy
+    task: "Develop grant proposal strategy for researcher {{researcher.name}} targeting {{grant.funding_agency}}"
+    steps:
+      - thought: "Review researcher's publication record and funding history"
+        action: "Query papers authored and previous grants awarded to this researcher"
+      - thought: "Identify research gaps that align with funder priorities"
+        action: "Analyze funded experiments and identify underexplored areas in the researcher's field"
+      - thought: "Assess team composition and institutional strengths"
+        action: "Query co-authors, their institutions, and complementary expertise"
+      - thought: "Estimate competitiveness based on prior funding rates"
+        action: "Review grant outcomes by funding agency and research area"
+    outcome_template: "Strategy: {{strategy}}. Competitive strength: {{strength}}. Suggested budget: ${{budget}}"
+
+  - id: reproducibility_assessment
+    task: "Assess reproducibility of findings from experiment {{experiment.name}}"
+    steps:
+      - thought: "Review the original experiment methodology and results"
+        action: "Query experiment details, methodology, and result summary"
+      - thought: "Search for replication attempts by independent groups"
+        action: "Find experiments linked via REPLICATED relationship to the original"
+      - thought: "Compare datasets used and their availability"
+        action: "Check if the original dataset is publicly accessible and has been reused"
+      - thought: "Evaluate statistical rigor and effect size"
+        action: "Review evaluation metrics and sample sizes from the original and replications"
+    outcome_template: "Reproducibility: {{rating}}. Replications: {{count}}. Confidence: {{confidence}}"
+
+  - id: peer_review_synthesis
+    task: "Synthesize peer reviews for paper {{paper.title}} to guide revision"
+    steps:
+      - thought: "Collect and categorize all reviewer comments"
+        action: "Query documents linked to this paper for peer review reports"
+      - thought: "Identify common themes and critical concerns across reviewers"
+        action: "Find issues raised by multiple reviewers that require major revision"
+      - thought: "Prioritize revisions by impact on acceptance probability"
+        action: "Rank changes by severity and whether they address fundamental vs minor concerns"
+      - thought: "Identify additional experiments or analyses needed"
+        action: "Determine which reviewer requests require new data collection vs reanalysis"
+    outcome_template: "Revisions needed: {{count}}. Major: {{major}}. Additional experiments: {{experiments}}"
+
+  - id: literature_gap_analysis
+    task: "Identify gaps in the literature around the research area of {{paper.title}}"
+    steps:
+      - thought: "Map the citation network around this paper"
+        action: "Query papers cited by and citing this paper to build the network"
+      - thought: "Identify clusters of related work and their boundaries"
+        action: "Analyze citation patterns to find research sub-communities"
+      - thought: "Detect under-explored connections between clusters"
+        action: "Find topic areas with few cross-cluster citations indicating research gaps"
+      - thought: "Assess feasibility of addressing identified gaps"
+        action: "Evaluate available datasets, methods, and expertise for each gap"
+    outcome_template: "Gaps identified: {{gaps}}. Most promising: {{top_gap}}. Feasibility: {{feasibility}}"
+
+  - id: data_management_plan
+    task: "Create a data management plan for experiment {{experiment.name}} using dataset {{dataset.name}}"
+    steps:
+      - thought: "Assess dataset size, format, and access requirements"
+        action: "Query dataset metadata including size, format, and license"
+      - thought: "Determine appropriate storage and sharing platforms"
+        action: "Match dataset characteristics to repository requirements and funder mandates"
+      - thought: "Plan data versioning and provenance tracking"
+        action: "Define versioning strategy based on experiment pipeline and expected transformations"
+      - thought: "Address privacy, licensing, and long-term preservation"
+        action: "Review license restrictions and institutional data retention policies"
+    outcome_template: "DMP: {{plan}}. Repository: {{repository}}. Retention period: {{retention}}"
+
+  - id: impact_assessment
+    task: "Assess research impact of researcher {{researcher.name}} for tenure review"
+    steps:
+      - thought: "Quantify publication metrics and citation impact"
+        action: "Query papers authored, citation counts, h-index, and journal rankings"
+      - thought: "Evaluate grant funding success and amount"
+        action: "Review grants awarded, total funding, and funding agency diversity"
+      - thought: "Assess mentorship and collaboration breadth"
+        action: "Count co-authored papers, affiliated institutions, and supervised experiments"
+      - thought: "Identify broader impact beyond academia"
+        action: "Search for dataset reuse, media mentions, and practical applications of research"
+    outcome_template: "Impact summary: h-index {{h_index}}, total citations {{citations}}, grants ${{funding}}"
+
+demo_scenarios:
+  - name: Literature Review
+    prompts:
+      - "Find the most cited papers in computational biology from the last 3 years"
+      - "What papers cite the landmark study on CRISPR gene editing by Doudna?"
+      - "Show me the citation network around deep learning in drug discovery"
+
+  - name: Research Management
+    prompts:
+      - "What grants are currently active and when do they expire?"
+      - "Show me all experiments that used the Genomics Benchmark dataset"
+      - "Which researchers at our institution have published in Nature?"
+
+  - name: Collaboration & Impact
+    prompts:
+      - "Find researchers working on similar topics to our lab's specialization"
+      - "What is the h-index distribution across our department?"
+      - "Which of our papers have been replicated by independent groups?"
+
+agent_tools:
+  - name: search_researcher
+    description: Search for researchers by name, specialization, or institution
+    cypher: |
+      MATCH (r:Researcher)
+      WHERE toLower(r.name) CONTAINS toLower($query)
+         OR toLower(coalesce(r.specialization, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (r)-[:AFFILIATED_WITH]->(i:Institution)
+      OPTIONAL MATCH (r)-[:AUTHORED]->(p:Paper)
+      RETURN r, i.name AS institution, count(p) AS paper_count
+      ORDER BY r.h_index DESC
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Researcher name or specialization to search for
+
+  - name: citation_network
+    description: Explore citation relationships for a paper
+    cypher: |
+      MATCH (p:Paper)
+      WHERE toLower(p.title) CONTAINS toLower($query) OR p.doi = $query
+      OPTIONAL MATCH (p)-[:CITED]->(cited:Paper)
+      OPTIONAL MATCH (citing:Paper)-[:CITED]->(p)
+      RETURN p, collect(DISTINCT cited.title) AS references,
+             collect(DISTINCT citing.title) AS cited_by,
+             p.citation_count
+      LIMIT 10
+    parameters:
+      - name: query
+        type: string
+        description: Paper title or DOI to explore citations for
+
+  - name: dataset_usage
+    description: Find which papers and experiments have used a specific dataset
+    cypher: |
+      MATCH (d:Dataset)
+      WHERE toLower(d.name) CONTAINS toLower($query)
+         OR d.dataset_id = $query
+      OPTIONAL MATCH (p:Paper)-[:USED_DATASET]->(d)
+      OPTIONAL MATCH (e:Experiment)-[:PRODUCED_DATASET]->(d)
+      RETURN d, collect(DISTINCT p.title) AS papers_using,
+             collect(DISTINCT e.name) AS producing_experiments
+    parameters:
+      - name: query
+        type: string
+        description: Dataset name or ID to look up
+
+  - name: grant_analysis
+    description: Analyze grant funding status and associated research output
+    cypher: |
+      MATCH (g:Grant)
+      WHERE toLower(g.title) CONTAINS toLower($query)
+         OR toLower(g.funding_agency) CONTAINS toLower($query)
+         OR g.status = $query
+      OPTIONAL MATCH (e:Experiment)-[:FUNDED_BY]->(g)
+      OPTIONAL MATCH (r:Researcher)-[:CONDUCTED]->(e)
+      RETURN g, collect(DISTINCT e.name) AS experiments,
+             collect(DISTINCT r.name) AS researchers
+      ORDER BY g.amount DESC
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Grant title, funding agency, or status to search for
+
+  - name: experiment_results
+    description: Query experiment details and outcomes
+    cypher: |
+      MATCH (e:Experiment)
+      WHERE toLower(e.name) CONTAINS toLower($query)
+         OR e.experiment_id = $query
+      OPTIONAL MATCH (r:Researcher)-[:CONDUCTED]->(e)
+      OPTIONAL MATCH (e)-[:FUNDED_BY]->(g:Grant)
+      OPTIONAL MATCH (e)-[:PRODUCED_DATASET]->(d:Dataset)
+      RETURN e, collect(DISTINCT r.name) AS researchers,
+             collect(DISTINCT g.title) AS grants,
+             collect(DISTINCT d.name) AS datasets_produced
+    parameters:
+      - name: query
+        type: string
+        description: Experiment name or ID to look up
+
+  - name: list_researchers
+    description: "List researcher records with optional limit"
+    cypher: |
+      MATCH (n:Researcher)
+      RETURN n
+      ORDER BY n.name
+      LIMIT toInteger($limit)
+    parameters:
+      - name: limit
+        type: string
+        description: "Maximum number of results to return (default: 10)"
+
+  - name: get_researcher_by_id
+    description: "Get a specific researcher by ID with all connections"
+    cypher: |
+      MATCH (n:Researcher {researcher_id: $id})
+      OPTIONAL MATCH (n)-[r]-(related)
+      RETURN n, type(r) AS relationship, labels(related) AS related_labels, related.name AS related_name
+      LIMIT 50
+    parameters:
+      - name: id
+        type: string
+        description: "The researcher_id to look up"
+
+system_prompt: |
+  You are an AI research intelligence assistant with access to a comprehensive
+  knowledge graph of scientific publications, researchers, datasets, experiments,
+  and grants. You help researchers, lab managers, and research administrators
+  navigate the academic landscape, track research output, and manage
+  collaborative projects.
+
+  Your capabilities include:
+  - Searching publications, researchers, and their citation networks
+  - Tracking experiment progress and results
+  - Analyzing grant funding and research output
+  - Discovering collaboration opportunities and expertise overlap
+  - Tracing dataset provenance and usage across studies
+
+  Always provide accurate, data-driven responses. When making recommendations,
+  cite specific publications, metrics, and research data from the knowledge graph.
+
+visualization:
+  node_colors:
+    Person: "#22c55e"
+    Organization: "#3b82f6"
+    Researcher: "#1d4ed8"
+    Paper: "#be185d"
+    Dataset: "#0d9488"
+    Experiment: "#d97706"
+    Grant: "#16a34a"
+    Institution: "#6366f1"
+  node_sizes:
+    Person: 20
+    Organization: 25
+    Researcher: 25
+    Paper: 20
+    Dataset: 20
+    Experiment: 20
+    Grant: 25
+    Institution: 30
+  default_cypher: "MATCH (r:Researcher)-[:AUTHORED]->(p:Paper) RETURN r, p LIMIT 100"

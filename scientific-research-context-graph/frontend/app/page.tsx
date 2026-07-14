@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { Box, Flex, Heading, Text, Tabs, IconButton, HStack, Spinner } from "@chakra-ui/react";
-import { MessageSquare, Network, FileText } from "lucide-react";
+import { Box, Flex, Heading, Text, Tabs, IconButton, HStack, Spinner, Button, Badge, Stack } from "@chakra-ui/react";
+import { MessageSquare, Network, FileText, GitBranch } from "lucide-react";
 import dynamic from "next/dynamic";
 import { ChatInterface } from "@/components/ChatInterface";
 const ContextGraphView = dynamic(
@@ -67,6 +67,8 @@ export default function Home() {
   const [backendStatus, setBackendStatus] = useState<"ok" | "degraded" | "offline">("offline");
   const [leftWidth, setLeftWidth] = useState(400);
   const [rightWidth, setRightWidth] = useState(350);
+  const [isRightPanelVisible, setIsRightPanelVisible] = useState(true);
+  const [traceCount, setTraceCount] = useState(0);
   const leftBaseRef = useRef(400);
   const rightBaseRef = useRef(350);
 
@@ -94,7 +96,7 @@ export default function Home() {
           return;
         } catch {
           if (attempt < retries - 1) {
-            await new Promise(r => setTimeout(r, delay * (attempt + 1)));
+            await new Promise((r) => setTimeout(r, delay * (attempt + 1)));
           }
         }
       }
@@ -124,16 +126,33 @@ export default function Home() {
   return (
     <Flex direction="column" h="100dvh" position="relative" zIndex={1}>
       {/* Header */}
-      <Flex className="app-header" px={6} py={3} justify="space-between" align="center">
-        <Box>
-          <Heading as="h2" size="md" className="title-gradient">
+      <Flex className="app-header" px={6} py={3.5} justify="space-between" align="center" gap={4}>
+        <Stack gap={1} maxW="xl">
+          <HStack gap={2} flexWrap="wrap">
+            <Badge
+              variant="subtle"
+              colorPalette="cyan"
+              borderRadius="full"
+              px={2.5}
+              py={0.5}
+              textTransform="uppercase"
+              letterSpacing="0.14em"
+              fontSize="10px"
+            >
+              Research Intelligence OS
+            </Badge>
+            <Text fontSize="xs" color="whiteAlpha.700">
+              Live graph, chat, and evidence panels
+            </Text>
+          </HStack>
+          <Heading as="h2" size="lg" className="title-gradient">
             <span className="header-emoji">🔬</span> {DOMAIN.name} Context Graph
           </Heading>
-          <Text fontSize="sm" color="whiteAlpha.700" mt={0.5}>
+          <Text fontSize="sm" color="whiteAlpha.700">
             {DOMAIN.tagline}
           </Text>
-        </Box>
-        <HStack gap={2} className="status-pill">
+        </Stack>
+        <HStack gap={3} className="status-pill" flexShrink={0}>
           <Box
             className={`status-dot ${backendStatus}`}
             w={2.5}
@@ -141,7 +160,7 @@ export default function Home() {
             borderRadius="full"
             bg={
               backendStatus === "ok"
-                ? "green.400"
+                ? "cyan.400"
                 : backendStatus === "degraded"
                   ? "yellow.400"
                   : "red.400"
@@ -154,14 +173,43 @@ export default function Home() {
                   : "Backend offline"
             }
           />
-          <Text fontSize="xs" color="whiteAlpha.800" fontWeight="medium">
-            {backendStatus === "ok"
-              ? "Connected"
-              : backendStatus === "degraded"
-                ? "Degraded"
-                : "Offline"}
-          </Text>
+          <Box>
+            <Text fontSize="xs" color="whiteAlpha.600" lineHeight="1">
+              System status
+            </Text>
+            <Text fontSize="xs" color="whiteAlpha.900" fontWeight="semibold">
+              {backendStatus === "ok"
+                ? "Connected"
+                : backendStatus === "degraded"
+                  ? "Degraded"
+                  : "Offline"}
+            </Text>
+          </Box>
         </HStack>
+        <Button
+          className="panel-toggle-btn"
+          size="xs"
+          variant="ghost"
+          color="whiteAlpha.800"
+          display={{ base: "none", lg: "inline-flex" }}
+          onClick={() => setIsRightPanelVisible((v) => !v)}
+        >
+          {isRightPanelVisible ? "Hide panel" : "Show panel"}
+        </Button>
+        {!isRightPanelVisible && (
+          <Button
+            aria-label="Show details panel"
+            className="trace-counter-pill"
+            size="xs"
+            variant="ghost"
+            color="whiteAlpha.800"
+            display={{ base: "none", lg: "inline-flex" }}
+            onClick={() => setIsRightPanelVisible(true)}
+          >
+            <GitBranch size={14} />
+            {traceCount} trace{traceCount === 1 ? "" : "s"}
+          </Button>
+        )}
       </Flex>
 
       {/* Main content - 3 panel layout */}
@@ -199,31 +247,34 @@ export default function Home() {
           </ErrorBoundary>
         </Box>
 
-        <ResizeHandle onDrag={handleRightDrag} />
+        {isRightPanelVisible && <ResizeHandle onDrag={handleRightDrag} />}
 
         {/* Right panel: Decision traces + Documents */}
         <Box
           as="aside"
           aria-label="Details"
-          className="panel-surface-right"
-          w={{ base: "100%", lg: `${rightWidth}px` }}
-          minW={{ lg: "280px" }}
+          aria-hidden={!isRightPanelVisible}
+          className={`panel-surface-right details-panel${isRightPanelVisible ? "" : " is-hidden"}`}
+          w={{ base: "100%", lg: isRightPanelVisible ? `${rightWidth}px` : "0px" }}
+          minW={{ lg: isRightPanelVisible ? "280px" : "0px" }}
           overflow="hidden"
           flexShrink={0}
           display={{ base: activePanel === "details" ? "block" : "none", lg: "block" }}
         >
-          <Tabs.Root defaultValue="traces" size="sm">
-            <Tabs.List borderBottom="1px solid" borderColor="gray.200">
-              <Tabs.Trigger value="traces">Traces</Tabs.Trigger>
-              <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
-            </Tabs.List>
-            <Tabs.Content value="traces" p={0} h="calc(100dvh - 110px)" overflow="auto">
-              <DecisionTracePanel />
-            </Tabs.Content>
-            <Tabs.Content value="documents" p={0} h="calc(100dvh - 110px)" overflow="auto">
-              <DocumentBrowser />
-            </Tabs.Content>
-          </Tabs.Root>
+          <Box className="details-panel-content">
+            <Tabs.Root defaultValue="traces" size="sm">
+              <Tabs.List borderBottom="1px solid" borderColor="gray.200">
+                <Tabs.Trigger value="traces">Traces</Tabs.Trigger>
+                <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
+              </Tabs.List>
+              <Tabs.Content value="traces" p={0} h="calc(100dvh - 110px)" overflow="auto">
+                <DecisionTracePanel isCollapsed={!isRightPanelVisible} onTraceCountChange={setTraceCount} />
+              </Tabs.Content>
+              <Tabs.Content value="documents" p={0} h="calc(100dvh - 110px)" overflow="auto">
+                <DocumentBrowser />
+              </Tabs.Content>
+            </Tabs.Root>
+          </Box>
         </Box>
       </Flex>
 

@@ -41,6 +41,18 @@ interface Message {
   preferences?: DetectedPreference[];
 }
 
+type TraceQuestionEventDetail = {
+  question: string;
+  askedAt: string;
+};
+
+type TraceQueryEventDetail = {
+  question: string;
+  askedAt: string;
+  toolName: string;
+  queryText: string;
+};
+
 interface ChatInterfaceProps {
   onGraphUpdate?: (data: GraphData) => void;
   externalInput?: string | null;
@@ -216,9 +228,34 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
     } catch { /* ignore */ }
   }
 
+  function emitTraceQuestion(detail: TraceQuestionEventDetail) {
+    window.dispatchEvent(new CustomEvent<TraceQuestionEventDetail>("ccg:trace-question", { detail }));
+  }
+
+  function emitTraceQuery(detail: TraceQueryEventDetail) {
+    window.dispatchEvent(new CustomEvent<TraceQueryEventDetail>("ccg:trace-query", { detail }));
+  }
+
+  function extractQueryText(inputs: Record<string, unknown>) {
+    const candidateKeys = ["query", "message", "question", "title", "name", "id"];
+
+    for (const key of candidateKeys) {
+      const value = inputs[key];
+      if (typeof value === "string" && value.trim()) {
+        return value.trim();
+      }
+    }
+
+    const compact = JSON.stringify(inputs);
+    return compact.length > 160 ? `${compact.slice(0, 157)}...` : compact;
+  }
+
   async function sendMessage(text?: string) {
     const messageText = text || input.trim();
     if (!messageText || loading) return;
+
+    const askedAt = new Date().toISOString();
+    emitTraceQuestion({ question: messageText, askedAt });
 
     const userMessage: Message = { id: crypto.randomUUID(), role: "user", content: messageText };
     setMessages((prev) => [...prev, userMessage]);
@@ -288,6 +325,12 @@ export function ChatInterface({ onGraphUpdate, externalInput, onExternalInputCon
                   break;
 
                 case "tool_start":
+                  emitTraceQuery({
+                    question: messageText,
+                    askedAt,
+                    toolName: data.name,
+                    queryText: extractQueryText(data.inputs || {}),
+                  });
                   toolCalls = [
                     ...toolCalls,
                     {

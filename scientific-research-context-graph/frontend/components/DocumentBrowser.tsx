@@ -10,8 +10,9 @@ import {
   Badge,
   Button,
   Flex,
+  Circle,
 } from "@chakra-ui/react";
-import { FileText, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { FileText, ArrowLeft, ChevronLeft, ChevronRight, Sparkles, Shapes } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { API_BASE } from "@/lib/config";
@@ -87,6 +88,8 @@ export function DocumentBrowser() {
     ).entries(),
   ];
 
+  const activeTemplateLabel = templateTypes.find(([id]) => id === filterTemplate)?.[1] || "All templates";
+
   return (
     <Flex direction="column" h="100%">
       <Box px={4} py={3} borderBottom="1px solid" borderColor="gray.200">
@@ -99,6 +102,32 @@ export function DocumentBrowser() {
         <Text fontSize="xs" color="gray.500">
           {documents.length} domain documents
         </Text>
+      </Box>
+
+      <Box px={4} pt={3}>
+        <Box className="document-hero semi-glass-pane">
+          <Flex justify="space-between" align="center" gap={3}>
+            <Box>
+              <Text className="trace-hero-kicker">Knowledge artifacts</Text>
+              <Text fontSize="sm" color="whiteAlpha.800">
+                Browse the narrative layer around papers, experiments, grants, and datasets.
+              </Text>
+            </Box>
+            <Circle size="58px" className="document-hero-badge">
+              <VStack gap={0}>
+                <Shapes size={16} />
+                <Text fontSize="10px">{documents.length}</Text>
+              </VStack>
+            </Circle>
+          </Flex>
+          <HStack mt={3} gap={2} flexWrap="wrap">
+            <Badge variant="outline">{activeTemplateLabel}</Badge>
+            <Badge colorPalette="cyan">
+              <Sparkles size={10} />
+              {templateTypes.length || 1} template views
+            </Badge>
+          </HStack>
+        </Box>
       </Box>
 
       {/* Template filter badges */}
@@ -135,7 +164,7 @@ export function DocumentBrowser() {
 
       {selectedDoc ? (
         /* Full document view */
-        <Box flex={1} overflow="auto" px={4} py={3}>
+        <Box flex={1} overflow="auto" px={4} py={3} className="semi-glass-pane document-reading-pane">
           <HStack
             cursor="pointer"
             onClick={() => setSelectedDoc(null)}
@@ -164,8 +193,7 @@ export function DocumentBrowser() {
           <Box
             fontSize="sm"
             lineHeight="tall"
-            color="gray.700"
-            className="markdown-content"
+            className="markdown-content document-markdown-content"
           >
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {selectedDoc.document.content}
@@ -204,7 +232,7 @@ export function DocumentBrowser() {
             documents.map((doc) => (
               <Box
                 key={doc.title}
-                className="list-card"
+                className="list-card document-card semi-glass-pane"
                 p={3}
                 cursor="pointer"
                 onClick={() => selectDocument(doc.title)}
@@ -214,15 +242,36 @@ export function DocumentBrowser() {
                   if (e.key === "Enter") selectDocument(doc.title);
                 }}
               >
-                <Text fontSize="sm" fontWeight="medium" lineClamp={1}>
-                  {doc.title}
-                </Text>
-                <Badge size="sm" mt={1}>
-                  {doc.template_name}
-                </Badge>
-                <Text fontSize="xs" color="gray.500" mt={1} lineClamp={2}>
-                  {doc.preview}
-                </Text>
+                <Flex justify="space-between" align="flex-start" gap={3}>
+                  <HStack align="flex-start" gap={3}>
+                    <Circle size="44px" className="document-card-orb">
+                      <FileText size={16} />
+                    </Circle>
+                    <Box>
+                      <Text fontSize="sm" fontWeight="medium" lineClamp={1}>
+                        {doc.title}
+                      </Text>
+                      <Badge size="sm" mt={1}>
+                        {doc.template_name}
+                      </Badge>
+                      <Text fontSize="xs" color="gray.500" mt={2} lineClamp={2}>
+                        {doc.preview}
+                      </Text>
+                    </Box>
+                  </HStack>
+                </Flex>
+                {doc.mentioned_entities.length > 0 && (
+                  <HStack mt={3} gap={1} flexWrap="wrap">
+                    {doc.mentioned_entities.slice(0, 3).map((entity, index) => (
+                      <Badge key={`${doc.title}-${entity.name}-${index}`} size="sm" variant="outline">
+                        {entity.name}
+                      </Badge>
+                    ))}
+                    {doc.mentioned_entities.length > 3 && (
+                      <Badge size="sm" variant="outline">+{doc.mentioned_entities.length - 3}</Badge>
+                    )}
+                  </HStack>
+                )}
               </Box>
             ))
           )}

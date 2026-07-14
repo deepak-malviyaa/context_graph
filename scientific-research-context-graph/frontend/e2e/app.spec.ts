@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 const BASE_URL = process.env.FRONTEND_URL || "http://localhost:3001";
-const API_URL = process.env.API_URL || "http://localhost:8001";
+const API_URL = process.env.API_URL || "http://localhost:8002";
 
 // Timeout for LLM responses — these can be slow
 const CHAT_TIMEOUT = 120_000;

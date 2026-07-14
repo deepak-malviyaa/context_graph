@@ -1,0 +1,733 @@
+@layer reset, base, tokens, recipes, utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* ------------------------------------------------------------------
+   App-wide cosmetic layer: animated gradient mesh + glass surfaces
+   ------------------------------------------------------------------ */
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  --accent-grad: linear-gradient(135deg, #6366f1 0%, #8b5cf6 40%, #22d3ee 100%);
+  --accent-grad-soft: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.18));
+}
+
+body {
+  background:
+    radial-gradient(1200px 800px at 8% -10%, rgba(99, 102, 241, 0.22), transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(34, 211, 238, 0.18), transparent 60%),
+    radial-gradient(900px 700px at 50% 120%, rgba(168, 85, 247, 0.16), transparent 60%),
+    linear-gradient(180deg, #f5f7ff 0%, #eef2ff 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(2px 2px at 20% 30%, rgba(99,102,241,.25) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 70% 80%, rgba(34,211,238,.22) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 40% 70%, rgba(168,85,247,.22) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 90% 20%, rgba(244,114,182,.20) 50%, transparent 51%);
+  background-size: 1100px 900px;
+  animation: drift 28s linear infinite;
+  z-index: 0;
+}
+
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0); }
+  50%  { transform: translate3d(-20px, 10px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  50%      { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+}
+
+@keyframes pulse-glow-amber {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.55); }
+  50%      { box-shadow: 0 0 0 8px rgba(250, 204, 21, 0); }
+}
+
+@keyframes pulse-glow-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55); }
+  50%      { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float-emoji {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%      { transform: translateY(-3px) rotate(3deg); }
+}
+
+/* Glass card surface */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card-strong {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Glossy header gradient */
+.app-header {
+  position: relative;
+  background:
+    linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #312e81 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 18s ease infinite;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+}
+
+.app-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, transparent 35%, transparent 80%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.app-header h2,
+.app-header .title-gradient {
+  background: linear-gradient(90deg, #e0e7ff 0%, #a5f3fc 50%, #f9a8d4 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 8s ease infinite;
+  letter-spacing: -0.01em;
+}
+
+.header-emoji {
+  display: inline-block;
+  animation: float-emoji 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 6px rgba(167, 139, 250, 0.55));
+}
+
+/* Status pill */
+.status-dot {
+  position: relative;
+}
+.status-dot.ok    { animation: pulse-glow 2.2s ease-out infinite; }
+.status-dot.degraded { animation: pulse-glow-amber 2.2s ease-out infinite; }
+.status-dot.offline  { animation: pulse-glow-red 2.2s ease-out infinite; }
+
+.status-pill {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+/* Panel surfaces */
+.panel-surface {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-right: 1px solid rgba(148, 163, 184, 0.18);
+  animation: fade-in-up 0.35s ease both;
+}
+
+.panel-surface-right {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-left: 1px solid rgba(148, 163, 184, 0.18);
+  animation: fade-in-up 0.45s ease both;
+}
+
+.graph-canvas {
+  position: relative;
+  background:
+    radial-gradient(1000px 700px at 30% 20%, rgba(99, 102, 241, 0.10), transparent 60%),
+    radial-gradient(900px 600px at 80% 90%, rgba(34, 211, 238, 0.10), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  animation: fade-in-up 0.5s ease both;
+}
+
+.graph-canvas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Resize handle — subtle glow on hover */
+.resize-handle {
+  position: relative;
+}
+.resize-handle:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0 -2px;
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.6), transparent);
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.45);
+}
+
+/* Mobile bottom bar */
+.mobile-tabbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 -6px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* Pretty scrollbars on glass panels */
+.panel-surface ::-webkit-scrollbar,
+.panel-surface-right ::-webkit-scrollbar { width: 8px; height: 8px; }
+.panel-surface ::-webkit-scrollbar-thumb,
+.panel-surface-right ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(99,102,241,.45), rgba(34,211,238,.45));
+  border-radius: 999px;
+}
+.panel-surface ::-webkit-scrollbar-track,
+.panel-surface-right ::-webkit-scrollbar-track { background: transparent; }
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  .app-header,
+  .header-emoji,
+  .app-header h2,
+  .app-header .title-gradient,
+  .status-dot,
+  .panel-surface,
+  .panel-surface-right,
+  .graph-canvas {
+    animation: none !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Inner surfaces: chat / traces / documents
+   ------------------------------------------------------------------ */
+
+@keyframes pop-in {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30%           { opacity: 1;    transform: translateY(-3px); }
+}
+
+@keyframes border-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 6px 22px rgba(99, 102, 241, 0.30); }
+  50%      { box-shadow: 0 10px 32px rgba(168, 85, 247, 0.45); }
+}
+
+/* Gradient panel headings */
+.panel-heading {
+  background: linear-gradient(90deg, #4338ca 0%, #7c3aed 45%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+/* Subtle hairline gradient under panel headers */
+.panel-surface > div:first-child,
+.panel-surface-right > div:first-child {
+  border-bottom: 1px solid transparent !important;
+  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+                    linear-gradient(90deg, rgba(99,102,241,.5), rgba(34,211,238,.5));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* --- Chat bubbles --- */
+
+.bubble-user {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #06b6d4 100%) !important;
+  color: #fff !important;
+  border-radius: 16px 16px 4px 16px !important;
+  box-shadow:
+    0 8px 24px -8px rgba(99, 102, 241, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.30);
+  animation: pop-in 0.28s ease both;
+  position: relative;
+  overflow: hidden;
+}
+.bubble-user::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 40%);
+}
+.bubble-user * { color: #fff !important; }
+
+.bubble-assistant {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  border-radius: 16px 16px 16px 4px !important;
+  box-shadow: 0 6px 20px -10px rgba(15, 23, 42, 0.12);
+  animation: pop-in 0.28s ease both;
+}
+
+/* Avatar circles get gradient backdrops */
+.avatar-user {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4) !important;
+  box-shadow: 0 4px 14px -4px rgba(79, 70, 229, 0.55);
+  animation: bob 5s ease-in-out infinite;
+}
+.avatar-assistant {
+  background: linear-gradient(135deg, #1e1b4b, #4338ca) !important;
+  box-shadow: 0 4px 14px -4px rgba(67, 56, 202, 0.55);
+  animation: bob 5s ease-in-out infinite;
+}
+
+/* --- Suggested prompt chips --- */
+.suggest-chip {
+  position: relative;
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent !important;
+  background-clip: padding-box;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 6px 18px -10px rgba(99, 102, 241, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.suggest-chip::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(99,102,241,.55), rgba(34,211,238,.55), rgba(168,85,247,.55));
+  background-size: 200% 200%;
+  animation: border-flow 6s ease infinite;
+  opacity: 0.6;
+}
+.suggest-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -10px rgba(99, 102, 241, 0.45);
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* --- Send button --- */
+.send-btn {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #06b6d4 100%) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 6px 18px -6px rgba(99, 102, 241, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.send-btn:not(:disabled):hover {
+  transform: translateY(-1px) scale(1.04);
+  filter: brightness(1.08);
+  box-shadow: 0 10px 22px -6px rgba(124, 58, 237, 0.6);
+}
+.send-btn:disabled {
+  filter: grayscale(0.5) brightness(0.9);
+  opacity: 0.6;
+}
+
+/* --- Chat input wrapper --- */
+.chat-input-wrap {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 22px -12px rgba(15, 23, 42, 0.18);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.chat-input-wrap:focus-within {
+  border-color: transparent !important;
+  box-shadow:
+    0 0 0 1.5px rgba(99, 102, 241, 0.55),
+    0 14px 32px -12px rgba(99, 102, 241, 0.45);
+}
+.chat-input-wrap textarea { background: transparent !important; }
+
+/* --- Tool call pill --- */
+.tool-chip {
+  background: linear-gradient(135deg, rgba(99,102,241,.12), rgba(34,211,238,.12)) !important;
+  border: 1px solid rgba(99, 102, 241, 0.28) !important;
+  border-radius: 999px !important;
+  padding: 4px 10px !important;
+  box-shadow: 0 2px 8px -4px rgba(99, 102, 241, 0.35);
+}
+
+/* --- Generic list cards (traces, documents) --- */
+.list-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  border-radius: 12px !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  animation: pop-in 0.35s ease both;
+}
+.list-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 12px 28px -14px rgba(99, 102, 241, 0.45);
+}
+.list-card.active {
+  border-color: rgba(124, 58, 237, 0.55) !important;
+  box-shadow: 0 12px 28px -14px rgba(124, 58, 237, 0.5);
+}
+
+/* --- Typing dots --- */
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  display: inline-block;
+  animation: typing-dot 1.2s ease-in-out infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.30s; }
+
+/* --- Subtle shimmer for "Thinking..." text --- */
+.shimmer-text {
+  background: linear-gradient(90deg, #475569 0%, #6366f1 35%, #06b6d4 50%, #6366f1 65%, #475569 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* Auto-polish: light up Chakra buttons inside panels on hover */
+.panel-surface button:not(.send-btn):not(.suggest-chip),
+.panel-surface-right button {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.panel-surface button:not(.send-btn):not(.suggest-chip):hover,
+.panel-surface-right button:hover {
+  transform: translateY(-1px);
+}
+
+/* Badges get a touch of glass */
+.panel-surface [data-scope="badge"],
+.panel-surface-right [data-scope="badge"] {
+  backdrop-filter: blur(6px);
+  border-radius: 999px !important;
+}
+
+/* Tabs in the right rail */
+.panel-surface-right [data-scope="tabs"][data-part="list"] {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25) !important;
+}
+.panel-surface-right [data-scope="tabs"][data-part="trigger"] {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.panel-surface-right [data-scope="tabs"][data-part="trigger"][data-selected]::after {
+  content: "";
+  position: absolute;
+  left: 8px; right: 8px; bottom: -1px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.55);
+}
+
+/* ------------------------------------------------------------------
+   Graph dashboard layer: toolbar, KPIs, legend, properties panel
+   ------------------------------------------------------------------ */
+
+@keyframes count-up {
+  0%   { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* Floating toolbar above the graph */
+.graph-toolbar {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.78) 0%, rgba(30, 27, 75, 0.78) 100%) !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  box-shadow:
+    0 12px 32px -12px rgba(15, 23, 42, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+.graph-toolbar h2,
+.graph-toolbar .panel-heading {
+  background: linear-gradient(90deg, #e0e7ff 0%, #a5f3fc 50%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+}
+.graph-toolbar p,
+.graph-toolbar span:not([data-scope]),
+.graph-toolbar .subtitle {
+  color: rgba(226, 232, 240, 0.7) !important;
+}
+.graph-toolbar button {
+  color: #cbd5e1 !important;
+}
+.graph-toolbar button:hover {
+  background: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* KPI mini-dashboard */
+.kpi-strip {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+.kpi-card {
+  position: relative;
+  min-width: 92px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  animation: count-up 0.4s ease both;
+}
+.kpi-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--kpi-grad, linear-gradient(135deg, rgba(99,102,241,.18), rgba(34,211,238,.18)));
+  opacity: 0.9;
+  pointer-events: none;
+}
+.kpi-card > * { position: relative; z-index: 1; }
+.kpi-card .kpi-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(226, 232, 240, 0.75);
+  font-weight: 600;
+}
+.kpi-card .kpi-value {
+  font-size: 20px;
+  font-weight: 700;
+  font-feature-settings: "tnum";
+  background: linear-gradient(90deg, #ffffff, #c7d2fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.kpi-card.kpi-nodes  { --kpi-grad: linear-gradient(135deg, rgba(99,102,241,.30), rgba(168,85,247,.20)); }
+.kpi-card.kpi-edges  { --kpi-grad: linear-gradient(135deg, rgba(34,211,238,.30), rgba(99,102,241,.20)); }
+.kpi-card.kpi-types  { --kpi-grad: linear-gradient(135deg, rgba(244,114,182,.28), rgba(168,85,247,.20)); }
+.kpi-card.kpi-mode   { --kpi-grad: linear-gradient(135deg, rgba(34,197,94,.28), rgba(34,211,238,.20)); }
+
+/* Floating glass cards over the graph */
+.float-card {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 40px -18px rgba(15, 23, 42, 0.25);
+  animation: pop-in 0.32s ease both;
+}
+
+/* Legend pretty badges */
+.legend-badge {
+  position: relative;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 2px 8px -2px rgba(15, 23, 42, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.legend-badge:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 6px 14px -4px rgba(15, 23, 42, 0.4);
+}
+
+/* Property rows inside the float card */
+.prop-row {
+  background: linear-gradient(135deg, rgba(99,102,241,.06), rgba(34,211,238,.06)) !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  border-radius: 8px !important;
+  padding: 6px 8px !important;
+}
+.prop-row > p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 10px;
+  font-weight: 700;
+  color: #6366f1 !important;
+}
+
+/* "Ask about" button on graph selection */
+.ask-about-btn {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #06b6d4 100%) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 6px 18px -6px rgba(99, 102, 241, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.ask-about-btn:hover {
+  transform: translateY(-1px) scale(1.03);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 26px -8px rgba(124, 58, 237, 0.55);
+}
+
+/* Loading badge for graph */
+.graph-loading-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #e0e7ff;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 24px -10px rgba(99, 102, 241, 0.55);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.graph-loading-badge::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(99, 102, 241, 0.35);
+  border-top-color: #a5f3fc;
+  animation: spin-slow 0.9s linear infinite;
+}
+
+/* Markdown content styling for chat messages */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  font-weight: 600;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+.markdown-content h1 { font-size: 1.25em; }
+.markdown-content h2 { font-size: 1.1em; }
+.markdown-content h3 { font-size: 1em; }
+.markdown-content p { margin-bottom: 0.5em; }
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+.markdown-content li { margin-bottom: 0.15em; }
+.markdown-content code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.markdown-content pre {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.75em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 0.5em;
+}
+.markdown-content pre code {
+  background: none;
+  padding: 0;
+}
+.markdown-content table {
+  border-collapse: collapse;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid #ddd;
+  padding: 0.3em 0.6em;
+}
+.markdown-content th { background: rgba(0, 0, 0, 0.04); }
+.markdown-content blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 0.75em;
+  color: #666;
+  margin-bottom: 0.5em;
+}

@@ -10,7 +10,7 @@ export const DOMAIN = {
   tagline: "AI-powered Research Intelligence",
 };
 
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001/api";
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8002/api";
 
 export const NODE_COLORS: Record<string, string> = {"Dataset": "#0d9488", "Event": "#f97316", "Experiment": "#d97706", "Grant": "#16a34a", "Institution": "#6366f1", "Location": "#a855f7", "Object": "#eab308", "Organization": "#3b82f6", "Paper": "#be185d", "Person": "#22c55e", "Researcher": "#1d4ed8"};
 

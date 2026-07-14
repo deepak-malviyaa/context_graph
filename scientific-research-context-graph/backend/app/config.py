@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     groq_url: str = "https://api.groq.com/openai/v1"
     domain_id: str = "scientific-research"
     session_strategy: str = "persistent"
-    backend_port: int = 8001
+    backend_port: int = 8002
     frontend_port: int = 3001
 
 

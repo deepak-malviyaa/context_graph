@@ -4,7 +4,7 @@ const config = defineConfig({
   cssVarsPrefix: "ccg",
   globalCss: {
     "html, body": {
-      color: "gray.900",
+      color: "gray.100",
       lineHeight: "1.6",
     },
   },

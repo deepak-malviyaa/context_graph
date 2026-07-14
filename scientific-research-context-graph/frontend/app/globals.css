@@ -16,20 +16,20 @@ body {
    ------------------------------------------------------------------ */
 
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.55);
-  --glass-bg-strong: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.55);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  --glass-bg: rgba(10, 15, 35, 0.62);
+  --glass-bg-strong: rgba(10, 15, 35, 0.82);
+  --glass-border: rgba(148, 163, 184, 0.14);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
   --accent-grad: linear-gradient(135deg, #6366f1 0%, #8b5cf6 40%, #22d3ee 100%);
   --accent-grad-soft: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.18));
 }
 
 body {
   background:
-    radial-gradient(1200px 800px at 8% -10%, rgba(99, 102, 241, 0.22), transparent 60%),
-    radial-gradient(1000px 700px at 110% 10%, rgba(34, 211, 238, 0.18), transparent 60%),
-    radial-gradient(900px 700px at 50% 120%, rgba(168, 85, 247, 0.16), transparent 60%),
-    linear-gradient(180deg, #f5f7ff 0%, #eef2ff 100%);
+    radial-gradient(1200px 800px at 8% -10%, rgba(99, 102, 241, 0.18), transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(900px 700px at 50% 120%, rgba(168, 85, 247, 0.14), transparent 60%),
+    linear-gradient(180deg, #070d1f 0%, #0a1228 100%);
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
@@ -178,18 +178,18 @@ body::before {
 
 /* Panel surfaces */
 .panel-surface {
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(8, 14, 30, 0.72);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border-right: 1px solid rgba(148, 163, 184, 0.18);
+  border-right: 1px solid rgba(148, 163, 184, 0.10);
   animation: fade-in-up 0.35s ease both;
 }
 
 .panel-surface-right {
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(8, 14, 30, 0.72);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border-left: 1px solid rgba(148, 163, 184, 0.18);
+  border-left: 1px solid rgba(148, 163, 184, 0.10);
   animation: fade-in-up 0.45s ease both;
 }
 
@@ -235,9 +235,9 @@ body::before {
 .graph-canvas {
   position: relative;
   background:
-    radial-gradient(1000px 700px at 30% 20%, rgba(99, 102, 241, 0.10), transparent 60%),
+    radial-gradient(1000px 700px at 30% 20%, rgba(99, 102, 241, 0.12), transparent 60%),
     radial-gradient(900px 600px at 80% 90%, rgba(34, 211, 238, 0.10), transparent 60%),
-    linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+    linear-gradient(180deg, #070d1f 0%, #0a1228 100%);
   animation: fade-in-up 0.5s ease both;
 }
 
@@ -246,8 +246,8 @@ body::before {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
   background-size: 32px 32px;
   mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
@@ -269,11 +269,11 @@ body::before {
 
 /* Mobile bottom bar */
 .mobile-tabbar {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(8, 14, 30, 0.82);
   backdrop-filter: blur(18px) saturate(180%);
   -webkit-backdrop-filter: blur(18px) saturate(180%);
-  border-top: 1px solid rgba(148, 163, 184, 0.25);
-  box-shadow: 0 -6px 24px rgba(15, 23, 42, 0.06);
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Pretty scrollbars on glass panels */
@@ -345,7 +345,7 @@ body::before {
 .panel-surface > div:first-child,
 .panel-surface-right > div:first-child {
   border-bottom: 1px solid transparent !important;
-  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+  background-image: linear-gradient(rgba(8,14,30,0.72), rgba(8,14,30,0.72)),
                     linear-gradient(90deg, rgba(99,102,241,.5), rgba(34,211,238,.5));
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -374,13 +374,14 @@ body::before {
 .bubble-user * { color: #fff !important; }
 
 .bubble-assistant {
-  background: rgba(255, 255, 255, 0.82) !important;
+  background: rgba(15, 23, 42, 0.78) !important;
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  border: 1px solid rgba(148, 163, 184, 0.15) !important;
   border-radius: 16px 16px 16px 4px !important;
-  box-shadow: 0 6px 20px -10px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 6px 20px -10px rgba(0, 0, 0, 0.45);
   animation: pop-in 0.28s ease both;
+  color: #e2e8f0 !important;
 }
 
 /* Avatar circles get gradient backdrops */
@@ -398,12 +399,13 @@ body::before {
 /* --- Suggested prompt chips --- */
 .suggest-chip {
   position: relative;
-  background: rgba(255, 255, 255, 0.72) !important;
+  background: rgba(15, 23, 42, 0.72) !important;
   backdrop-filter: blur(10px);
   border: 1px solid transparent !important;
   background-clip: padding-box;
+  color: #cbd5e1 !important;
   box-shadow:
-    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 1px 0 rgba(255,255,255,0.04) inset,
     0 6px 18px -10px rgba(99, 102, 241, 0.35);
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
@@ -421,7 +423,7 @@ body::before {
 .suggest-chip:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px -10px rgba(99, 102, 241, 0.45);
-  background: rgba(255, 255, 255, 0.92) !important;
+  background: rgba(20, 30, 55, 0.92) !important;
 }
 
 /* --- Send button --- */
@@ -445,12 +447,12 @@ body::before {
 /* --- Chat input wrapper --- */
 .chat-input-wrap {
   position: relative;
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(10, 18, 40, 0.85) !important;
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
   border-radius: 14px !important;
-  box-shadow: 0 6px 22px -12px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 6px 22px -12px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .chat-input-wrap:focus-within {
@@ -473,11 +475,12 @@ body::before {
 /* --- Generic list cards (traces, documents) --- */
 .list-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.78) !important;
+  background: rgba(10, 18, 40, 0.72) !important;
   backdrop-filter: blur(10px) saturate(160%);
   -webkit-backdrop-filter: blur(10px) saturate(160%);
-  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  border: 1px solid rgba(148, 163, 184, 0.12) !important;
   border-radius: 12px !important;
+  color: #cbd5e1 !important;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   animation: pop-in 0.35s ease both;
 }
